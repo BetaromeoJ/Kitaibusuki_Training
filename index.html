@@ -29,11 +29,11 @@
         <span>北指宿中学校<span class="sub">ICT研修ポータル</span></span>
       </a>
       <nav class="header-nav" aria-label="メインメニュー">
+        <a href="#instructor">講師紹介</a>
         <a href="#today">今日の研修</a>
         <a href="#canva-basics">Canva基礎</a>
         <a href="#subjects">教科別活用</a>
         <a href="#prompts">プロンプト集</a>
-        <a href="#instructor">講師紹介</a>
       </nav>
       <button type="button" id="menuBtn" class="menu-btn" aria-expanded="false" aria-controls="mobileNav" aria-label="メニューを開く">
         <span class="material-symbols-outlined" aria-hidden="true">menu</span>
@@ -51,6 +51,7 @@
     <a href="#top"><span class="material-symbols-outlined" aria-hidden="true">home</span>トップ</a>
     <a href="#instructor"><span class="material-symbols-outlined" aria-hidden="true">person</span>講師紹介</a>
     <a href="#book"><span class="material-symbols-outlined" aria-hidden="true">menu_book</span>著作紹介</a>
+    <a href="#usage"><span class="material-symbols-outlined" aria-hidden="true">explore</span>このサイトの使い方</a>
     <a href="#today"><span class="material-symbols-outlined" aria-hidden="true">today</span>今日の研修</a>
     <a href="#session01"><span class="material-symbols-outlined" aria-hidden="true">mic</span>SESSION 01 音声×AI</a>
     <a href="#session02"><span class="material-symbols-outlined" aria-hidden="true">auto_awesome</span>SESSION 02 Notebook×Canva</a>
@@ -75,7 +76,7 @@
         <a href="#canva-basics" class="btn btn-outline">Canvaを基礎から学ぶ</a>
         <a href="#prompts" class="btn btn-outline">プロンプト集を見る</a>
       </div>
-      <a href="#usage" class="scroll-cue">
+      <a href="#instructor" class="scroll-cue">
         <span>SCROLL</span>
         <span class="material-symbols-outlined" aria-hidden="true">keyboard_arrow_down</span>
       </a>
@@ -125,21 +126,18 @@
             <p class="instructor-bio">
               1969年東京生まれ。鹿児島大学在学中からKTS鹿児島テレビでの深夜番組制作に携わり、卒業後は東京赤坂のヨーロッパ専門の旅行会社に勤務。退職後、古着と雑貨の輸入で起業した後、教職へ。初任・鹿屋高校、屋久島高校、鶴丸高校、鹿屋高校(2回目)を経て、現在は開陽高校定時制課程で進路支援部主任を務める。ICTを活かした探究的な教育実践に注力している。
             </p>
+
+            <!-- 資格取得の推進：ここから編集 -->
+            <p class="instructor-bio" style="margin-bottom:1rem;">
+              Googleでは先生方の資格取得を推進しています。<br>ご興味のある方は、以下から詳細・登録方法を確認できます。
+            </p>
+            <a href="https://edu.google.com/intl/ALL_jp/learning-center/certifications/" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+              <span class="material-symbols-outlined" aria-hidden="true">workspace_premium</span>認定資格の詳細を見る
+            </a>
+            <!-- 資格取得の推進：ここまで -->
           </div>
         </div>
       </div>
-
-      <!-- 資格取得の推進：ここから編集 -->
-      <div class="card" style="margin-top:1.25rem;">
-        <h3 style="font-size:1rem;font-weight:800;margin-bottom:0.9rem;display:flex;align-items:center;gap:0.5rem;"><span class="material-symbols-outlined" aria-hidden="true">workspace_premium</span>資格取得を推進しています</h3>
-        <p style="font-size:0.88rem;color:var(--color-text-sub);margin-bottom:1rem;">北指宿中学校では、教職員の資格取得を推進しています。ご興味のある方は、以下から詳細・登録方法を確認できます。</p>
-        <div class="link-list">
-          <a href="https://edu.google.com/intl/ALL_jp/learning-center/certifications/" target="_blank" rel="noopener"><span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>Google 認定教育者 レベル1</a>
-          <a href="https://edu.google.com/intl/ALL_jp/learning-center/certifications/" target="_blank" rel="noopener"><span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>Google 認定教育者 レベル2</a>
-          <a href="https://edu.google.com/intl/ALL_jp/learning-center/certifications/" target="_blank" rel="noopener"><span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>Gemini 認定教育者</a>
-        </div>
-      </div>
-      <!-- 資格取得の推進：ここまで -->
     </div>
   </section>
   <!-- 講師プロフィール：ここまで -->
@@ -236,7 +234,7 @@
       <div class="section-head">
         <p class="badge badge-solid">Today's Workshop</p>
         <h2 class="section-title">今日の研修</h2>
-        <p class="section-lead">本日の研修の流れです。カードから、それぞれの演習手順・注意点・プロンプトを確認できます。</p>
+        <p class="section-lead">本日の研修の流れです。カードの「開く」ボタンから、それぞれの演習手順・注意点・プロンプトを確認できます。</p>
       </div>
 
       <p class="session-lead">今回の研修テーマは「<strong>AI × Canva　授業づくりと校務を、もっと軽く。</strong>」です。単なる「Canva操作研修」ではありません。生成AI・Gemini Notebook・Canvaを組み合わせ、授業準備や校務にかかる時間を減らし、先生にしかできない仕事に使える時間を増やすための実践型研修です。</p>
@@ -1080,12 +1078,12 @@
       <p class="foot-title">北指宿中学校 ICT研修ポータル</p>
       <p class="foot-sub">AI × Canvaで、授業づくりと校務をもっと軽く。研修当日も、研修後も、日々の授業・校務でも使えるポータルです。</p>
       <div class="footer-links">
+        <a href="#instructor">講師紹介</a>
+        <a href="#book">著作紹介</a>
         <a href="#today">今日の研修</a>
         <a href="#canva-basics">Canva Basics</a>
         <a href="#prompts">プロンプトライブラリ</a>
         <a href="#subjects">教科別活用例</a>
-        <a href="#instructor">講師紹介</a>
-        <a href="#book">著作紹介</a>
       </div>
       <p class="footer-copy">&copy; 北指宿中学校 ICT研修ポータル</p>
     </div>
