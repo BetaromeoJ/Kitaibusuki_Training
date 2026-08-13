@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>北指宿中学校 ICT研修ポータル | AI × Canvaで、授業づくりと校務をもっと軽く。</title>
+<meta name="description" content="指宿市立北指宿中学校 ICT校内研修ポータル。生成AI・Gemini Notebook・Canvaを、研修当日から明日の授業・校務まで活用するための実践サイトです。">
+<!-- 研修日・学校名：ここを差し替え -->
+<meta name="training-date" content="2026年8月21日（金）13:00〜15:00 指宿市立北指宿中学校 ICT校内研修">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Material+Symbols+Outlined" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ===== オープニング演出（sessionStorageで1回だけ表示） ===== -->
+  <div id="splash" class="splash-overlay" role="dialog" aria-label="オープニング">
+    <p class="splash-text">北指宿中学校 ICT研修<span class="splash-sub">AI × Canva 2026</span></p>
+  </div>
+
+  <!-- コピー完了などを通知するライブリージョン（視覚的には非表示） -->
+  <div id="copy-announcer" aria-live="polite" class="sr-only"></div>
+
+  <!-- ===== 固定ヘッダー ===== -->
+  <header class="site-header">
+    <div class="wrap">
+      <a href="#top" class="site-logo">
+        <span class="material-symbols-outlined" aria-hidden="true">auto_awesome</span>
+        <span>北指宿中学校<span class="sub">ICT研修ポータル</span></span>
+      </a>
+      <nav class="header-nav" aria-label="メインメニュー">
+        <a href="#today">今日の研修</a>
+        <a href="#canva-basics">Canva基礎</a>
+        <a href="#subjects">教科別活用</a>
+        <a href="#prompts">プロンプト集</a>
+        <a href="#instructor">講師紹介</a>
+      </nav>
+      <button type="button" id="menuBtn" class="menu-btn" aria-expanded="false" aria-controls="mobileNav" aria-label="メニューを開く">
+        <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="navOverlay" class="nav-overlay"></div>
+  <nav id="mobileNav" class="mobile-nav" aria-label="モバイルメニュー">
+    <div style="display:flex;justify-content:flex-end;margin-bottom:1rem;">
+      <button type="button" id="navCloseBtn" class="menu-btn" aria-label="メニューを閉じる">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+    </div>
+    <a href="#top"><span class="material-symbols-outlined" aria-hidden="true">home</span>トップ</a>
+    <a href="#today"><span class="material-symbols-outlined" aria-hidden="true">today</span>今日の研修</a>
+    <a href="#session01"><span class="material-symbols-outlined" aria-hidden="true">mic</span>SESSION 01 音声×AI</a>
+    <a href="#session02"><span class="material-symbols-outlined" aria-hidden="true">auto_awesome</span>SESSION 02 Notebook×Canva</a>
+    <a href="#canva-basics"><span class="material-symbols-outlined" aria-hidden="true">school</span>Canva Basics</a>
+    <a href="#after"><span class="material-symbols-outlined" aria-hidden="true">history</span>研修後に復習する</a>
+    <a href="#subjects"><span class="material-symbols-outlined" aria-hidden="true">apps</span>教科別活用例</a>
+    <a href="#prompts"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span>プロンプトライブラリ</a>
+    <a href="#roadmap"><span class="material-symbols-outlined" aria-hidden="true">route</span>AI活用ロードマップ</a>
+    <a href="#tools"><span class="material-symbols-outlined" aria-hidden="true">handyman</span>ツールの使い分け</a>
+    <a href="#instructor"><span class="material-symbols-outlined" aria-hidden="true">person</span>講師紹介</a>
+    <a href="#book"><span class="material-symbols-outlined" aria-hidden="true">menu_book</span>著作紹介</a>
+  </nav>
+
+  <!-- ===== ヒーロー ===== -->
+  <section class="hero" id="top">
+    <div class="wrap">
+      <p class="badge">指宿市立北指宿中学校 ICT校内研修</p>
+      <h1 class="hero-title-en"><span class="line-dark">Work Smarter.</span><span class="line-gray">Teach Better.</span></h1>
+      <p class="hero-copy-jp">AI × Canvaで、授業づくりと校務をもっと軽く。</p>
+      <p class="hero-meta">Kita-Ibusuki Junior High School ICT Workshop 2026</p>
+      <p class="hero-copy">2026年8月21日（金）13:00〜15:00、北指宿中学校 教職員を対象に行うICT研修のポータルサイトです。単なるCanva操作研修ではなく、生成AI・Gemini Notebook・Canvaを組み合わせて、授業準備や校務にかかる時間を減らし、先生にしかできない仕事に使える時間を増やすことを目指します。研修当日はこのサイトを操作しながら進め、研修後も復習や実務での見直しに使えます。</p>
+      <div class="hero-actions">
+        <a href="#today" class="btn btn-primary">今日の研修を始める</a>
+        <a href="#canva-basics" class="btn btn-outline">Canvaを基礎から学ぶ</a>
+        <a href="#prompts" class="btn btn-outline">プロンプト集を見る</a>
+      </div>
+      <a href="#usage" class="scroll-cue">
+        <span>SCROLL</span>
+        <span class="material-symbols-outlined" aria-hidden="true">keyboard_arrow_down</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== このサイトの4つの使い方 ===== -->
+  <section id="usage" class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="badge badge-solid">How to Use</p>
+        <h2 class="section-title">このサイトの4つの使い方</h2>
+        <p class="section-lead">研修当日だけでなく、自分のペースで学ぶとき、研修後に復習するとき、日々の授業・校務で使うときにも開いてください。</p>
+      </div>
+      <div class="grid grid-4">
+        <a href="#today" class="card card-hover role-card">
+          <div class="role-card-head">
+            <div class="role-letter">A</div>
+            <h3>研修当日に使う</h3>
+          </div>
+          <p class="desc">講師と一緒に操作・体験するための入口です。SESSION 01・02をこの場で一緒に進めます。</p>
+          <span class="role-link">今日の研修へ<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span>
+        </a>
+        <a href="#canva-basics" class="card card-hover role-card">
+          <div class="role-card-head">
+            <div class="role-letter">B</div>
+            <h3>自分で学ぶ</h3>
+          </div>
+          <p class="desc">Canvaの経験差に合わせて、基礎基本を自分のペースで学べます。研修本編では詳しく扱いません。</p>
+          <span class="role-link">Canva Basicsへ<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span>
+        </a>
+        <a href="#after" class="card card-hover role-card">
+          <div class="role-card-head">
+            <div class="role-letter">C</div>
+            <h3>研修後に復習する</h3>
+          </div>
+          <p class="desc">研修が終わったあとも、動画・プロンプト・資料・リンクをいつでも確認できます。</p>
+          <span class="role-link">研修後に復習するへ<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span>
+        </a>
+        <a href="#subjects" class="card card-hover role-card">
+          <div class="role-card-head">
+            <div class="role-letter">D</div>
+            <h3>今後の授業・校務で使う</h3>
+          </div>
+          <p class="desc">教科別の活用例やプロンプト、AI活用ロードマップを、日々の授業・校務で使い続けられます。</p>
+          <span class="role-link">教科別活用例へ<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 今日の研修 ===== -->
+  <section id="today" class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="badge badge-solid">Today's Workshop</p>
+        <h2 class="section-title">今日の研修</h2>
+        <p class="section-lead">本日の研修の流れです。カードから、それぞれの演習手順・注意点・プロンプトを確認できます。</p>
+      </div>
+
+      <div class="card info-card" style="margin-bottom:1.75rem;">
+        <div class="info-grid">
+          <div class="info-item">
+            <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
+            <div><p class="info-label">日時</p><p class="info-value">2026年8月21日（金）13:00〜15:00</p></div>
+          </div>
+          <div class="info-item">
+            <span class="material-symbols-outlined" aria-hidden="true">apartment</span>
+            <div><p class="info-label">学校</p><p class="info-value">指宿市立北指宿中学校</p></div>
+          </div>
+          <div class="info-item">
+            <span class="material-symbols-outlined" aria-hidden="true">group</span>
+            <div><p class="info-label">対象</p><p class="info-value">北指宿中学校 教職員</p></div>
+          </div>
+          <div class="info-item">
+            <span class="material-symbols-outlined" aria-hidden="true">person</span>
+            <div><p class="info-label">講師</p><p class="info-value">和田 倫周（みちひろ）</p></div>
+          </div>
+        </div>
+      </div>
+
+      <p class="session-lead">今回の研修テーマは「<strong>AI × Canva　授業づくりと校務を、もっと軽く。</strong>」です。単なる「Canva操作研修」ではありません。生成AI・Gemini Notebook・Canvaを組み合わせ、授業準備や校務にかかる時間を減らし、先生にしかできない仕事に使える時間を増やすための実践型研修です。</p>
+
+      <div class="tip-card" style="margin-bottom:2rem;">
+        <span class="material-symbols-outlined" aria-hidden="true">lightbulb</span>
+        <p>事前アンケートでは、Canvaを一度も使ったことがない先生から、教育版を日常的に使っている先生まで、経験に大きな差がありました。そのため研修本編では、全員でテンプレートを探して作品を作るような一斉操作は行いません。<strong>SESSION 01・02</strong>を中心に進め、Canvaの基礎基本は<a href="#canva-basics" style="color:var(--color-blue-deep);font-weight:700;">Canva Basics</a>から、必要な先生が自分のペースで学べるようにしています。</p>
+      </div>
+
+      <!-- ===== SESSION 01 ===== -->
+      <div class="card session-card" id="session01" style="margin-bottom:2rem;">
+        <span class="session-badge"><span class="material-symbols-outlined" aria-hidden="true">mic</span>SESSION 01</span>
+        <h3 class="session-title">音声 × 生成AI</h3>
+        <p class="session-copy">「話した内容」を、使える文章へ。</p>
+        <p class="session-lead">会議、打合せ、面談などを録音し、その音声データを生成AIに読み込ませることで、会議録・要点整理・面談記録・保護者への報告文・職員への共有文・次に行うべきことの整理などへ変換できることを体験します。重要なのは、文字起こしをすることではなく、音声を「次の仕事に使える情報」へ変えることです。</p>
+
+        <h4 class="session-sub-title">基本の流れ</h4>
+        <div class="flow-diagram" style="margin-bottom:2rem;">
+          <div class="flow-step">会議・打合せ・面談などを録音する</div>
+          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
+          <div class="flow-step">音声データを生成AIに読み込ませる</div>
+          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
+          <div class="flow-step">目的にあわせてプロンプトを送る</div>
+          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
+          <div class="flow-step">会議録・報告文・共有文などへ変換する</div>
+        </div>
+
+        <h4 class="session-sub-title">演習手順</h4>
+        <ol class="step-list" style="margin-bottom:1.5rem;">
+          <li class="step-item">
+            <div class="step-num">1</div>
+            <div class="step-body"><h4>デモ音声を用意する</h4><p>研修では原則としてデモ用音声を使用します。下の「デモ音声」から音声データを確認してください。</p></div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">2</div>
+            <div class="step-body"><h4>音声データを生成AIに読み込ませる</h4><p>Gemini（またはGemini Notebook）に音声ファイルを添付します。</p></div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">3</div>
+            <div class="step-body"><h4>コピー用プロンプトを貼り付けて送信する</h4><p>下のプロンプトをコピーし、貼り付けて送信します。</p></div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">4</div>
+            <div class="step-body"><h4>出力を確認し、目的にあわせて整える</h4><p>出力された内容が音声と一致しているか、必ず人が確認します。</p></div>
+          </li>
+        </ol>
+
+        <div class="audio-placeholder">
+          <span class="material-symbols-outlined" aria-hidden="true">graphic_eq</span>
+          <p><strong>デモ音声（準備中）：</strong>研修当日に配布・共有します。データが準備でき次第、このカードにリンクを追加します。<br>実際の生徒・保護者・教職員の音声は使用しません。</p>
+        </div>
+
+        <h4 class="session-sub-title">コピー用プロンプト</h4>
+        <!-- コピー用プロンプト：ここから -->
+        <div class="prompt-card">
+          <div class="prompt-card-head">
+            <div>
+              <h4>会議録・要点整理</h4>
+              <p class="prompt-scene">録音した音声を、文字起こしを挟まずそのまま要約し、内容を整理します。</p>
+            </div>
+            <button type="button" class="copy-btn" data-copy-target="#promptS1-1">
+              <span class="material-symbols-outlined" aria-hidden="true">content_copy</span>
+              <span class="copy-label">コピー</span>
+            </button>
+          </div>
+          <div class="prompt-body" id="promptS1-1">添付した音声データから、会議録を作成してください。
+
+次の項目に分けてまとめてください。
+・日時、参加者
+・議題
+・主な発言・意見
+・決定事項
+・次回までの課題
+
+音声から判断できない部分は推測せず、
+「確認が必要」としてください。</div>
+        </div>
+        <p style="font-size:0.85rem;color:var(--color-text-sub);margin-top:1rem;">保護者への報告文・職員への共有文のプロンプトは<a href="#prompts-voice" style="color:var(--color-blue-deep);font-weight:700;">プロンプトライブラリ「音声」</a>にまとめてあります。</p>
+        <!-- コピー用プロンプト：ここまで -->
+
+        <h4 class="session-sub-title">音声データを扱うときの注意事項</h4>
+        <div class="security-card">
+          <div class="security-card-head">
+            <span class="material-symbols-outlined" aria-hidden="true">shield</span>
+            <p>Important / Security</p>
+          </div>
+          <ul>
+            <li>実際の生徒・保護者・教職員の音声を、許可なくAIサービスへアップロードしない。</li>
+            <li>個人情報を含むデータは、所属自治体・学校のルールを確認したうえで利用する。</li>
+            <li>研修では原則としてデモ用音声を使用する。</li>
+            <li>AIが生成した内容は、必ず人が確認する。</li>
+            <li>聞き取れない内容をAIに推測させない。</li>
+            <li>面談等を録音する場合は、事前に適切な説明・同意を行う。</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ===== SESSION 02 ===== -->
+      <div class="card session-card" id="session02">
+        <span class="session-badge"><span class="material-symbols-outlined" aria-hidden="true">auto_awesome</span>SESSION 02</span>
+        <h3 class="session-title">Gemini Notebook × Canva</h3>
+        <p class="session-copy">資料から、スライドへ。そして「自分の教材」へ。</p>
+        <p class="session-lead">既存の教材や信頼できる資料を起点として、授業資料づくりを効率化する考え方です。単に「AIにスライドを作らせる」のではなく、手元にある資料をGemini Notebookで整理し、生成したスライドをCanvaで授業に合う形へ仕上げます。</p>
+
+        <h4 class="session-sub-title">基本の流れ</h4>
+        <div class="flow-diagram" style="margin-bottom:2rem;">
+          <div class="flow-step">教材・資料</div>
+          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
+          <div class="flow-step">Gemini Notebook</div>
+          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
+          <div class="flow-step">スライド生成</div>
+          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
+          <div class="flow-step">PDFとして保存</div>
+          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
+          <div class="flow-step">画像としてCanvaへ</div>
+          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
+          <div class="flow-step">マジックレイヤー等を使って編集</div>
+          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
+          <div class="flow-step">授業で使える教材へ仕上げる</div>
+        </div>
+
+        <div class="statement-card" style="margin-bottom:2rem;">
+          <p class="eyebrow">Canva's Role</p>
+          <p class="statement">Canvaは、最初から全部作る場所ではありません。<br>AIが作った土台を、<span class="accent">人に伝わる形へ仕上げる場所</span>です。</p>
+        </div>
+
+        <p style="font-size:0.9rem;color:var(--color-text-sub);margin-bottom:0.75rem;">Canvaでは、主に次のような機能を使います。</p>
+        <div class="pill-row" style="margin-bottom:2rem;">
+          <span class="grad-pill">マジックレイヤー</span>
+          <span class="grad-pill">テキスト編集</span>
+          <span class="grad-pill">画像差し替え</span>
+          <span class="grad-pill">レイアウト調整</span>
+          <span class="grad-pill">色・フォントの調整</span>
+          <span class="grad-pill">PDF・画像への書き出し</span>
+        </div>
+
+        <h4 class="session-sub-title">演習手順</h4>
+        <ol class="step-list" style="margin-bottom:1.5rem;">
+          <li class="step-item">
+            <div class="step-num">1</div>
+            <div class="step-body"><h4>教材・資料をGemini Notebookに読み込ませる</h4><p>信頼できる資料をソースとして追加します。</p></div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">2</div>
+            <div class="step-body"><h4>Studio機能でスライドを生成する</h4><p>資料をもとに、スライド形式で生成します。</p></div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">3</div>
+            <div class="step-body"><h4>PDFとして保存し、Canvaへ読み込む</h4><p>生成したスライドをPDF（または画像）として保存し、Canvaにアップロードします。</p></div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">4</div>
+            <div class="step-body"><h4>マジックレイヤー等で編集し、教材へ仕上げる</h4><p>文字・画像・レイアウトを調整し、授業で使える形に整えます。</p></div>
+          </li>
+        </ol>
+
+        <h4 class="session-sub-title">コピー用プロンプト</h4>
+        <div class="prompt-card">
+          <div class="prompt-card-head">
+            <div>
+              <h4>スライド構成の生成</h4>
+              <p class="prompt-scene">資料をもとに、Gemini Notebookで生成するスライドの構成案を作ります。</p>
+            </div>
+            <button type="button" class="copy-btn" data-copy-target="#promptS2-1">
+              <span class="material-symbols-outlined" aria-hidden="true">content_copy</span>
+              <span class="copy-label">コピー</span>
+            </button>
+          </div>
+          <div class="prompt-body" id="promptS2-1">読み込んだ資料をもとに、【単元名】の授業スライドの構成案を作成してください。
+
+・導入（1枚）
+・展開（3〜4枚）
+・まとめ（1枚）
+
+各スライドに入れる要点を、箇条書きで示してください。
+資料に無い内容は加えないでください。</div>
+        </div>
+        <p style="font-size:0.85rem;color:var(--color-text-sub);margin-top:1rem;">ほかのプロンプトは<a href="#prompts-lesson" style="color:var(--color-blue-deep);font-weight:700;">プロンプトライブラリ「授業」</a>にまとめてあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LEARN BY YOURSELF：Canva Basics ===== -->
+  <section id="canva-basics" class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="badge badge-solid">Learn by Yourself</p>
+        <h2 class="section-title">Canva Basics<br>自分のペースで学ぶ</h2>
+        <p class="section-lead">研修本編では詳しく扱いません。Canvaが初めての方、まだ慣れていない方は、ここから自分のペースで学べます。動画は準備でき次第、順次このページに追加します。</p>
+      </div>
+
+      <div class="grid grid-3">
+
+        <!-- Canva Basics 動画カード1（YouTube URLはここに設定してください） -->
+        <div class="card video-card">
+          <p class="video-num">01</p>
+          <h4>Canvaへのログイン</h4>
+          <!-- YouTube URL：ここを差し替え（下のiframeのコメントを外し、srcを実際のURLに変更してください） -->
+          <!-- <div class="video-frame"><iframe src="https://www.youtube.com/embed/XXXXXXXXXXX" title="Canvaへのログイン" allowfullscreen loading="lazy"></iframe></div> -->
+          <div class="video-placeholder-frame"><div class="ph-inner"><span class="material-symbols-outlined" aria-hidden="true">smart_display</span><span class="ph-label">動画は準備中です</span></div></div>
+        </div>
+
+        <!-- Canva Basics 動画カード2 -->
+        <div class="card video-card">
+          <p class="video-num">02</p>
+          <h4>Canvaの画面構成</h4>
+          <!-- <div class="video-frame"><iframe src="https://www.youtube.com/embed/XXXXXXXXXXX" title="Canvaの画面構成" allowfullscreen loading="lazy"></iframe></div> -->
+          <div class="video-placeholder-frame"><div class="ph-inner"><span class="material-symbols-outlined" aria-hidden="true">smart_display</span><span class="ph-label">動画は準備中です</span></div></div>
+        </div>
+
+        <!-- Canva Basics 動画カード3 -->
+        <div class="card video-card">
+          <p class="video-num">03</p>
+          <h4>テンプレートの探し方</h4>
+          <!-- <div class="video-frame"><iframe src="https://www.youtube.com/embed/XXXXXXXXXXX" title="テンプレートの探し方" allowfullscreen loading="lazy"></iframe></div> -->
+          <div class="video-placeholder-frame"><div class="ph-inner"><span class="material-symbols-outlined" aria-hidden="true">smart_display</span><span class="ph-label">動画は準備中です</span></div></div>
+        </div>
+
+        <!-- Canva Basics 動画カード4 -->
+        <div class="card video-card">
+          <p class="video-num">04</p>
+          <h4>文字の入力・編集</h4>
+          <!-- <div class="video-frame"><iframe src="https://www.youtube.com/embed/XXXXXXXXXXX" title="文字の入力・編集" allowfullscreen loading="lazy"></iframe></div> -->
+          <div class="video-placeholder-frame"><div class="ph-inner"><span class="material-symbols-outlined" aria-hidden="true">smart_display</span><span class="ph-label">動画は準備中です</span></div></div>
+        </div>
+
+        <!-- Canva Basics 動画カード5 -->
+        <div class="card video-card">
+          <p class="video-num">05</p>
+          <h4>写真・イラストの挿入</h4>
+          <!-- <div class="video-frame"><iframe src="https://www.youtube.com/embed/XXXXXXXXXXX" title="写真・イラストの挿入" allowfullscreen loading="lazy"></iframe></div> -->
+          <div class="video-placeholder-frame"><div class="ph-inner"><span class="material-symbols-outlined" aria-hidden="true">smart_display</span><span class="ph-label">動画は準備中です</span></div></div>
+        </div>
+
+        <!-- Canva Basics 動画カード6 -->
+        <div class="card video-card">
+          <p class="video-num">06</p>
+          <h4>ページの追加・複製</h4>
+          <!-- <div class="video-frame"><iframe src="https://www.youtube.com/embed/XXXXXXXXXXX" title="ページの追加・複製" allowfullscreen loading="lazy"></iframe></div> -->
+          <div class="video-placeholder-frame"><div class="ph-inner"><span class="material-symbols-outlined" aria-hidden="true">smart_display</span><span class="ph-label">動画は準備中です</span></div></div>
+        </div>
+
+        <!-- Canva Basics 動画カード7 -->
+        <div class="card video-card">
+          <p class="video-num">07</p>
+          <h4>PDF・画像でのダウンロード</h4>
+          <!-- <div class="video-frame"><iframe src="https://www.youtube.com/embed/XXXXXXXXXXX" title="PDF・画像でのダウンロード" allowfullscreen loading="lazy"></iframe></div> -->
+          <div class="video-placeholder-frame"><div class="ph-inner"><span class="material-symbols-outlined" aria-hidden="true">smart_display</span><span class="ph-label">動画は準備中です</span></div></div>
+        </div>
+
+        <!-- Canva Basics 動画カード8 -->
+        <div class="card video-card">
+          <p class="video-num">08</p>
+          <h4>共有方法</h4>
+          <!-- <div class="video-frame"><iframe src="https://www.youtube.com/embed/XXXXXXXXXXX" title="共有方法" allowfullscreen loading="lazy"></iframe></div> -->
+          <div class="video-placeholder-frame"><div class="ph-inner"><span class="material-symbols-outlined" aria-hidden="true">smart_display</span><span class="ph-label">動画は準備中です</span></div></div>
+        </div>
+
+        <!-- Canva Basics 動画カード9 -->
+        <div class="card video-card">
+          <p class="video-num">09</p>
+          <h4>Canva教育版について</h4>
+          <!-- <div class="video-frame"><iframe src="https://www.youtube.com/embed/XXXXXXXXXXX" title="Canva教育版について" allowfullscreen loading="lazy"></iframe></div> -->
+          <div class="video-placeholder-frame"><div class="ph-inner"><span class="material-symbols-outlined" aria-hidden="true">smart_display</span><span class="ph-label">動画は準備中です</span></div></div>
+        </div>
+
+        <!-- Canva Basics 動画カード10 -->
+        <div class="card video-card">
+          <p class="video-num">10</p>
+          <h4>よく使う基本操作</h4>
+          <!-- <div class="video-frame"><iframe src="https://www.youtube.com/embed/XXXXXXXXXXX" title="よく使う基本操作" allowfullscreen loading="lazy"></iframe></div> -->
+          <div class="video-placeholder-frame"><div class="ph-inner"><span class="material-symbols-outlined" aria-hidden="true">smart_display</span><span class="ph-label">動画は準備中です</span></div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AFTER THE WORKSHOP ===== -->
+  <section id="after" class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="badge badge-solid">After the Workshop</p>
+        <h2 class="section-title">研修後に復習する</h2>
+        <p class="section-lead">研修が終わってからも、必要なときにここへ戻ってきてください。</p>
+      </div>
+
+      <div class="grid grid-3" style="margin-bottom:2.5rem;">
+        <a href="#today" class="card card-hover">
+          <h4 style="font-size:0.98rem;font-weight:800;margin-bottom:0.4rem;">今日の研修をもう一度確認</h4>
+          <p style="font-size:0.85rem;color:var(--color-text-sub);">流れ・情報をもう一度見る</p>
+        </a>
+        <a href="#session01" class="card card-hover">
+          <h4 style="font-size:0.98rem;font-weight:800;margin-bottom:0.4rem;">音声AI演習</h4>
+          <p style="font-size:0.85rem;color:var(--color-text-sub);">SESSION 01を見直す</p>
+        </a>
+        <a href="#session02" class="card card-hover">
+          <h4 style="font-size:0.98rem;font-weight:800;margin-bottom:0.4rem;">Gemini Notebook演習</h4>
+          <p style="font-size:0.85rem;color:var(--color-text-sub);">SESSION 02を見直す</p>
+        </a>
+        <a href="#canva-basics" class="card card-hover">
+          <h4 style="font-size:0.98rem;font-weight:800;margin-bottom:0.4rem;">Canva基礎動画</h4>
+          <p style="font-size:0.85rem;color:var(--color-text-sub);">Canva Basicsを見る</p>
+        </a>
+        <a href="#prompts" class="card card-hover">
+          <h4 style="font-size:0.98rem;font-weight:800;margin-bottom:0.4rem;">使用したプロンプト</h4>
+          <p style="font-size:0.85rem;color:var(--color-text-sub);">プロンプトライブラリを見る</p>
+        </a>
+        <a href="#roadmap" class="card card-hover">
+          <h4 style="font-size:0.98rem;font-weight:800;margin-bottom:0.4rem;">AI活用ロードマップ</h4>
+          <p style="font-size:0.85rem;color:var(--color-text-sub);">明日からの使い方を見る</p>
+        </a>
+      </div>
+
+      <h3 class="session-sub-title" style="margin-top:0;">よくある質問</h3>
+      <div class="accordion">
+        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq1">
+          <span class="trigger-label"><span class="material-symbols-outlined" aria-hidden="true">help</span>Canvaは無料ですか？</span>
+          <span class="material-symbols-outlined expand-icon" aria-hidden="true">expand_more</span>
+        </button>
+        <div class="accordion-panel" id="faq1">
+          <p>個人版は基本無料で利用できます。Canva教育版（Canva for Education）は、教育機関としての認証を受けると、多くの有料機能を無料で利用できます。校内での導入状況は、管理職・情報担当にご確認ください。</p>
+        </div>
+      </div>
+      <div class="accordion">
+        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq2">
+          <span class="trigger-label"><span class="material-symbols-outlined" aria-hidden="true">help</span>生成AIに個人情報を入力してもいいですか？</span>
+          <span class="material-symbols-outlined expand-icon" aria-hidden="true">expand_more</span>
+        </button>
+        <div class="accordion-panel" id="faq2">
+          <p>原則として、実際の生徒・保護者・教職員に関する個人情報や、許可を得ていない音声・資料をAIサービスへ入力しないでください。詳しくは<a href="#session01" style="color:var(--color-blue-deep);font-weight:700;">SESSION 01の注意事項</a>をご確認ください。</p>
+        </div>
+      </div>
+      <div class="accordion">
+        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq3">
+          <span class="trigger-label"><span class="material-symbols-outlined" aria-hidden="true">help</span>GeminiとGemini Notebookは何が違いますか？</span>
+          <span class="material-symbols-outlined expand-icon" aria-hidden="true">expand_more</span>
+        </button>
+        <div class="accordion-panel" id="faq3">
+          <p>Geminiは幅広い相談・作業に使える汎用のAIアシスタントです。Gemini Notebookは、自分がアップロードした資料を根拠として、その範囲内で要約・整理・教材化を行うことに向いています。詳しくは<a href="#tools" style="color:var(--color-blue-deep);font-weight:700;">ツールの使い分け</a>をご確認ください。</p>
+        </div>
+      </div>
+      <div class="accordion">
+        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq4">
+          <span class="trigger-label"><span class="material-symbols-outlined" aria-hidden="true">help</span>今日の研修内容を、全部いつも行う必要がありますか？</span>
+          <span class="material-symbols-outlined expand-icon" aria-hidden="true">expand_more</span>
+        </button>
+        <div class="accordion-panel" id="faq4">
+          <p>いいえ。<a href="#roadmap" style="color:var(--color-blue-deep);font-weight:700;">AI活用ロードマップ</a>にもある通り、必要なところだけをAIに任せることが大切です。すべてのステップを毎回行う必要はありません。</p>
+        </div>
+      </div>
+
+      <h3 class="session-sub-title">参考リンク</h3>
+      <div class="card">
+        <div class="link-list">
+          <a href="https://www.canva.com/help/" target="_blank" rel="noopener"><span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>Canva ヘルプセンター</a>
+          <a href="https://www.canva.com/education/" target="_blank" rel="noopener"><span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>Canva for Education（教育版）</a>
+          <a href="https://notebooklm.google/" target="_blank" rel="noopener"><span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>Gemini Notebook（NotebookLM）</a>
+          <a href="https://gemini.google.com/" target="_blank" rel="noopener"><span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>Gemini</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TEACHING IDEAS：教科別活用例 ===== -->
+  <section id="subjects" class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="badge badge-solid">Teaching Ideas</p>
+        <h2 class="section-title">教科別活用例</h2>
+        <p class="section-lead">研修当日はここを詳しく説明せず、数例だけ紹介します。あとから自分の教科・立場を探してください。</p>
+      </div>
+      <div class="grid grid-3">
+
+        <div class="card subject-card">
+          <div class="subject-card-head"><span class="subject-tag">国語</span><h4>国語</h4></div>
+          <p class="subject-flow">作品・評論資料をGemini Notebookで整理<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>授業スライド<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>Canvaで教材化</p>
+        </div>
+
+        <div class="card subject-card">
+          <div class="subject-card-head"><span class="subject-tag">数学</span><h4>数学</h4></div>
+          <p class="subject-flow">問題場面を視覚化<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>図解・ワークシート</p>
+        </div>
+
+        <div class="card subject-card">
+          <div class="subject-card-head"><span class="subject-tag">英語</span><h4>英語</h4></div>
+          <p class="subject-flow">会話場面・文化背景<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>ビジュアル教材</p>
+        </div>
+
+        <div class="card subject-card">
+          <div class="subject-card-head"><span class="subject-tag">理科</span><h4>理科</h4></div>
+          <p class="subject-flow">実験手順<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>図解・スライド</p>
+        </div>
+
+        <div class="card subject-card">
+          <div class="subject-card-head"><span class="subject-tag">社会</span><h4>社会</h4></div>
+          <p class="subject-flow">資料<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>要点整理<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>図解</p>
+        </div>
+
+        <div class="card subject-card">
+          <div class="subject-card-head"><span class="subject-tag">保体</span><h4>保健体育</h4></div>
+          <p class="subject-flow">動作やルール<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>視覚教材</p>
+        </div>
+
+        <div class="card subject-card">
+          <div class="subject-card-head"><span class="subject-tag">音楽</span><h4>音楽</h4></div>
+          <p class="subject-flow">楽曲・作曲家・背景資料<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>授業資料</p>
+        </div>
+
+        <div class="card subject-card">
+          <div class="subject-card-head"><span class="subject-tag">家庭</span><h4>家庭</h4></div>
+          <p class="subject-flow">調理・被服等の工程<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>手順教材</p>
+        </div>
+
+        <div class="card subject-card">
+          <div class="subject-card-head"><span class="subject-tag">美術</span><h4>美術</h4></div>
+          <p class="subject-flow">作品鑑賞<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>比較・鑑賞教材</p>
+        </div>
+
+        <div class="card subject-card">
+          <div class="subject-card-head"><span class="subject-tag">技術</span><h4>技術</h4></div>
+          <p class="subject-flow">制作工程<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>手順教材</p>
+        </div>
+
+        <div class="card subject-card">
+          <div class="subject-card-head"><span class="subject-tag">特支</span><h4>特別支援</h4></div>
+          <p class="subject-flow">文字情報<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>視覚的に分かりやすい教材</p>
+        </div>
+
+        <div class="card subject-card">
+          <div class="subject-card-head"><span class="subject-tag">養護</span><h4>養護</h4></div>
+          <p class="subject-flow">保健だより<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>掲示物</p>
+        </div>
+
+        <div class="card subject-card">
+          <div class="subject-card-head"><span class="subject-tag">管理職</span><h4>管理職</h4></div>
+          <p class="subject-flow">会議・校内周知<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>保護者文書</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROMPT LIBRARY ===== -->
+  <section id="prompts" class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="badge badge-solid">Prompt Library</p>
+        <h2 class="section-title">明日から使えるプロンプト集</h2>
+        <p class="section-lead">「そのままコピー」→「【　】部分だけ自分の内容に変更」で使えます。カテゴリーをタップすると開きます。</p>
+      </div>
+
+      <!-- 音声 -->
+      <div class="accordion" id="prompts-voice">
+        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="cat-voice">
+          <span class="trigger-label"><span class="material-symbols-outlined" aria-hidden="true">mic</span>音声</span>
+          <span class="material-symbols-outlined expand-icon" aria-hidden="true">expand_more</span>
+        </button>
+        <div class="accordion-panel" id="cat-voice">
+
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <div><h4>会議録</h4><p class="prompt-scene">会議・打合せの音声から会議録を作る。</p></div>
+              <button type="button" class="copy-btn" data-copy-target="#pv1"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
+            </div>
+            <div class="prompt-body" id="pv1">添付した音声データから、会議録を作成してください。
+
+次の項目に分けてまとめてください。
+・日時、参加者
+・議題
+・主な発言・意見
+・決定事項
+・次回までの課題
+
+音声から判断できない部分は推測せず、
+「確認が必要」としてください。</div>
+          </div>
+
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <div><h4>面談まとめ</h4><p class="prompt-scene">面談の音声を、記録として整理する。</p></div>
+              <button type="button" class="copy-btn" data-copy-target="#pv2"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
+            </div>
+            <div class="prompt-body" id="pv2">添付した音声は【生徒名／保護者名】との面談記録です。
+次の観点で整理してください。
+
+・面談の目的
+・本人・保護者から出た意見
+・学校側の説明内容
+・今後の対応
+・次回面談予定
+
+個人が特定される固有名詞は【　】のまま扱い、
+書き換えないでください。</div>
+          </div>
+
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <div><h4>保護者報告</h4><p class="prompt-scene">音声の内容を、保護者向けの報告文にする。</p></div>
+              <button type="button" class="copy-btn" data-copy-target="#pv3"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
+            </div>
+            <div class="prompt-body" id="pv3">添付した音声の内容をもとに、
+保護者向けの報告文を作成してください。
+
+条件:
+・丁寧な言葉づかいにする
+・専門用語を避ける
+・【学年・組】【生徒名】は【　】のまま残す
+・事実と学校の対応を分けて書く</div>
+          </div>
+
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <div><h4>職員共有</h4><p class="prompt-scene">音声の内容を、職員向けの連絡文にする。</p></div>
+              <button type="button" class="copy-btn" data-copy-target="#pv4"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
+            </div>
+            <div class="prompt-body" id="pv4">添付した音声の内容を、職員間で共有するための
+簡潔な連絡文にしてください。
+
+・見出しをつける
+・重要な変更点を先に書く
+・共有すべき締切がある場合は太字で示す</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 授業 -->
+      <div class="accordion" id="prompts-lesson">
+        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="cat-lesson">
+          <span class="trigger-label"><span class="material-symbols-outlined" aria-hidden="true">auto_stories</span>授業</span>
+          <span class="material-symbols-outlined expand-icon" aria-hidden="true">expand_more</span>
+        </button>
+        <div class="accordion-panel" id="cat-lesson">
+
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <div><h4>授業アイデア</h4><p class="prompt-scene">単元の授業アイデアを複数提案してもらう。</p></div>
+              <button type="button" class="copy-btn" data-copy-target="#pl1"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
+            </div>
+            <div class="prompt-body" id="pl1">【教科】【学年】【単元名】の授業アイデアを
+3つ提案してください。
+
+条件:
+・生徒が主体的に取り組める活動を含める
+・1時間（50分）で実施できる規模にする
+・ICTを活用する案を1つ以上含める</div>
+          </div>
+
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <div><h4>ワークシート</h4><p class="prompt-scene">単元のワークシートのたたき台を作る。</p></div>
+              <button type="button" class="copy-btn" data-copy-target="#pl2"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
+            </div>
+            <div class="prompt-body" id="pl2">【教科】【単元名】のワークシートを作成してください。
+
+・目標を1文で示す
+・穴埋め問題を3問
+・記述問題を2問
+・難易度は【基礎／標準／発展】</div>
+          </div>
+
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <div><h4>発問</h4><p class="prompt-scene">授業で使う発問をレベル別に考えてもらう。</p></div>
+              <button type="button" class="copy-btn" data-copy-target="#pl3"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
+            </div>
+            <div class="prompt-body" id="pl3">【単元名】の授業で使える発問を、
+レベル別に5つ考えてください。
+
+・知識を確認する発問を2つ
+・思考を促す発問を2つ
+・意見を引き出す発問を1つ</div>
+          </div>
+
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <div><h4>スライド構成</h4><p class="prompt-scene">Gemini Notebookで生成するスライドの構成案を作る。</p></div>
+              <button type="button" class="copy-btn" data-copy-target="#pl4"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
+            </div>
+            <div class="prompt-body" id="pl4">読み込んだ資料をもとに、【単元名】の
+授業スライドの構成案を作成してください。
+
+・導入（1枚）
+・展開（3〜4枚）
+・まとめ（1枚）
+
+各スライドに入れる要点を、箇条書きで示してください。
+資料に無い内容は加えないでください。</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 校務 -->
+      <div class="accordion" id="prompts-work">
+        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="cat-work">
+          <span class="trigger-label"><span class="material-symbols-outlined" aria-hidden="true">work</span>校務</span>
+          <span class="material-symbols-outlined expand-icon" aria-hidden="true">expand_more</span>
+        </button>
+        <div class="accordion-panel" id="cat-work">
+
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <div><h4>保護者文書</h4><p class="prompt-scene">行事・連絡の案内文を作る。</p></div>
+              <button type="button" class="copy-btn" data-copy-target="#pw1"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
+            </div>
+            <div class="prompt-body" id="pw1">【行事名／連絡内容】について、
+保護者向けの案内文を作成してください。
+
+・件名をつける
+・日時、持ち物、注意事項を分けて書く
+・丁寧語を使い、簡潔にまとめる</div>
+          </div>
+
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <div><h4>学級通信</h4><p class="prompt-scene">学級通信のたたき台を作る。</p></div>
+              <button type="button" class="copy-btn" data-copy-target="#pw2"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
+            </div>
+            <div class="prompt-body" id="pw2">【学年・組】の学級通信を作成してください。
+
+・今週の出来事を3つ
+・来週の予定
+・担任からひとこと
+
+文体は温かく、保護者が読みやすい長さにしてください。</div>
+          </div>
+
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <div><h4>行事案内</h4><p class="prompt-scene">職員向けの行事実施案内を作る。</p></div>
+              <button type="button" class="copy-btn" data-copy-target="#pw3"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
+            </div>
+            <div class="prompt-body" id="pw3">【行事名】の実施案内を、職員向けに作成してください。
+
+・目的
+・日時・場所
+・役割分担（【　】のまま項目だけ示す）
+・準備物と締切</div>
+          </div>
+
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <div><h4>校内文書</h4><p class="prompt-scene">校内向けの通知文書を作る。</p></div>
+              <button type="button" class="copy-btn" data-copy-target="#pw4"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
+            </div>
+            <div class="prompt-body" id="pw4">【議題／内容】について、
+校内向けの通知文書を作成してください。
+
+・要点を先頭にまとめる
+・箇条書きを使う
+・確認・提出が必要な場合は期限を明記する</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Canva -->
+      <div class="accordion" id="prompts-canva">
+        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="cat-canva">
+          <span class="trigger-label"><span class="material-symbols-outlined" aria-hidden="true">palette</span>Canva</span>
+          <span class="material-symbols-outlined expand-icon" aria-hidden="true">expand_more</span>
+        </button>
+        <div class="accordion-panel" id="cat-canva">
+
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <div><h4>画像生成用プロンプト</h4><p class="prompt-scene">授業で使うシンプルなイラストを生成する。</p></div>
+              <button type="button" class="copy-btn" data-copy-target="#pc1"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
+            </div>
+            <div class="prompt-body" id="pc1">【授業で使う場面・テーマ】を表す、
+シンプルで分かりやすいイラストを生成してください。
+
+条件:
+・生徒にとって理解しやすい構図にする
+・文字は入れない
+・色数を抑え、落ち着いた配色にする</div>
+          </div>
+
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <div><h4>デザイン改善用プロンプト</h4><p class="prompt-scene">作った教材の見やすさを改善する案をもらう。</p></div>
+              <button type="button" class="copy-btn" data-copy-target="#pc2"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
+            </div>
+            <div class="prompt-body" id="pc2">この教材のデザインを、中学生にとって見やすく
+改善する案を3つ提案してください。
+
+・文字サイズや余白の観点
+・色のコントラストの観点
+・情報量を減らす観点
+
+それぞれ具体的な変更点を挙げてください。</div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== START TOMORROW：AI活用ロードマップ ===== -->
+  <section id="roadmap" class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="badge badge-solid">Start Tomorrow</p>
+        <h2 class="section-title">明日から使えるAI活用ロードマップ</h2>
+        <p class="section-lead">今回の研修内容を、7つのステップに整理しました。</p>
+      </div>
+
+      <div class="card">
+        <div class="roadmap">
+          <div class="roadmap-step">
+            <div class="roadmap-num"><span class="step-label">STEP</span><span class="step-no">01</span></div>
+            <div class="roadmap-body"><h4>録音する</h4><p>会議・打合せ・面談などを録音する。</p></div>
+          </div>
+          <div class="roadmap-step">
+            <div class="roadmap-num"><span class="step-label">STEP</span><span class="step-no">02</span></div>
+            <div class="roadmap-body"><h4>AIで整理する</h4><p>録音した音声を生成AIに読み込ませ、内容を整理する。</p></div>
+          </div>
+          <div class="roadmap-step">
+            <div class="roadmap-num"><span class="step-label">STEP</span><span class="step-no">03</span></div>
+            <div class="roadmap-body"><h4>必要な文章に変換する</h4><p>会議録・報告文・共有文など、目的に合わせて文章化する。</p></div>
+          </div>
+          <div class="roadmap-step">
+            <div class="roadmap-num"><span class="step-label">STEP</span><span class="step-no">04</span></div>
+            <div class="roadmap-body"><h4>資料をGemini Notebookで整理する</h4><p>授業や校務の資料をソースとして読み込ませ、要点を整理する。</p></div>
+          </div>
+          <div class="roadmap-step">
+            <div class="roadmap-num"><span class="step-label">STEP</span><span class="step-no">05</span></div>
+            <div class="roadmap-body"><h4>プレゼン資料を生成する</h4><p>Gemini NotebookのStudio機能でスライドを生成する。</p></div>
+          </div>
+          <div class="roadmap-step">
+            <div class="roadmap-num"><span class="step-label">STEP</span><span class="step-no">06</span></div>
+            <div class="roadmap-body"><h4>Canvaで仕上げる</h4><p>生成したスライドをCanvaに取り込み、人に伝わる形へ編集する。</p></div>
+          </div>
+          <div class="roadmap-step">
+            <div class="roadmap-num"><span class="step-label">STEP</span><span class="step-no">07</span></div>
+            <div class="roadmap-body"><h4>授業・校務で使う</h4><p>完成した教材・文書を、実際の授業や校務で活用する。</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tip-card" style="margin-top:1.5rem;">
+        <span class="material-symbols-outlined" aria-hidden="true">info</span>
+        <p><strong>全員がこの7STEPを毎回行う必要はありません。</strong>必要なところだけ、AIに任せることが大切です。録音だけで十分なときもあれば、Canvaでの仕上げまで必要なときもあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AIツールの使い分け ===== -->
+  <section id="tools" class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="badge badge-solid">How to Choose</p>
+        <h2 class="section-title">AIツールの使い分け</h2>
+        <p class="section-lead">どれが優れているかを比べるものではありません。目的によって使い分けます。</p>
+      </div>
+      <div class="grid grid-4">
+        <div class="card tool-card">
+          <div class="tool-icon"><span class="material-symbols-outlined" aria-hidden="true">chat</span></div>
+          <h4>ChatGPT</h4>
+          <p>考える・相談する・文章化する。アイデア出しや文章の下書き、壁打ち相手として使います。</p>
+        </div>
+        <div class="card tool-card">
+          <div class="tool-icon"><span class="material-symbols-outlined" aria-hidden="true">auto_awesome</span></div>
+          <h4>Gemini</h4>
+          <p>Google環境と組み合わせて生成AIを活用する。普段の校務の流れの中で使います。</p>
+        </div>
+        <div class="card tool-card">
+          <div class="tool-icon"><span class="material-symbols-outlined" aria-hidden="true">menu_book</span></div>
+          <h4>Gemini Notebook</h4>
+          <p>手元の資料を起点に理解・整理・教材化する。資料の範囲内で要約・スライド化します。</p>
+        </div>
+        <div class="card tool-card">
+          <div class="tool-icon"><span class="material-symbols-outlined" aria-hidden="true">palette</span></div>
+          <h4>Canva</h4>
+          <p>人に伝わる形に仕上げる。AIが作った土台を、生徒や保護者に伝わるデザインへ整えます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 講師プロフィール：ここから編集 -->
+  <!-- ===== 講師紹介 ===== -->
+  <section id="instructor" class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="badge badge-solid">Instructor</p>
+        <h2 class="section-title">講師紹介</h2>
+      </div>
+
+      <div class="card card-hover instructor-card">
+        <div class="instructor-flex">
+          <!-- 講師写真：assets/images/instructor-illustration.png を差し替えてください（画像が無くても崩れません） -->
+          <div class="instructor-photo">
+            <img src="assets/images/instructor-illustration.png" alt="和田倫周 プロフィールイラスト" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <span class="material-symbols-outlined avatar-fallback-icon" aria-hidden="true">person</span>
+          </div>
+          <div>
+            <h3 class="instructor-name">和田 倫周 <span class="yomi">（わだ みちひろ）</span></h3>
+            <p class="instructor-role">鹿児島県立開陽高等学校 定時制課程 進路支援部主任 / 国語科教諭・司書教諭</p>
+
+            <!-- 資格バッジ：画像は assets/images/google-trainer-badge.png・canvassador-badge.png を差し替えてください（画像が無くても崩れません） -->
+            <div class="badge-row">
+              <span class="grad-pill">Google for Education 認定トレーナー</span>
+              <img src="assets/images/google-trainer-badge.png" alt="Google for Education Certified Trainer" class="badge-img" onerror="this.style.display='none';">
+            </div>
+            <div class="badge-row">
+              <span class="grad-pill">Canva 認定教育アンバサダー</span>
+              <img src="assets/images/canvassador-badge.png" alt="Canva Canvassador 2026" class="badge-img-round" onerror="this.style.display='none';">
+            </div>
+            <div class="pill-row">
+              <span class="grad-pill">GEG Mentors 2025-2026</span>
+              <span class="grad-pill">GEG Kagoshima 認定共同リーダー</span>
+              <span class="grad-pill">Gemini 認定教育者</span>
+              <span class="grad-pill">CEC鹿児島リーダー</span>
+            </div>
+
+            <p class="instructor-bio">
+              1969年東京生まれ。大学在学中からテレビ局での深夜番組制作に携わり、卒業後は東京赤坂のヨーロッパ専門の旅行会社に勤務。退職後、古着と雑貨の輸入で起業した後、教職へ。初任・鹿屋高校、屋久島高校、鶴丸高校、鹿屋高校(2回目)を経て、現在は開陽高校定時制課程で進路支援部主任を務める。ICTを活かした探究的な教育実践に注力している。
+            </p>
+
+            <div class="quote-box">
+              「国語を教えるのではなく、国語で『生き方』を伝える授業」が信条。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 講師プロフィール：ここまで -->
+
+  <!-- 著作情報：ここから編集 -->
+  <!-- ===== 著作紹介 ===== -->
+  <section id="book" class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="badge badge-solid">Book</p>
+        <h2 class="section-title">著作紹介</h2>
+      </div>
+
+      <!-- 著作カード1：ここから編集（書名・出版社・著者・紹介文・画像・リンクを差し替え） -->
+      <div class="card card-hover book-card">
+        <!-- 書影：assets/images/book-cover.png を差し替えてください（画像が無くても崩れません） -->
+        <div class="book-cover">
+          <img src="assets/images/book-cover.png" alt="先生のためのCanva教育版 やさしい入門 書影" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <span class="material-symbols-outlined avatar-fallback-icon" aria-hidden="true">menu_book</span>
+        </div>
+        <div class="book-info">
+          <h3>先生のためのCanva教育版 やさしい入門</h3>
+          <p class="publisher">[監修] 坂本良晶　[著者] 飯山彩也香、五十嵐太一、江藤由布、遠藤隆平、大野翔、恩地麻里、片岸力丸、柴田大翔、長田夢、藤井海、古川俊、<strong>和田倫周</strong></p>
+          <ul class="desc">
+            <li><span class="label">定価:</span><span>1,980円（本体1,800円+税10%）</span></li>
+            <li><span class="label">発売日:</span><span>2026.5.28</span></li>
+            <li><span class="label">判型:</span><span>B5変形 / 208ページ</span></li>
+            <li><span class="label">ISBN:</span><span>978-4-297-15660-2</span></li>
+          </ul>
+          <a href="https://gihyo.jp/book/2026/978-4-297-15660-2" target="_blank" rel="noopener" class="btn btn-primary btn-sm">技術評論社サイトで見る</a>
+        </div>
+      </div>
+      <!-- 著作カード1：ここまで -->
+
+      <!-- 著作カードを追加する場合は、上の .book-card 1ブロックをコピーしてこの下に貼り付け、grid_2などで並べてください -->
+
+    </div>
+  </section>
+  <!-- 著作情報：ここまで -->
+
+  <!-- ===== 個人情報の取扱い（最終確認） ===== -->
+  <section class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="badge badge-solid">Privacy</p>
+        <h2 class="section-title">個人情報の取扱い</h2>
+      </div>
+      <div class="caution-card">
+        <span class="material-symbols-outlined" aria-hidden="true">warning</span>
+        <p>個人情報を含む資料や音声を生成AIへ入力しないでください。生徒・保護者の氏名、住所、電話番号、成績、健康情報などは、番号・記号・仮名に置き換えてください。AIが生成した内容は、そのまま使用せず、必ず教職員が内容を確認してください。詳しくは<a href="#session01" style="color:var(--color-blue-deep);font-weight:700;">SESSION 01の注意事項</a>をご確認ください。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== フッター ===== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="foot-title">北指宿中学校 ICT研修ポータル</p>
+      <p class="foot-sub">AI × Canvaで、授業づくりと校務をもっと軽く。研修当日も、研修後も、日々の授業・校務でも使えるポータルです。</p>
+      <div class="footer-links">
+        <a href="#today">今日の研修</a>
+        <a href="#canva-basics">Canva Basics</a>
+        <a href="#prompts">プロンプトライブラリ</a>
+        <a href="#subjects">教科別活用例</a>
+        <a href="#instructor">講師紹介</a>
+        <a href="#book">著作紹介</a>
+      </div>
+      <p class="footer-copy">&copy; 北指宿中学校 ICT研修ポータル</p>
+    </div>
+  </footer>
+
+  <!-- ===== トップへ戻るボタン ===== -->
+  <button type="button" id="backToTop" class="back-to-top" aria-label="トップへ戻る">
+    <span class="material-symbols-outlined" aria-hidden="true">arrow_upward</span>
+  </button>
+
+  <!-- ===== トースト通知 ===== -->
+  <div id="toast" class="toast" role="status">
+    <span class="material-symbols-outlined" aria-hidden="true">check_circle</span>
+    <span class="toast-label">コピーしました</span>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
