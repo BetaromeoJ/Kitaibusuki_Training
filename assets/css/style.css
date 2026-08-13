@@ -280,7 +280,7 @@ section.block + section.block {
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: #0a0a0c;
+  background: var(--color-blue-deep);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -303,14 +303,15 @@ section.block + section.block {
   transform: translateY(24px);
   transition: opacity .6s ease, transform .6s ease;
   padding: 0 1.5rem;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.18);
 }
 .splash-overlay.show .splash-text { opacity: 1; transform: translateY(0); }
 .splash-sub {
   display: block;
   margin-top: .6rem;
   font-size: .78rem;
-  font-weight: 500;
-  color: #9aa0b4;
+  font-weight: 600;
+  color: #e3e8ff;
   letter-spacing: 0.12em;
 }
 
@@ -626,7 +627,7 @@ section.block + section.block {
 }
 .instructor-photo {
   position: relative;
-  width: 160px; height: 160px;
+  width: 184px; height: 184px;
   border-radius: var(--radius-full);
   background: var(--color-pill-bg);
   border: 1px solid var(--color-border);
@@ -668,6 +669,18 @@ section.block + section.block {
 }
 .badge-img { height: 96px; width: auto; }
 .badge-img-round { height: 64px; width: 64px; border-radius: var(--radius-full); object-fit: cover; }
+.achievement-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: linear-gradient(90deg, #f7d38a 0%, #f0b45e 100%);
+  color: #6b4a12;
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 0.5rem 1.05rem;
+  border-radius: var(--radius-full);
+}
+.achievement-pill .material-symbols-outlined { font-size: 17px; color: #8a5c0c; }
 .instructor-bio { color: var(--color-text); font-size: 0.92rem; line-height: 1.85; margin-bottom: 1rem; }
 .quote-box {
   background: linear-gradient(90deg, #eef0fb 0%, #f2eefa 100%);
@@ -691,7 +704,7 @@ section.block + section.block {
 }
 .book-cover {
   position: relative;
-  width: 192px;
+  width: 216px;
   border-radius: var(--radius-sm);
   box-shadow: 0 8px 20px -10px rgba(17,17,20,0.35);
   background: var(--color-pill-bg);
