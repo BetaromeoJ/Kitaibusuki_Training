@@ -587,21 +587,93 @@ section.block + section.block {
 .session-sub-title { font-size: 1.02rem; font-weight: 800; margin: 2rem 0 1rem; }
 .session-sub-title:first-of-type { margin-top: 0; }
 
-/* SESSIONの階層化：概要は常時表示、詳細は開閉パネル */
-.session-toggle {
-  width: 100%;
+/* ------------------------------------------------------------
+   SESSIONの全画面ビュー（メニュー・ボタンのリンクから開く）
+   ------------------------------------------------------------ */
+body.session-view-open { overflow: hidden; }
+
+.session-view {
+  position: fixed;
+  inset: 0;
+  z-index: 700;
+  background: #ffffff;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: none;
+}
+.session-view.open { display: block; }
+
+.session-curtain {
+  position: absolute;
+  inset: 0;
+  z-index: 50;
+  background: var(--color-blue-deep);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(0);
+  transition: transform .55s cubic-bezier(.65,0,.35,1);
+}
+.session-curtain.hide {
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+.session-curtain-text {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: clamp(1.3rem, 4vw, 2rem);
+  letter-spacing: 0.04em;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .5s ease, transform .5s ease;
+  padding: 0 1.5rem;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.18);
+}
+.session-curtain.show .session-curtain-text { opacity: 1; transform: translateY(0); }
+.session-curtain-sub {
+  display: block;
+  margin-top: .6rem;
+  font-size: .78rem;
+  font-weight: 600;
+  color: #e3e8ff;
+  letter-spacing: 0.12em;
+}
+
+.session-view-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-border);
+  padding: 0.85rem 0;
+}
+.session-view-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.session-close-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 44px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--color-text);
+  background: #ffffff;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  background: var(--color-panel-bg);
-  margin: 0.25rem 0 0;
+  border-radius: var(--radius-full);
+  padding: 0.55rem 1.15rem;
+  cursor: pointer;
 }
-.session-toggle:hover { background: #eef0fb; }
-.session-card .accordion-panel.session-detail {
-  padding: 1.75rem 0 0;
-}
-.session-card .accordion-panel.session-detail.open {
-  margin-bottom: -0.5rem;
-}
+.session-close-btn:hover { border-color: #c9d0f5; color: var(--color-blue-deep); }
+
+.session-view-body { padding: 2rem 0 5rem; }
 
 /* ------------------------------------------------------------
    強調ステートメント（Canvaの位置付け等）

@@ -160,11 +160,15 @@ function initAccordions() {
   });
 }
 
+// SESSION 01・02は「全画面ビュー」として扱うため、通常のスムーススクロール対象から除外する
+const SESSION_VIEW_IDS = ['session01', 'session02'];
+
 function initSmoothAnchors() {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    const targetId = link.getAttribute('href').slice(1);
+    if (SESSION_VIEW_IDS.includes(targetId)) return;
     link.addEventListener('click', (e) => {
-      const targetId = link.getAttribute('href').slice(1);
       if (!targetId) return;
       const target = document.getElementById(targetId);
       if (!target) return;
@@ -176,6 +180,74 @@ function initSmoothAnchors() {
       target.setAttribute('tabindex', '-1');
       target.focus({ preventScroll: true });
     });
+  });
+}
+
+// SESSIONの全画面ビュー：メニューやボタンのリンク（href="#session01"等）をクリックすると、
+// そのセッションだけを全画面表示する。入場時は幕（カーテン）が下から上へ流れて消える演出を行う。
+function initSessionViews() {
+  const views = document.querySelectorAll('.session-view');
+  if (!views.length) return;
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const openView = (id) => {
+    const view = document.getElementById(id + '-view');
+    if (!view) return;
+
+    document.body.classList.add('session-view-open');
+    view.classList.add('open');
+    view.scrollTop = 0;
+
+    const curtain = view.querySelector('.session-curtain');
+    if (curtain) {
+      if (prefersReducedMotion) {
+        curtain.classList.add('hide');
+      } else {
+        curtain.classList.remove('hide', 'show');
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => curtain.classList.add('show'));
+        });
+        clearTimeout(curtain._hideTimer);
+        curtain._hideTimer = setTimeout(() => curtain.classList.add('hide'), 850);
+      }
+    }
+
+    view.setAttribute('tabindex', '-1');
+    view.focus({ preventScroll: true });
+  };
+
+  const closeView = (view) => {
+    view.classList.remove('open');
+    document.body.classList.remove('session-view-open');
+    const curtain = view.querySelector('.session-curtain');
+    if (curtain) {
+      clearTimeout(curtain._hideTimer);
+      curtain.classList.remove('show', 'hide');
+    }
+  };
+
+  // href="#session01" / "#session02" を持つリンクはすべて全画面ビューを開くトリガーにする
+  document.querySelectorAll('a[href="#session01"], a[href="#session02"]').forEach((link) => {
+    link.addEventListener('click', (e) => {
+      const id = link.getAttribute('href').slice(1);
+      const view = document.getElementById(id + '-view');
+      if (!view) return;
+      e.preventDefault();
+      openView(id);
+    });
+  });
+
+  views.forEach((view) => {
+    view.querySelectorAll('.session-close-btn').forEach((btn) => {
+      btn.addEventListener('click', () => closeView(view));
+    });
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.session-view.open').forEach(closeView);
+    }
   });
 }
 
@@ -194,6 +266,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initBackToTop();
   initCopyButtons();
   initAccordions();
+  initSessionViews();
   initSmoothAnchors();
   initTapLift();
 });

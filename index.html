@@ -69,7 +69,7 @@
       <h1 class="hero-title-en"><span class="line-dark">Work Smarter.</span><span class="line-accent">Teach Better.</span></h1>
       <p class="hero-copy-jp">AI × Canvaで、授業づくりと校務をもっと軽く。</p>
       <p class="hero-meta">Kita-Ibusuki Junior High School ICT Workshop 2026</p>
-      <p class="hero-copy">2026年8月21日（金）13:00〜15:00、北指宿中学校 教職員を対象に行うICT研修のポータルサイトです。単なるCanva操作研修ではなく、生成AI・Gemini Notebook・Canvaを組み合わせて、授業準備や校務にかかる時間を減らし、先生にしかできない仕事に使える時間を増やすことを目指します。研修当日はこのサイトを操作しながら進め、研修後も復習や実務での見直しに使えます。</p>
+      <p class="hero-copy">2026年8月21日（金）13:00〜15:00、北指宿中学校の先生方を対象に行うICT研修のポータルサイトです。単なるCanva操作研修ではなく、生成AI・Gemini Notebook・Canvaを組み合わせて、授業準備や校務にかかる時間を減らし、先生にしかできない仕事に使える時間を増やすことを目指します。研修当日はこのサイトを操作しながら進め、研修後も復習や実務での見直しに使えます。</p>
       <div class="hero-actions">
         <a href="#today" class="btn btn-primary">今日の研修を始める</a>
         <a href="#canva-basics" class="btn btn-outline">Canvaを基礎から学ぶ</a>
@@ -234,20 +234,42 @@
         <p>事前アンケートでは、Canvaを一度も使ったことがない先生から、教育版を日常的に使っている先生まで、経験に大きな差がありました。そのため研修本編では、全員でテンプレートを探して作品を作るような一斉操作は行いません。<strong>SESSION 01・02</strong>を中心に進め、Canvaの基礎基本は<a href="#canva-basics" style="color:var(--color-blue-deep);font-weight:700;">Canva Basics</a>から、必要な先生が自分のペースで学べるようにしています。</p>
       </div>
 
-      <!-- ===== SESSION 01 ===== -->
-      <div class="card session-card" id="session01" style="margin-bottom:2rem;">
+      <!-- ===== SESSION 01（クリックで全画面表示） ===== -->
+      <div class="card session-card" id="session01" style="margin-bottom:1.25rem;">
         <span class="session-badge"><span class="material-symbols-outlined" aria-hidden="true">mic</span>SESSION 01</span>
         <h3 class="session-title">音声 × 生成AI</h3>
         <p class="session-copy">「話した内容」を、使える文章へ。</p>
+        <a href="#session01" class="btn btn-primary">SESSION 01を開く<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+      </div>
+
+      <!-- ===== SESSION 02（クリックで全画面表示） ===== -->
+      <div class="card session-card" id="session02">
+        <span class="session-badge"><span class="material-symbols-outlined" aria-hidden="true">auto_awesome</span>SESSION 02</span>
+        <h3 class="session-title">Gemini Notebook × Canva</h3>
+        <p class="session-copy">資料から、スライドへ。そして「自分の教材」へ。</p>
+        <a href="#session02" class="btn btn-primary">SESSION 02を開く<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SESSION 01 全画面ビュー（メニュー・ボタンのリンクから開く／幕の演出付き） ===== -->
+  <div class="session-view" id="session01-view" role="dialog" aria-modal="true" aria-label="SESSION 01 音声×生成AI">
+    <div class="session-curtain">
+      <p class="session-curtain-text">SESSION 01<span class="session-curtain-sub">音声 × 生成AI</span></p>
+    </div>
+    <div class="session-view-header">
+      <div class="wrap">
+        <span class="session-badge" style="margin:0;"><span class="material-symbols-outlined" aria-hidden="true">mic</span>SESSION 01</span>
+        <button type="button" class="session-close-btn"><span class="material-symbols-outlined" aria-hidden="true">close</span>閉じる</button>
+      </div>
+    </div>
+    <div class="session-view-body">
+      <div class="wrap">
+        <h2 class="session-title">音声 × 生成AI</h2>
+        <p class="session-copy">「話した内容」を、使える文章へ。</p>
         <p class="session-lead">会議、打合せ、面談などを録音し、その音声データを生成AIに読み込ませることで、会議録・要点整理・面談記録・保護者への報告文・職員への共有文・次に行うべきことの整理などへ変換できることを体験します。重要なのは、文字起こしをすることではなく、音声を「次の仕事に使える情報」へ変えることです。</p>
 
-        <button type="button" class="accordion-trigger session-toggle" aria-expanded="false" aria-controls="session01-detail">
-          <span class="trigger-label"><span class="material-symbols-outlined" aria-hidden="true">checklist</span>詳しく見る（基本の流れ・演習手順・プロンプト・注意事項）</span>
-          <span class="material-symbols-outlined expand-icon" aria-hidden="true">expand_more</span>
-        </button>
-        <div class="accordion-panel session-detail" id="session01-detail">
-
-        <h4 class="session-sub-title">基本の流れ</h4>
+        <h4 class="session-sub-title" style="margin-top:1.75rem;">基本の流れ</h4>
         <div class="flow-diagram" style="margin-bottom:2rem;">
           <div class="flow-step">会議・打合せ・面談などを録音する</div>
           <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
@@ -326,24 +348,28 @@
             <li>面談等を録音する場合は、事前に適切な説明・同意を行う。</li>
           </ul>
         </div>
-
-        </div>
       </div>
+    </div>
+  </div>
 
-      <!-- ===== SESSION 02 ===== -->
-      <div class="card session-card" id="session02">
-        <span class="session-badge"><span class="material-symbols-outlined" aria-hidden="true">auto_awesome</span>SESSION 02</span>
-        <h3 class="session-title">Gemini Notebook × Canva</h3>
+  <!-- ===== SESSION 02 全画面ビュー（メニュー・ボタンのリンクから開く／幕の演出付き） ===== -->
+  <div class="session-view" id="session02-view" role="dialog" aria-modal="true" aria-label="SESSION 02 Gemini Notebook×Canva">
+    <div class="session-curtain">
+      <p class="session-curtain-text">SESSION 02<span class="session-curtain-sub">Gemini Notebook × Canva</span></p>
+    </div>
+    <div class="session-view-header">
+      <div class="wrap">
+        <span class="session-badge" style="margin:0;"><span class="material-symbols-outlined" aria-hidden="true">auto_awesome</span>SESSION 02</span>
+        <button type="button" class="session-close-btn"><span class="material-symbols-outlined" aria-hidden="true">close</span>閉じる</button>
+      </div>
+    </div>
+    <div class="session-view-body">
+      <div class="wrap">
+        <h2 class="session-title">Gemini Notebook × Canva</h2>
         <p class="session-copy">資料から、スライドへ。そして「自分の教材」へ。</p>
         <p class="session-lead">既存の教材や信頼できる資料を起点として、授業資料づくりを効率化する考え方です。単に「AIにスライドを作らせる」のではなく、手元にある資料をGemini Notebookで整理し、生成したスライドをCanvaで授業に合う形へ仕上げます。</p>
 
-        <button type="button" class="accordion-trigger session-toggle" aria-expanded="false" aria-controls="session02-detail">
-          <span class="trigger-label"><span class="material-symbols-outlined" aria-hidden="true">checklist</span>詳しく見る（基本の流れ・Canvaの位置付け・演習手順・プロンプト）</span>
-          <span class="material-symbols-outlined expand-icon" aria-hidden="true">expand_more</span>
-        </button>
-        <div class="accordion-panel session-detail" id="session02-detail">
-
-        <h4 class="session-sub-title">基本の流れ</h4>
+        <h4 class="session-sub-title" style="margin-top:1.75rem;">基本の流れ</h4>
         <div class="flow-diagram" style="margin-bottom:2rem;">
           <div class="flow-step">教材・資料</div>
           <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
@@ -417,11 +443,9 @@
 資料に無い内容は加えないでください。</div>
         </div>
         <p style="font-size:0.85rem;color:var(--color-text-sub);margin-top:1rem;">ほかのプロンプトは<a href="#prompts-lesson" style="color:var(--color-blue-deep);font-weight:700;">プロンプトライブラリ「授業」</a>にまとめてあります。</p>
-
-        </div>
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- ===== LEARN BY YOURSELF：Canva Basics ===== -->
   <section id="canva-basics" class="block">
