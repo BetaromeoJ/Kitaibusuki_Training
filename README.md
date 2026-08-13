@@ -56,18 +56,16 @@ SESSION 1・2・3・4は吉野東小学校ICT研修ポータルの第1〜4講座
 調整したものです（`児童`→`生徒`、`小学校`→`中学校` 等の表記変更を含む）。SESSION 5は同ポータルの
 第5講座「StudioとCanvaで教材を作る」をもとにしています。
 
-## Canva Basics動画の設定方法
+## Canva Basicsについて
 
-`index.html`内の各動画カードにある以下のコメント箇所を編集します。
+`#canva-basics`（Canva Basics）は自作動画ではなく、Canva公式の学習コンテンツ（無料）3件へのリンクカードです。
 
-```html
-<!-- <div class="video-frame"><iframe src="https://www.youtube.com/embed/XXXXXXXXXXX" ...></iframe></div> -->
-<div class="video-placeholder-frame">...</div>
-```
+- Canva使い方完全ガイド（`https://www.canva.com/ja_jp/learn/how-to/`）：リンクボタンあり
+- Canvaデザインスクール（動画）（`https://www.canva.com/ja_jp/design-school/videos/`）：リンクボタンあり
+- Canva日本公式ブログ（`https://www.canva.com/ja_jp/learn/`）：本文中のテキストリンク
 
-1. `<div class="video-frame">...</div>` 行のコメント（`<!--` `-->`）を外す
-2. `src` の `XXXXXXXXXXX` を実際のYouTube動画ID（`https://www.youtube.com/embed/`の後ろの文字列）に差し替える
-3. 直後の `<div class="video-placeholder-frame">...</div>`（プレースホルダー表示）は削除してください
+リンク先を変更する場合は、`index.html`内 `<!-- ===== LEARN BY YOURSELF：Canva Basics ===== -->` 以下の
+`.tool-card`（3枚）の`href`とテキストを書き換えてください。
 
 ## プロンプトの追加方法
 
@@ -112,6 +110,6 @@ SESSION 1・2・3・4は吉野東小学校ICT研修ポータルの第1〜4講座
 - [ ] 各SESSION末尾の「次のSESSIONへ」リンクで、正しく次のSESSIONへ切り替わるか
 - [ ] SESSION全画面ビューの「閉じる」ボタン・Escキーで元の画面に戻れるか
 - [ ] 講師写真・書影の画像が正しく表示されるか（読み込めない場合もレイアウトが崩れないか）
-- [ ] Canva Basics動画のURLを設定した場合、正しく再生されるか
+- [ ] Canva Basicsの3つのリンク（ガイド・動画・ブログ）が正しく開くか
 - [ ] デモ音声のリンクを設定したか
 - [ ] GitHub Pages等で公開後、実機（スマートフォン・iPad・PC）で表示確認したか
