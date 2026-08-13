@@ -160,8 +160,8 @@ function initAccordions() {
   });
 }
 
-// SESSION 01・02は「全画面ビュー」として扱うため、通常のスムーススクロール対象から除外する
-const SESSION_VIEW_IDS = ['session01', 'session02'];
+// SESSION 1〜5は「全画面ビュー」として扱うため、通常のスムーススクロール対象から除外する
+const SESSION_VIEW_IDS = ['session1', 'session2', 'session3', 'session4', 'session5'];
 
 function initSmoothAnchors() {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -195,6 +195,11 @@ function initSessionViews() {
     const view = document.getElementById(id + '-view');
     if (!view) return;
 
+    // 別のSESSIONが開いている場合は先に閉じる（「次のSESSIONへ」リンクで一度に1つだけ表示するため）
+    document.querySelectorAll('.session-view.open').forEach((openViewEl) => {
+      if (openViewEl !== view) closeView(openViewEl);
+    });
+
     document.body.classList.add('session-view-open');
     view.classList.add('open');
     view.scrollTop = 0;
@@ -227,8 +232,9 @@ function initSessionViews() {
     }
   };
 
-  // href="#session01" / "#session02" を持つリンクはすべて全画面ビューを開くトリガーにする
-  document.querySelectorAll('a[href="#session01"], a[href="#session02"]').forEach((link) => {
+  // href="#session1"〜"#session5" を持つリンクはすべて全画面ビューを開くトリガーにする
+  const sessionLinkSelector = SESSION_VIEW_IDS.map((id) => `a[href="#${id}"]`).join(', ');
+  document.querySelectorAll(sessionLinkSelector).forEach((link) => {
     link.addEventListener('click', (e) => {
       const id = link.getAttribute('href').slice(1);
       const view = document.getElementById(id + '-view');
