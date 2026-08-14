@@ -1369,6 +1369,20 @@ body.session-view-open { overflow: hidden; }
   margin-bottom: 1.5rem;
 }
 .footer-copy { font-size: 0.78rem; color: var(--color-text-faint); }
+.contact-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--color-blue-deep);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.9rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.9rem;
+}
+.contact-pill .material-symbols-outlined { font-size: 19px; }
+.contact-pill:hover { opacity: 0.9; }
 
 /* 印刷対応 */
 @media print {
