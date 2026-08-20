@@ -32,8 +32,8 @@
         <a href="#instructor">講師紹介</a>
         <a href="#today">今日の研修</a>
         <a href="#canva-basics">Canva基礎</a>
-        <a href="#subjects">教科別活用</a>
-        <a href="#prompts">プロンプト集</a>
+        <a href="#session2">教科別活用</a>
+        <a href="#today">プロンプト集</a>
       </nav>
       <button type="button" id="menuBtn" class="menu-btn" aria-expanded="false" aria-controls="mobileNav" aria-label="メニューを開く">
         <span class="material-symbols-outlined" aria-hidden="true">menu</span>
@@ -58,8 +58,8 @@
     <a href="#session3"><span class="material-symbols-outlined" aria-hidden="true">palette</span>Session 3 Canvaで教材化</a>
     <a href="#canva-basics"><span class="material-symbols-outlined" aria-hidden="true">school</span>Canva Basics</a>
     <a href="#after"><span class="material-symbols-outlined" aria-hidden="true">history</span>研修後に復習する</a>
-    <a href="#subjects"><span class="material-symbols-outlined" aria-hidden="true">apps</span>教科別活用例</a>
-    <a href="#prompts"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span>プロンプトライブラリ</a>
+    <a href="#session2"><span class="material-symbols-outlined" aria-hidden="true">apps</span>教科別活用例</a>
+    <a href="#today"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span>プロンプトライブラリ</a>
     <a href="#roadmap"><span class="material-symbols-outlined" aria-hidden="true">route</span>AI活用ロードマップ</a>
     <a href="#tools"><span class="material-symbols-outlined" aria-hidden="true">handyman</span>ツールの使い分け</a>
   </nav>
@@ -75,7 +75,7 @@
       <div class="hero-actions">
         <a href="#today" class="btn btn-primary">今日の研修を始める</a>
         <a href="#canva-basics" class="btn btn-outline">Canvaを基礎から学ぶ</a>
-        <a href="#prompts" class="btn btn-outline">プロンプト集を見る</a>
+        <a href="#today" class="btn btn-outline">プロンプト集を見る</a>
       </div>
       <a href="#instructor" class="scroll-cue">
         <span>SCROLL</span>
@@ -220,7 +220,7 @@
           <p class="desc">研修が終わったあとも、プロンプト・資料・リンクをいつでも確認できます。</p>
           <span class="role-link">研修後に復習するへ<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span>
         </a>
-        <a href="#subjects" class="card card-hover role-card">
+        <a href="#session2" class="card card-hover role-card">
           <div class="role-card-head">
             <div class="role-letter">D</div>
             <h3>今後の授業・校務で使う</h3>
@@ -297,7 +297,7 @@
             <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>iPadのボイスメモで録音する</li>
             <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>録音した音声をGeminiやGemini Notebookに渡す</li>
             <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>単発の音声を要約し、議事録やToDoを作成する</li>
-            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>ロールプレイの音声をGemini Notebookに追加し、面談記録・保護者への報告メッセージを作成する</li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>ロールプレイの音声もGeminiに読み込ませ、面談記録・保護者への報告メッセージを作成する</li>
             <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>同じ音声から、学級通信・管理職への報告など目的に応じた文書に変換する</li>
           </ul>
         </div>
@@ -318,46 +318,75 @@
             <h4 style="margin-bottom:0.5rem;"><span class="material-symbols-outlined" aria-hidden="true" style="vertical-align:middle;color:var(--color-blue-deep);">ios_share</span> 方法B：音声データをそのまま共有する</h4>
             <ol class="step-list" style="margin-top:0.5rem;">
               <li class="step-item" style="padding:0.55rem 0;gap:0.75rem;"><div class="step-num" style="width:26px;height:26px;font-size:0.8rem;">1</div><div class="step-body"><p>ボイスメモで録音する</p></div></li>
-              <li class="step-item" style="padding:0.55rem 0;gap:0.75rem;"><div class="step-num" style="width:26px;height:26px;font-size:0.8rem;">2</div><div class="step-body"><p>共有ボタンからGemini（またはGemini Notebook）を選ぶ</p></div></li>
+              <li class="step-item" style="padding:0.55rem 0;gap:0.75rem;"><div class="step-num" style="width:26px;height:26px;font-size:0.8rem;">2</div><div class="step-body"><p>共有ボタンからGeminiを選ぶ</p></div></li>
               <li class="step-item" style="padding:0.55rem 0;gap:0.75rem;"><div class="step-num" style="width:26px;height:26px;font-size:0.8rem;">3</div><div class="step-body"><p>音声データをそのまま添付・追加して送信する</p></div></li>
             </ol>
           </div>
         </div>
         <div class="tip-card" style="margin-bottom:2rem;">
           <span class="material-symbols-outlined" aria-hidden="true">lightbulb</span>
-          <p>単発の内容をすぐ整理したいときは、<strong>方法A・方法B</strong>のどちらでもかまいません。同じ音声から複数の文書を何度も作り直したいとき（下のPart Bで扱います）は、音声データをGemini Notebookに追加する<strong>方法B</strong>が向いています。</p>
+          <p>単発の会議・打合せの音声も、ロールプレイで録音した面談・会議の音声も、渡し方は同じです。文字起こしをコピーする<strong>方法A</strong>、音声データをそのまま共有する<strong>方法B</strong>のどちらでもかまいません。状況に応じて使いやすい方を選んでください。</p>
         </div>
 
         <div style="margin:2rem 0 1.5rem;padding-top:2rem;border-top:2px solid var(--color-border);">
           <span class="badge badge-solid" style="margin-bottom:0.6rem;">Part A</span>
-          <h3 class="session-title" style="font-size:1.35rem;">単発の音声を、要約・議事録・ToDoへ</h3>
-          <p class="session-copy" style="margin-bottom:0;">会議・打合せなどの音声を、その場で使える文章に変えます。</p>
+          <h3 class="session-title" style="font-size:1.35rem;">音声を、要約・議事録・ToDo・面談記録・報告文へ</h3>
+          <p class="session-copy" style="margin-bottom:0;">会議・打合せの音声も、ロールプレイで録音した面談・会議の音声も、その場で使える文書に変えます。</p>
         </div>
 
         <h4 class="session-sub-title">基本の流れ</h4>
         <div class="flow-diagram" style="margin-bottom:2rem;">
           <div class="flow-step">音声をGeminiへ渡す（方法A・B）</div>
           <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
-          <div class="flow-step">要約</div>
+          <div class="flow-step">目的に合わせてプロンプトを送信する</div>
           <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
-          <div class="flow-step">議事録・ToDo作成</div>
+          <div class="flow-step">出力を確認する</div>
+          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
+          <div class="flow-step">要約・議事録・ToDo、面談記録・学級通信・管理職への報告など、目的に応じた文書に仕上げる</div>
+        </div>
+
+        <h4 class="session-sub-title">ロールプレイ演習</h4>
+        <p style="color:var(--color-text-sub);margin-bottom:1rem;">会議・打合せの音声だけでなく、ロールプレイの音声でも練習します。近くの2〜3人の先生でグループを作り、次の2つのロールプレイを行い、iPadのボイスメモで録音してください。</p>
+        <div class="card" style="margin-bottom:1rem;">
+          <ul class="goal-list">
+            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span><strong>ロールプレイ1：面談</strong> — 教師役・生徒役・保護者役に分かれ、三者面談を行う</li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span><strong>ロールプレイ2：会議</strong> — 全員が教師役になり、特定の（架空の）生徒についてイニシャルトークで情報共有を行う</li>
+          </ul>
+        </div>
+        <div class="tip-card" style="margin-bottom:2rem;">
+          <span class="material-symbols-outlined" aria-hidden="true">badge</span>
+          <p><strong>イニシャルトーク：</strong>生徒について話すときに、実名ではなくイニシャル（例：Aさん）で話す習慣です。ロールプレイであっても、録音を扱う実際の場面を意識して、イニシャルトークを徹底しましょう。</p>
         </div>
 
         <h4 class="session-sub-title">演習手順</h4>
         <ol class="step-list" style="margin-bottom:1.5rem;">
           <li class="step-item">
             <div class="step-num">1</div>
-            <div class="step-body"><h4>コピー用プロンプトを貼り付けて送信する</h4><p>下のプロンプトをコピーし、Geminiに貼り付けて送信します。</p></div>
+            <div class="step-body"><h4>音声を用意する</h4><p>会議・打合せの音声、または（上のロールプレイで）面談・会議の音声を、iPadのボイスメモで録音します。</p></div>
           </li>
           <li class="step-item">
             <div class="step-num">2</div>
-            <div class="step-body"><h4>結果を確認する</h4><p>出力された内容が音声（または文字起こし）と一致しているか、必ず人が確認します。</p></div>
+            <div class="step-body"><h4>コピー用プロンプトを貼り付けて送信する</h4><p>下のプロンプトから目的に合うものを選び、Geminiに貼り付けて送信します（方法A・Bどちらでも可）。</p></div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">3</div>
+            <div class="step-body"><h4>結果を確認する</h4><p>出力された内容が音声（または文字起こし・ロールプレイの記憶）と一致しているか、必ず人が確認します。</p></div>
           </li>
         </ol>
-        <p style="color:var(--color-text-sub);font-size:0.85rem;margin-bottom:1.5rem;">方法Aで文字起こしを貼り付けた場合も、方法Bで音声データを添付した場合も、同じプロンプトがそのまま使えます。</p>
+
+        <h4 class="session-sub-title">実践例</h4>
+        <div class="example-card" style="margin-bottom:2rem;">
+          <h4>職員朝会の録音から連絡文を作る</h4>
+          <p>職員朝会をボイスメモで録音し、そのままGeminiに共有。プロンプト1で要約と整理を行い、プロンプト2で管理職への報告に使える議事録を作成。プロンプト3で自分が担当する作業だけをToDoとして抽出し、期限を確認します。</p>
+        </div>
+        <div class="example-card" style="margin-bottom:2rem;">
+          <h4>ロールプレイから、記録と報告メッセージを同時に作る</h4>
+          <p>グループで三者面談のロールプレイを行い、iPadのボイスメモで録音してそのままGeminiに共有。プロンプト4で面談記録と保護者への報告メッセージを同時に生成しました。イニシャルトークを意識して話したことで、出力にも生徒個人が特定される情報が含まれず、そのまま研修内で確認・共有できました。</p>
+        </div>
 
         <h4 class="session-sub-title">コピー用プロンプト</h4>
         <!-- コピー用プロンプト：ここから -->
+        <p style="font-weight:800;font-size:0.85rem;color:var(--color-text-faint);letter-spacing:0.04em;margin-bottom:0.75rem;">会議・打合せの音声から</p>
         <div class="prompt-card">
           <div class="prompt-card-head">
             <div>
@@ -432,134 +461,12 @@
 
 音声で確認できない項目は「未確認」としてください。</div>
         </div>
-        <p style="font-size:0.85rem;color:var(--color-text-sub);margin-top:1rem;">保護者への報告文・職員への共有文のプロンプトは<a href="#prompts-voice" style="color:var(--color-blue-deep);font-weight:700;">プロンプトライブラリ「音声」</a>にもまとめてあります。</p>
-        <!-- コピー用プロンプト：ここまで -->
 
-
-
-        <h4 class="session-sub-title">実践例</h4>
-        <div class="example-card" style="margin-bottom:2rem;">
-          <h4>職員朝会の録音から連絡文を作る</h4>
-          <p>職員朝会をボイスメモで録音し、そのままGeminiに共有。プロンプト1で要約と整理を行い、プロンプト2で管理職への報告に使える議事録を作成。プロンプト3で自分が担当する作業だけをToDoとして抽出し、期限を確認しました。</p>
-        </div>
-
-
-        <h4 class="session-sub-title">音声データを扱うときの注意事項</h4>
-        <div class="security-card" style="margin-bottom:2rem;">
-          <div class="security-card-head">
-            <span class="material-symbols-outlined" aria-hidden="true">shield</span>
-            <p>Important / Security</p>
-          </div>
-          <ul>
-            <li>実際の生徒・保護者・教職員の音声を、許可なくAIサービスへアップロードしない。</li>
-            <li>個人情報を含むデータは、所属自治体・学校のルールを確認したうえで利用する。</li>
-            <li>AIが生成した内容（議事録・ToDo等）は、必ず人が確認してから使用する。</li>
-            <li>聞き取れない・判断できない内容をAIに推測させず、「確認が必要」「未確認」として扱う。</li>
-            <li>面談等を録音する場合は、事前に適切な説明・同意を行い、無断で録音しない。</li>
-          </ul>
-        </div>
-
-
-        <h4 class="session-sub-title">よくあるトラブル</h4>
-        <div class="accordion" style="margin-bottom:1rem;">
-          <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="accS1-1">
-            <span>Geminiに音声を添付できない</span>
-            <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
-          </button>
-          <div class="accordion-panel" id="accS1-1">
-            <p>アカウントの確認、アプリ版とブラウザ版の切り替え、ファイル形式の確認などが必要です。改善しない場合は、情報担当・管理職にご相談ください。</p>
-          </div>
-        </div>
-
-
-        <div style="margin:2.75rem 0 1.5rem;padding-top:2rem;border-top:2px solid var(--color-border);">
-          <span class="badge badge-solid" style="margin-bottom:0.6rem;">Part B</span>
-          <h3 class="session-title" style="font-size:1.35rem;">ロールプレイ音声を、Gemini Notebookで複数の文書へ</h3>
-          <p class="session-copy" style="margin-bottom:0;">同じ音声から、面談記録・学級通信・管理職への報告まで。</p>
-        </div>
-
-        <h4 class="session-sub-title" >この講座でできるようになること</h4>
-        <div class="card" style="margin-bottom:2rem;">
-          <ul class="goal-list">
-            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>面談・会議のロールプレイ音声を録音する</li>
-            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>音声をGemini Notebookに資料として追加する</li>
-            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>面談記録と保護者への報告メッセージを同時に作成する</li>
-            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>学級通信・管理職への報告など、目的に応じた文書に変換する</li>
-          </ul>
-        </div>
-
-
-        <h4 class="session-sub-title">ロールプレイ演習</h4>
-        <p style="color:var(--color-text-sub);margin-bottom:1rem;">近くの2〜3人の先生でグループを作り、次の2つのロールプレイを行い、iPadのボイスメモで録音してください。</p>
-        <div class="card" style="margin-bottom:1rem;">
-          <ul class="goal-list">
-            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span><strong>ロールプレイ1：面談</strong> — 教師役・生徒役・保護者役に分かれ、三者面談を行う</li>
-            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span><strong>ロールプレイ2：会議</strong> — 全員が教師役になり、特定の（架空の）生徒についてイニシャルトークで情報共有を行う</li>
-          </ul>
-        </div>
-        <div class="tip-card" style="margin-bottom:2rem;">
-          <span class="material-symbols-outlined" aria-hidden="true">badge</span>
-          <p><strong>イニシャルトーク：</strong>生徒について話すときに、実名ではなくイニシャル（例：Aさん）で話す習慣です。ロールプレイであっても、録音を扱う実際の場面を意識して、イニシャルトークを徹底しましょう。</p>
-        </div>
-
-        <h4 class="session-sub-title">GeminiとGemini Notebookの使い分け</h4>
-        <div class="compare-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-bottom:2rem;">
-          <div class="card">
-            <h4 style="margin-bottom:0.5rem;"><span class="material-symbols-outlined" aria-hidden="true" style="vertical-align:middle;color:var(--color-blue-deep);">chat</span> Geminiに直接、音声を読み込ませる</h4>
-            <p style="color:var(--color-text-sub);font-size:0.9rem;">単発の会議・打合せ・面談など、その場限りの内容を素早く整理したいときに向いています（上のPart Aで紹介している使い方）。</p>
-          </div>
-          <div class="card">
-            <h4 style="margin-bottom:0.5rem;"><span class="material-symbols-outlined" aria-hidden="true" style="vertical-align:middle;color:var(--color-blue-deep);">folder_open</span> Gemini Notebookに、音声を資料として追加する</h4>
-            <p style="color:var(--color-text-sub);font-size:0.9rem;">同じ音声（資料）から、目的の異なる複数の文書を作りたいときに向いています。ひとつのソースを保持したまま、何度も違う切り口でプロンプトを送れます。音声・資料を保存しておき、後日あらためて活用する可能性がある場合も、Gemini Notebookを使うとよいでしょう。</p>
-          </div>
-        </div>
-
-        <h4 class="session-sub-title">基本の流れ</h4>
-        <div class="flow-diagram" style="margin-bottom:2rem;">
-          <div class="flow-step">ロールプレイ（面談・会議）を行い、録音する</div>
-          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
-          <div class="flow-step">音声をGemini Notebookにソースとして追加する</div>
-          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
-          <div class="flow-step">目的に合わせてプロンプトを送信する</div>
-          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
-          <div class="flow-step">出力を確認する</div>
-          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
-          <div class="flow-step">面談記録・報告メッセージ・学級通信などへ仕上げる</div>
-        </div>
-
-        <h4 class="session-sub-title">演習手順</h4>
-        <ol class="step-list" style="margin-bottom:1.5rem;">
-          <li class="step-item">
-            <div class="step-num">1</div>
-            <div class="step-body"><h4>グループを作る</h4><p>近くの2〜3人の先生とグループになります。</p></div>
-          </li>
-          <li class="step-item">
-            <div class="step-num">2</div>
-            <div class="step-body"><h4>面談のロールプレイを行い、録音する</h4><p>教師役・生徒役・保護者役に分かれ、iPadのボイスメモで録音しながら三者面談を行います。</p></div>
-          </li>
-          <li class="step-item">
-            <div class="step-num">3</div>
-            <div class="step-body"><h4>会議のロールプレイを行い、録音する</h4><p>全員が教師役になり、特定の（架空の）生徒についてイニシャルトークで話し合う場面を録音します。</p></div>
-          </li>
-          <li class="step-item">
-            <div class="step-num">4</div>
-            <div class="step-body"><h4>Gemini Notebookを開き、音声をソースとして追加する</h4><p>2つの録音データを、それぞれソースとして追加します。</p></div>
-          </li>
-          <li class="step-item">
-            <div class="step-num">5</div>
-            <div class="step-body"><h4>コピー用プロンプトを貼り付けて送信する</h4><p>作りたい文書に合わせてプロンプトを選び、送信します。</p></div>
-          </li>
-          <li class="step-item">
-            <div class="step-num">6</div>
-            <div class="step-body"><h4>出力を、ロールプレイの記憶と照らし合わせて確認する</h4><p>事実と異なる内容が含まれていないか必ず確認します。</p></div>
-          </li>
-        </ol>
-
-        <h4 class="session-sub-title">コピー用プロンプト</h4>
+        <p style="font-weight:800;font-size:0.85rem;color:var(--color-text-faint);letter-spacing:0.04em;margin:1.5rem 0 0.75rem;">面談・ロールプレイの音声から</p>
         <div class="prompt-card">
           <div class="prompt-card-head">
             <div>
-              <h4>プロンプト1：面談記録と保護者への報告メッセージ</h4>
+              <h4>プロンプト4：面談記録と保護者への報告メッセージ</h4>
               <p class="prompt-scene">ひとつの音声から、記録用と保護者向けメッセージの両方を作成します。</p>
             </div>
             <button type="button" class="copy-btn" data-copy-target="#promptS2-1">
@@ -594,7 +501,7 @@
         <div class="prompt-card">
           <div class="prompt-card-head">
             <div>
-              <h4>プロンプト2：学級通信</h4>
+              <h4>プロンプト5：学級通信</h4>
               <p class="prompt-scene">音声の内容をもとに、学級通信に使える文章を作成します。</p>
             </div>
             <button type="button" class="copy-btn" data-copy-target="#promptS2-2">
@@ -613,7 +520,7 @@
         <div class="prompt-card">
           <div class="prompt-card-head">
             <div>
-              <h4>プロンプト3：管理職への報告</h4>
+              <h4>プロンプト6：管理職への報告</h4>
               <p class="prompt-scene">音声の内容を、管理職向けの簡潔な報告文にまとめます。</p>
             </div>
             <button type="button" class="copy-btn" data-copy-target="#promptS2-3">
@@ -631,38 +538,34 @@
 
 簡潔に、要点だけを示してください。</div>
         </div>
-        <p style="font-size:0.85rem;color:var(--color-text-sub);margin-top:1rem;">ほかのプロンプトは<a href="#prompts-voice" style="color:var(--color-blue-deep);font-weight:700;">プロンプトライブラリ「音声」</a>にまとめてあります。</p>
+        <p style="font-size:0.85rem;color:var(--color-text-sub);margin-top:1rem;">ほかのプロンプトは<a href="#prompts-voice" style="color:var(--color-blue-deep);font-weight:700;">プロンプトライブラリ「音声」</a>にもまとめてあります。</p>
+        <!-- コピー用プロンプト：ここまで -->
 
-
-
-        <h4 class="session-sub-title">実践例</h4>
-        <div class="example-card" style="margin-bottom:2rem;">
-          <h4>研修中のロールプレイから、記録と報告メッセージを同時に作る</h4>
-          <p>グループで三者面談のロールプレイを行い、iPadのボイスメモで録音。Gemini Notebookにソースとして追加し、プロンプト1で面談記録と保護者への報告メッセージを同時に生成しました。イニシャルトークを意識して話したことで、出力にも生徒個人が特定される情報が含まれず、そのまま研修内で確認・共有できました。</p>
-        </div>
-
-
-        <h4 class="session-sub-title">注意点</h4>
-        <div class="caution-card" style="margin-bottom:2rem;">
-          <span class="material-symbols-outlined" aria-hidden="true">warning</span>
+        <h4 class="session-sub-title">音声データを扱うときの注意事項</h4>
+        <div class="security-card" style="margin-bottom:2rem;">
+          <div class="security-card-head">
+            <span class="material-symbols-outlined" aria-hidden="true">shield</span>
+            <p>Important / Security</p>
+          </div>
           <ul>
-            <li>ロールプレイは、実在の生徒・保護者を想定せず、架空の設定で行う。</li>
+            <li>実際の生徒・保護者・教職員の音声を、許可なくAIサービスへアップロードしない。</li>
+            <li>個人情報を含むデータは、所属自治体・学校のルールを確認したうえで利用する。</li>
+            <li>聞き取れない・判断できない内容をAIに推測させず、「確認が必要」「未確認」として扱う。</li>
+            <li>面談等を録音する場合は、事前に適切な説明・同意を行い、無断で録音しない。ロールプレイは、実在の生徒・保護者を想定せず、架空の設定で行う。</li>
             <li>生徒について話すときは、イニシャルトークを徹底する。</li>
-            <li>保護者へ送るメッセージは、必ず内容を確認してから送信する。</li>
-            <li>生徒個人が特定される情報を、学級通信などの配布物に含めない。</li>
-            <li>AIが生成した文章は、事実と異なる部分がないか必ず確認する。</li>
+            <li>AIが生成した内容（議事録・ToDo・面談記録・報告文など）は、事実と異なる部分がないか、必ず人が確認してから使用する。</li>
+            <li>生徒個人が特定される情報を、学級通信などの配布物に含めない。保護者へ送るメッセージも、必ず内容を確認してから送信する。</li>
           </ul>
         </div>
 
-
         <h4 class="session-sub-title">よくあるトラブル</h4>
         <div class="accordion" style="margin-bottom:1rem;">
-          <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="accS2-1">
-            <span>Gemini Notebookにソースを追加できない</span>
+          <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="accS1-1">
+            <span>Geminiに音声を添付できない</span>
             <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
           </button>
-          <div class="accordion-panel" id="accS2-1">
-            <p>ファイル形式・サイズや、アカウントの確認が必要です。うまく追加できない場合は、いったんアプリを再起動してから試してください。</p>
+          <div class="accordion-panel" id="accS1-1">
+            <p>アカウントの確認、アプリ版とブラウザ版の切り替え、ファイル形式の確認などが必要です。改善しない場合は、情報担当・管理職にご相談ください。</p>
           </div>
           <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="accS2-2">
             <span>生成される文章の文体が目的に合わない</span>
@@ -681,8 +584,84 @@
         </div>
 
 
+        <h4 class="session-sub-title">明日から使えるプロンプト集：音声</h4>
+        <p style="color:var(--color-text-sub);margin-bottom:1rem;">「そのままコピー」→「【　】部分だけ自分の内容に変更」で使えます。カテゴリーをタップすると開きます。</p>
+      <div class="accordion" id="prompts-voice">
+        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="cat-voice">
+          <span class="trigger-label"><span class="material-symbols-outlined" aria-hidden="true">mic</span>音声</span>
+          <span class="material-symbols-outlined expand-icon" aria-hidden="true">expand_more</span>
+        </button>
+        <div class="accordion-panel" id="cat-voice">
+
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <div><h4>会議録</h4><p class="prompt-scene">会議・打合せの音声から会議録を作る。</p></div>
+              <button type="button" class="copy-btn" data-copy-target="#pv1"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
+            </div>
+            <div class="prompt-body" id="pv1">添付した音声データから、会議録を作成してください。
+
+次の項目に分けてまとめてください。
+・日時、参加者
+・議題
+・主な発言・意見
+・決定事項
+・次回までの課題
+
+音声から判断できない部分は推測せず、
+「確認が必要」としてください。</div>
+          </div>
+
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <div><h4>面談まとめ</h4><p class="prompt-scene">面談の音声を、記録として整理する。</p></div>
+              <button type="button" class="copy-btn" data-copy-target="#pv2"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
+            </div>
+            <div class="prompt-body" id="pv2">添付した音声は【生徒名／保護者名】との面談記録です。
+次の観点で整理してください。
+
+・面談の目的
+・本人・保護者から出た意見
+・学校側の説明内容
+・今後の対応
+・次回面談予定
+
+個人が特定される固有名詞は【　】のまま扱い、
+書き換えないでください。</div>
+          </div>
+
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <div><h4>保護者報告</h4><p class="prompt-scene">音声の内容を、保護者向けの報告文にする。</p></div>
+              <button type="button" class="copy-btn" data-copy-target="#pv3"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
+            </div>
+            <div class="prompt-body" id="pv3">添付した音声の内容をもとに、
+保護者向けの報告文を作成してください。
+
+条件:
+・丁寧な言葉づかいにする
+・専門用語を避ける
+・【学年・組】【生徒名】は【　】のまま残す
+・事実と学校の対応を分けて書く</div>
+          </div>
+
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <div><h4>職員共有</h4><p class="prompt-scene">音声の内容を、職員向けの連絡文にする。</p></div>
+              <button type="button" class="copy-btn" data-copy-target="#pv4"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
+            </div>
+            <div class="prompt-body" id="pv4">添付した音声の内容を、職員間で共有するための
+簡潔な連絡文にしてください。
+
+・見出しをつける
+・重要な変更点を先に書く
+・共有すべき締切がある場合は太字で示す</div>
+          </div>
+
+        </div>
+      </div>
+
         <div class="page-nav">
-          <a href="#session2" class="btn btn-primary">次のSessionへ：Gemini Notebookで資料を活用する<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+          <a href="#session2" class="btn btn-primary">Session 2へ<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
         </div>
 
         <footer class="site-footer">
@@ -693,8 +672,8 @@
             <a href="#book">著作紹介</a>
             <a href="#today">今日の研修</a>
             <a href="#canva-basics">Canva Basics</a>
-            <a href="#prompts">プロンプトライブラリ</a>
-            <a href="#subjects">教科別活用例</a>
+            <a href="#today">プロンプトライブラリ</a>
+            <a href="#session2">教科別活用例</a>
           </div>
           <p style="margin-bottom:0.9rem;">
             <a href="mailto:michihirowadarin@gmail.com" class="contact-pill">
@@ -1011,6 +990,220 @@
         </div>
 
 
+        <h4 class="session-sub-title">Gemini Notebook 教科別活用例</h4>
+        <p style="color:var(--color-text-sub);margin-bottom:1rem;">Gemini Notebookの教科別活用例です。教科別に数例だけ紹介します。ご自分の教科・立場ならどんな活用ができるかをGeminiに相談してみましょう。</p>
+        <div class="grid grid-3" style="margin-bottom:2rem;">
+
+        <div class="card subject-card">
+          <div class="subject-card-head"><span class="subject-tag">国語</span><h4>国語</h4></div>
+          <p class="subject-flow">例1：作品・評論資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>授業スライド<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>Canvaで教材化</p>
+          <p class="subject-flow">例2：教科書の文章をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>確認問題を作成</p>
+        </div>
+
+        <div class="card subject-card">
+          <div class="subject-card-head"><span class="subject-tag">数学</span><h4>数学</h4></div>
+          <p class="subject-flow">例1：問題文・図表をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>図解・ワークシート</p>
+          <p class="subject-flow">例2：単元の解説資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>確認問題を作成</p>
+        </div>
+
+        <div class="card subject-card">
+          <div class="subject-card-head"><span class="subject-tag">英語</span><h4>英語</h4></div>
+          <p class="subject-flow">例1：会話文・文化背景資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>ビジュアル教材</p>
+          <p class="subject-flow">例2：教科書本文をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>単語・表現の確認問題</p>
+        </div>
+
+        <div class="card subject-card">
+          <div class="subject-card-head"><span class="subject-tag">理科</span><h4>理科</h4></div>
+          <p class="subject-flow">例1：実験手順書をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>図解・スライド</p>
+          <p class="subject-flow">例2：教科書資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>まとめプリント</p>
+        </div>
+
+        <div class="card subject-card">
+          <div class="subject-card-head"><span class="subject-tag">社会</span><h4>社会</h4></div>
+          <p class="subject-flow">例1：資料集・年表をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>要点整理・図解</p>
+          <p class="subject-flow">例2：新聞記事・統計資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>授業スライド</p>
+        </div>
+
+        <div class="card subject-card">
+          <div class="subject-card-head"><span class="subject-tag">保体</span><h4>保健体育</h4></div>
+          <p class="subject-flow">例1：ルール・動作解説資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>視覚教材</p>
+          <p class="subject-flow">例2：保健分野の資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>確認問題を作成</p>
+        </div>
+
+        <div class="card subject-card">
+          <div class="subject-card-head"><span class="subject-tag">音楽</span><h4>音楽</h4></div>
+          <p class="subject-flow">例1：楽曲・作曲家の背景資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>授業資料</p>
+          <p class="subject-flow">例2：音楽用語の解説資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>確認プリント</p>
+        </div>
+
+        <div class="card subject-card">
+          <div class="subject-card-head"><span class="subject-tag">家庭</span><h4>家庭</h4></div>
+          <p class="subject-flow">例1：調理・被服等の工程資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>手順教材</p>
+          <p class="subject-flow">例2：消費生活・栄養の資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>確認問題を作成</p>
+        </div>
+
+        <div class="card subject-card">
+          <div class="subject-card-head"><span class="subject-tag">美術</span><h4>美術</h4></div>
+          <p class="subject-flow">例1：作品解説資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>比較・鑑賞教材</p>
+          <p class="subject-flow">例2：技法・画材の資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>制作手順プリント</p>
+        </div>
+
+        <div class="card subject-card">
+          <div class="subject-card-head"><span class="subject-tag">技術</span><h4>技術</h4></div>
+          <p class="subject-flow">例1：製作工程マニュアルをソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>手順教材</p>
+          <p class="subject-flow">例2：情報分野の資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>確認問題を作成</p>
+        </div>
+
+        <div class="card subject-card">
+          <div class="subject-card-head"><span class="subject-tag">特支</span><h4>特別支援</h4></div>
+          <p class="subject-flow">例1：授業資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>視覚的に分かりやすい教材</p>
+          <p class="subject-flow">例2：生活単元学習の資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>手順カード</p>
+        </div>
+
+        <div class="card subject-card">
+          <div class="subject-card-head"><span class="subject-tag">養護</span><h4>養護</h4></div>
+          <p class="subject-flow">例1：保健指導資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>保健だより</p>
+          <p class="subject-flow">例2：感染症・安全に関する資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>掲示物</p>
+        </div>
+
+        <div class="card subject-card">
+          <div class="subject-card-head"><span class="subject-tag">管理職</span><h4>管理職</h4></div>
+          <p class="subject-flow">例1：会議資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>校内周知文書</p>
+          <p class="subject-flow">例2：通知・要項をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>保護者向け文書</p>
+        </div>
+
+      </div>
+
+        <h4 class="session-sub-title">明日から使えるプロンプト集：授業・校務</h4>
+        <p style="color:var(--color-text-sub);margin-bottom:1rem;">「そのままコピー」→「【　】部分だけ自分の内容に変更」で使えます。カテゴリーをタップすると開きます。</p>
+      <div class="accordion" id="prompts-lesson">
+        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="cat-lesson">
+          <span class="trigger-label"><span class="material-symbols-outlined" aria-hidden="true">auto_stories</span>授業</span>
+          <span class="material-symbols-outlined expand-icon" aria-hidden="true">expand_more</span>
+        </button>
+        <div class="accordion-panel" id="cat-lesson">
+
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <div><h4>授業アイデア</h4><p class="prompt-scene">単元の授業アイデアを複数提案してもらう。</p></div>
+              <button type="button" class="copy-btn" data-copy-target="#pl1"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
+            </div>
+            <div class="prompt-body" id="pl1">【教科】【学年】【単元名】の授業アイデアを
+3つ提案してください。
+
+条件:
+・生徒が主体的に取り組める活動を含める
+・1時間（50分）で実施できる規模にする
+・ICTを活用する案を1つ以上含める</div>
+          </div>
+
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <div><h4>ワークシート</h4><p class="prompt-scene">単元のワークシートのたたき台を作る。</p></div>
+              <button type="button" class="copy-btn" data-copy-target="#pl2"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
+            </div>
+            <div class="prompt-body" id="pl2">【教科】【単元名】のワークシートを作成してください。
+
+・目標を1文で示す
+・穴埋め問題を3問
+・記述問題を2問
+・難易度は【基礎／標準／発展】</div>
+          </div>
+
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <div><h4>発問</h4><p class="prompt-scene">授業で使う発問をレベル別に考えてもらう。</p></div>
+              <button type="button" class="copy-btn" data-copy-target="#pl3"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
+            </div>
+            <div class="prompt-body" id="pl3">【単元名】の授業で使える発問を、
+レベル別に5つ考えてください。
+
+・知識を確認する発問を2つ
+・思考を促す発問を2つ
+・意見を引き出す発問を1つ</div>
+          </div>
+
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <div><h4>スライド構成</h4><p class="prompt-scene">Gemini Notebookで生成するスライドの構成案を作る。</p></div>
+              <button type="button" class="copy-btn" data-copy-target="#pl4"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
+            </div>
+            <div class="prompt-body" id="pl4">読み込んだ資料をもとに、【単元名】の
+授業スライドの構成案を作成してください。
+
+・導入（1枚）
+・展開（3〜4枚）
+・まとめ（1枚）
+
+各スライドに入れる要点を、箇条書きで示してください。
+資料に無い内容は加えないでください。</div>
+          </div>
+
+        </div>
+      </div>
+      <div class="accordion" id="prompts-work">
+        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="cat-work">
+          <span class="trigger-label"><span class="material-symbols-outlined" aria-hidden="true">work</span>校務</span>
+          <span class="material-symbols-outlined expand-icon" aria-hidden="true">expand_more</span>
+        </button>
+        <div class="accordion-panel" id="cat-work">
+
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <div><h4>保護者文書</h4><p class="prompt-scene">行事・連絡の案内文を作る。</p></div>
+              <button type="button" class="copy-btn" data-copy-target="#pw1"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
+            </div>
+            <div class="prompt-body" id="pw1">【行事名／連絡内容】について、
+保護者向けの案内文を作成してください。
+
+・件名をつける
+・日時、持ち物、注意事項を分けて書く
+・丁寧語を使い、簡潔にまとめる</div>
+          </div>
+
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <div><h4>学級通信</h4><p class="prompt-scene">学級通信のたたき台を作る。</p></div>
+              <button type="button" class="copy-btn" data-copy-target="#pw2"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
+            </div>
+            <div class="prompt-body" id="pw2">【学年・組】の学級通信を作成してください。
+
+・今週の出来事を3つ
+・来週の予定
+・担任からひとこと
+
+文体は温かく、保護者が読みやすい長さにしてください。</div>
+          </div>
+
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <div><h4>行事案内</h4><p class="prompt-scene">職員向けの行事実施案内を作る。</p></div>
+              <button type="button" class="copy-btn" data-copy-target="#pw3"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
+            </div>
+            <div class="prompt-body" id="pw3">【行事名】の実施案内を、職員向けに作成してください。
+
+・目的
+・日時・場所
+・役割分担（【　】のまま項目だけ示す）
+・準備物と締切</div>
+          </div>
+
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <div><h4>校内文書</h4><p class="prompt-scene">校内向けの通知文書を作る。</p></div>
+              <button type="button" class="copy-btn" data-copy-target="#pw4"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
+            </div>
+            <div class="prompt-body" id="pw4">【議題／内容】について、
+校内向けの通知文書を作成してください。
+
+・要点を先頭にまとめる
+・箇条書きを使う
+・確認・提出が必要な場合は期限を明記する</div>
+          </div>
+
+        </div>
+      </div>
+
         <h4 class="session-sub-title">よくあるトラブル</h4>
         <div class="accordion" style="margin-bottom:1rem;">
           <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="accS4-1">
@@ -1024,7 +1217,7 @@
 
 
         <div class="page-nav">
-          <a href="#session3" class="btn btn-primary">次のSessionへ：StudioとCanvaで教材を作る<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+          <a href="#session3" class="btn btn-primary">Session 3へ<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
         </div>
 
         <footer class="site-footer">
@@ -1035,8 +1228,8 @@
             <a href="#book">著作紹介</a>
             <a href="#today">今日の研修</a>
             <a href="#canva-basics">Canva Basics</a>
-            <a href="#prompts">プロンプトライブラリ</a>
-            <a href="#subjects">教科別活用例</a>
+            <a href="#today">プロンプトライブラリ</a>
+            <a href="#session2">教科別活用例</a>
           </div>
           <p style="margin-bottom:0.9rem;">
             <a href="mailto:michihirowadarin@gmail.com" class="contact-pill">
@@ -1085,8 +1278,10 @@
 
         <div class="tip-card" style="margin-bottom:2rem;">
           <span class="material-symbols-outlined" aria-hidden="true">login</span>
-          <p><strong>Canvaにまだログインしたことがない方へ：</strong>下のボタンからCanvaを開き、<strong>県域教育アカウント（@kago.ed.jp）でログインしてください</strong>。初回はログイン画面の表示に少し時間がかかることがあります。</p>
-          <a href="https://www.canva.com/login" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="margin-top:0.9rem;">Canvaを開く<span class="material-symbols-outlined" aria-hidden="true">open_in_new</span></a>
+          <div style="flex:1;">
+            <p><strong>Canvaにまだログインしたことがない方へ：</strong>下のボタンからCanvaを開き、<strong>県域教育アカウント（@kago.ed.jp）でログインしてください</strong>。初回はログイン画面の表示に少し時間がかかることがあります。</p>
+            <a href="https://www.canva.com/login" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:0.9rem;width:100%;justify-content:center;">Canvaを開く<span class="material-symbols-outlined" aria-hidden="true">open_in_new</span></a>
+          </div>
         </div>
 
         <h4 class="session-sub-title">インフォグラフィックとスライドの違い</h4>
@@ -1280,6 +1475,47 @@
           </ul>
         </div>
 
+        <h4 class="session-sub-title">明日から使えるプロンプト集：Canva</h4>
+        <p style="color:var(--color-text-sub);margin-bottom:1rem;">「そのままコピー」→「【　】部分だけ自分の内容に変更」で使えます。カテゴリーをタップすると開きます。</p>
+      <div class="accordion" id="prompts-canva">
+        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="cat-canva">
+          <span class="trigger-label"><span class="material-symbols-outlined" aria-hidden="true">palette</span>Canva</span>
+          <span class="material-symbols-outlined expand-icon" aria-hidden="true">expand_more</span>
+        </button>
+        <div class="accordion-panel" id="cat-canva">
+
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <div><h4>画像生成用プロンプト</h4><p class="prompt-scene">授業で使うシンプルなイラストを生成する。</p></div>
+              <button type="button" class="copy-btn" data-copy-target="#pc1"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
+            </div>
+            <div class="prompt-body" id="pc1">【授業で使う場面・テーマ】を表す、
+シンプルで分かりやすいイラストを生成してください。
+
+条件:
+・生徒にとって理解しやすい構図にする
+・文字は入れない
+・色数を抑え、落ち着いた配色にする</div>
+          </div>
+
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <div><h4>デザイン改善用プロンプト</h4><p class="prompt-scene">作った教材の見やすさを改善する案をもらう。</p></div>
+              <button type="button" class="copy-btn" data-copy-target="#pc2"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
+            </div>
+            <div class="prompt-body" id="pc2">この教材のデザインを、中学生にとって見やすく
+改善する案を3つ提案してください。
+
+・文字サイズや余白の観点
+・色のコントラストの観点
+・情報量を減らす観点
+
+それぞれ具体的な変更点を挙げてください。</div>
+          </div>
+
+        </div>
+      </div>
+
         <h4 class="session-sub-title">よくあるトラブル</h4>
         <div class="accordion" style="margin-bottom:1rem;">
           <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="accS5-1">
@@ -1303,8 +1539,8 @@
             <a href="#book">著作紹介</a>
             <a href="#today">今日の研修</a>
             <a href="#canva-basics">Canva Basics</a>
-            <a href="#prompts">プロンプトライブラリ</a>
-            <a href="#subjects">教科別活用例</a>
+            <a href="#today">プロンプトライブラリ</a>
+            <a href="#session2">教科別活用例</a>
           </div>
           <p style="margin-bottom:0.9rem;">
             <a href="mailto:michihirowadarin@gmail.com" class="contact-pill">
@@ -1318,6 +1554,53 @@
   </div>
 
   
+  <!-- ===== AIツールの使い分け ===== -->
+  <section id="tools" class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="badge badge-solid">How to Choose</p>
+        <h2 class="section-title">AIツールの使い分け</h2>
+        <p class="section-lead">どれが優れているかを比べるものではありません。目的によって使い分けます。</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card tool-card">
+          <span class="badge badge-solid" style="margin-bottom:0.7rem;">県域教育アカウントで利用可</span>
+          <div class="tool-icon"><span class="material-symbols-outlined" aria-hidden="true">auto_awesome</span></div>
+          <h4>Gemini</h4>
+          <p>Google環境と組み合わせて生成AIを活用する。普段の校務の流れの中で使います。</p>
+        </div>
+        <div class="card tool-card">
+          <span class="badge badge-solid" style="margin-bottom:0.7rem;">県域教育アカウントで利用可</span>
+          <div class="tool-icon"><span class="material-symbols-outlined" aria-hidden="true">menu_book</span></div>
+          <h4>Gemini Notebook</h4>
+          <p>手元の資料を起点に理解・整理・教材化する。資料の範囲内で要約・スライド化します。</p>
+        </div>
+        <div class="card tool-card">
+          <span class="badge badge-solid" style="margin-bottom:0.7rem;">県域教育アカウントで利用可</span>
+          <div class="tool-icon"><span class="material-symbols-outlined" aria-hidden="true">palette</span></div>
+          <h4>Canva</h4>
+          <p>人に伝わる形に仕上げる。AIが作った土台を、生徒や保護者に伝わるデザインへ整えます。</p>
+        </div>
+        <div class="card tool-card">
+          <div class="tool-icon"><span class="material-symbols-outlined" aria-hidden="true">chat</span></div>
+          <h4>ChatGPT</h4>
+          <p>考える・相談する・文章化する。アイデア出しや文章の下書き、壁打ち相手として使います。</p>
+        </div>
+        <div class="card tool-card">
+          <div class="tool-icon"><span class="material-symbols-outlined" aria-hidden="true">draft</span></div>
+          <h4>Claude</h4>
+          <p>長文を丁寧に読み書きする。長い資料の要約や、保護者向け文書など細やかな配慮が必要な文章の下書きに向きます。</p>
+        </div>
+        <div class="card tool-card">
+          <span class="badge badge-solid" style="margin-bottom:0.7rem;">県域教育アカウントで利用可</span>
+          <div class="tool-icon"><span class="material-symbols-outlined" aria-hidden="true">grid_view</span></div>
+          <h4>Copilot</h4>
+          <p>Microsoft 365と組み合わせて使う。Word・Excel・PowerPointなど、普段の校務文書の作成をその場で支援します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== LEARN BY YOURSELF：Canva Basics ===== -->
   <section id="canva-basics" class="block">
     <div class="wrap">
@@ -1384,11 +1667,11 @@
           <h4 style="font-size:0.98rem;font-weight:800;margin-bottom:0.4rem;">Canva公式の学習コンテンツ</h4>
           <p style="font-size:0.85rem;color:var(--color-text-sub);">Canva Basicsを見る</p>
         </a>
-        <a href="#subjects" class="card card-hover">
+        <a href="#session2" class="card card-hover">
           <h4 style="font-size:0.98rem;font-weight:800;margin-bottom:0.4rem;">教科別の活用例</h4>
           <p style="font-size:0.85rem;color:var(--color-text-sub);">自分の教科・立場を見る</p>
         </a>
-        <a href="#prompts" class="card card-hover">
+        <a href="#today" class="card card-hover">
           <h4 style="font-size:0.98rem;font-weight:800;margin-bottom:0.4rem;">使用したプロンプト</h4>
           <p style="font-size:0.85rem;color:var(--color-text-sub);">プロンプトライブラリを見る</p>
         </a>
@@ -1448,355 +1731,7 @@
     </div>
   </section>
 
-  <!-- ===== TEACHING IDEAS：教科別活用例 ===== -->
-  <section id="subjects" class="block">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="badge badge-solid">Teaching Ideas</p>
-        <h2 class="section-title">Gemini Notebook 教科別活用例</h2>
-        <p class="section-lead">Gemini Notebookの教科別活用例です。教科別に数例だけ紹介します。ご自分の教科・立場ならどんな活用ができるかをGeminiに相談してみましょう。</p>
-      </div>
-      <div class="grid grid-3">
 
-        <div class="card subject-card">
-          <div class="subject-card-head"><span class="subject-tag">国語</span><h4>国語</h4></div>
-          <p class="subject-flow">例1：作品・評論資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>授業スライド<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>Canvaで教材化</p>
-          <p class="subject-flow">例2：教科書の文章をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>確認問題を作成</p>
-        </div>
-
-        <div class="card subject-card">
-          <div class="subject-card-head"><span class="subject-tag">数学</span><h4>数学</h4></div>
-          <p class="subject-flow">例1：問題文・図表をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>図解・ワークシート</p>
-          <p class="subject-flow">例2：単元の解説資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>確認問題を作成</p>
-        </div>
-
-        <div class="card subject-card">
-          <div class="subject-card-head"><span class="subject-tag">英語</span><h4>英語</h4></div>
-          <p class="subject-flow">例1：会話文・文化背景資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>ビジュアル教材</p>
-          <p class="subject-flow">例2：教科書本文をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>単語・表現の確認問題</p>
-        </div>
-
-        <div class="card subject-card">
-          <div class="subject-card-head"><span class="subject-tag">理科</span><h4>理科</h4></div>
-          <p class="subject-flow">例1：実験手順書をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>図解・スライド</p>
-          <p class="subject-flow">例2：教科書資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>まとめプリント</p>
-        </div>
-
-        <div class="card subject-card">
-          <div class="subject-card-head"><span class="subject-tag">社会</span><h4>社会</h4></div>
-          <p class="subject-flow">例1：資料集・年表をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>要点整理・図解</p>
-          <p class="subject-flow">例2：新聞記事・統計資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>授業スライド</p>
-        </div>
-
-        <div class="card subject-card">
-          <div class="subject-card-head"><span class="subject-tag">保体</span><h4>保健体育</h4></div>
-          <p class="subject-flow">例1：ルール・動作解説資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>視覚教材</p>
-          <p class="subject-flow">例2：保健分野の資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>確認問題を作成</p>
-        </div>
-
-        <div class="card subject-card">
-          <div class="subject-card-head"><span class="subject-tag">音楽</span><h4>音楽</h4></div>
-          <p class="subject-flow">例1：楽曲・作曲家の背景資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>授業資料</p>
-          <p class="subject-flow">例2：音楽用語の解説資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>確認プリント</p>
-        </div>
-
-        <div class="card subject-card">
-          <div class="subject-card-head"><span class="subject-tag">家庭</span><h4>家庭</h4></div>
-          <p class="subject-flow">例1：調理・被服等の工程資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>手順教材</p>
-          <p class="subject-flow">例2：消費生活・栄養の資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>確認問題を作成</p>
-        </div>
-
-        <div class="card subject-card">
-          <div class="subject-card-head"><span class="subject-tag">美術</span><h4>美術</h4></div>
-          <p class="subject-flow">例1：作品解説資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>比較・鑑賞教材</p>
-          <p class="subject-flow">例2：技法・画材の資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>制作手順プリント</p>
-        </div>
-
-        <div class="card subject-card">
-          <div class="subject-card-head"><span class="subject-tag">技術</span><h4>技術</h4></div>
-          <p class="subject-flow">例1：製作工程マニュアルをソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>手順教材</p>
-          <p class="subject-flow">例2：情報分野の資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>確認問題を作成</p>
-        </div>
-
-        <div class="card subject-card">
-          <div class="subject-card-head"><span class="subject-tag">特支</span><h4>特別支援</h4></div>
-          <p class="subject-flow">例1：授業資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>視覚的に分かりやすい教材</p>
-          <p class="subject-flow">例2：生活単元学習の資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>手順カード</p>
-        </div>
-
-        <div class="card subject-card">
-          <div class="subject-card-head"><span class="subject-tag">養護</span><h4>養護</h4></div>
-          <p class="subject-flow">例1：保健指導資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>保健だより</p>
-          <p class="subject-flow">例2：感染症・安全に関する資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>掲示物</p>
-        </div>
-
-        <div class="card subject-card">
-          <div class="subject-card-head"><span class="subject-tag">管理職</span><h4>管理職</h4></div>
-          <p class="subject-flow">例1：会議資料をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>校内周知文書</p>
-          <p class="subject-flow">例2：通知・要項をソースとして追加<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>保護者向け文書</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PROMPT LIBRARY ===== -->
-  <section id="prompts" class="block">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="badge badge-solid">Prompt Library</p>
-        <h2 class="section-title">明日から使えるプロンプト集</h2>
-        <p class="section-lead">「そのままコピー」→「【　】部分だけ自分の内容に変更」で使えます。カテゴリーをタップすると開きます。</p>
-      </div>
-
-      <!-- 音声 -->
-      <div class="accordion" id="prompts-voice">
-        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="cat-voice">
-          <span class="trigger-label"><span class="material-symbols-outlined" aria-hidden="true">mic</span>音声</span>
-          <span class="material-symbols-outlined expand-icon" aria-hidden="true">expand_more</span>
-        </button>
-        <div class="accordion-panel" id="cat-voice">
-
-          <div class="prompt-card">
-            <div class="prompt-card-head">
-              <div><h4>会議録</h4><p class="prompt-scene">会議・打合せの音声から会議録を作る。</p></div>
-              <button type="button" class="copy-btn" data-copy-target="#pv1"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
-            </div>
-            <div class="prompt-body" id="pv1">添付した音声データから、会議録を作成してください。
-
-次の項目に分けてまとめてください。
-・日時、参加者
-・議題
-・主な発言・意見
-・決定事項
-・次回までの課題
-
-音声から判断できない部分は推測せず、
-「確認が必要」としてください。</div>
-          </div>
-
-          <div class="prompt-card">
-            <div class="prompt-card-head">
-              <div><h4>面談まとめ</h4><p class="prompt-scene">面談の音声を、記録として整理する。</p></div>
-              <button type="button" class="copy-btn" data-copy-target="#pv2"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
-            </div>
-            <div class="prompt-body" id="pv2">添付した音声は【生徒名／保護者名】との面談記録です。
-次の観点で整理してください。
-
-・面談の目的
-・本人・保護者から出た意見
-・学校側の説明内容
-・今後の対応
-・次回面談予定
-
-個人が特定される固有名詞は【　】のまま扱い、
-書き換えないでください。</div>
-          </div>
-
-          <div class="prompt-card">
-            <div class="prompt-card-head">
-              <div><h4>保護者報告</h4><p class="prompt-scene">音声の内容を、保護者向けの報告文にする。</p></div>
-              <button type="button" class="copy-btn" data-copy-target="#pv3"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
-            </div>
-            <div class="prompt-body" id="pv3">添付した音声の内容をもとに、
-保護者向けの報告文を作成してください。
-
-条件:
-・丁寧な言葉づかいにする
-・専門用語を避ける
-・【学年・組】【生徒名】は【　】のまま残す
-・事実と学校の対応を分けて書く</div>
-          </div>
-
-          <div class="prompt-card">
-            <div class="prompt-card-head">
-              <div><h4>職員共有</h4><p class="prompt-scene">音声の内容を、職員向けの連絡文にする。</p></div>
-              <button type="button" class="copy-btn" data-copy-target="#pv4"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
-            </div>
-            <div class="prompt-body" id="pv4">添付した音声の内容を、職員間で共有するための
-簡潔な連絡文にしてください。
-
-・見出しをつける
-・重要な変更点を先に書く
-・共有すべき締切がある場合は太字で示す</div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- 授業 -->
-      <div class="accordion" id="prompts-lesson">
-        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="cat-lesson">
-          <span class="trigger-label"><span class="material-symbols-outlined" aria-hidden="true">auto_stories</span>授業</span>
-          <span class="material-symbols-outlined expand-icon" aria-hidden="true">expand_more</span>
-        </button>
-        <div class="accordion-panel" id="cat-lesson">
-
-          <div class="prompt-card">
-            <div class="prompt-card-head">
-              <div><h4>授業アイデア</h4><p class="prompt-scene">単元の授業アイデアを複数提案してもらう。</p></div>
-              <button type="button" class="copy-btn" data-copy-target="#pl1"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
-            </div>
-            <div class="prompt-body" id="pl1">【教科】【学年】【単元名】の授業アイデアを
-3つ提案してください。
-
-条件:
-・生徒が主体的に取り組める活動を含める
-・1時間（50分）で実施できる規模にする
-・ICTを活用する案を1つ以上含める</div>
-          </div>
-
-          <div class="prompt-card">
-            <div class="prompt-card-head">
-              <div><h4>ワークシート</h4><p class="prompt-scene">単元のワークシートのたたき台を作る。</p></div>
-              <button type="button" class="copy-btn" data-copy-target="#pl2"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
-            </div>
-            <div class="prompt-body" id="pl2">【教科】【単元名】のワークシートを作成してください。
-
-・目標を1文で示す
-・穴埋め問題を3問
-・記述問題を2問
-・難易度は【基礎／標準／発展】</div>
-          </div>
-
-          <div class="prompt-card">
-            <div class="prompt-card-head">
-              <div><h4>発問</h4><p class="prompt-scene">授業で使う発問をレベル別に考えてもらう。</p></div>
-              <button type="button" class="copy-btn" data-copy-target="#pl3"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
-            </div>
-            <div class="prompt-body" id="pl3">【単元名】の授業で使える発問を、
-レベル別に5つ考えてください。
-
-・知識を確認する発問を2つ
-・思考を促す発問を2つ
-・意見を引き出す発問を1つ</div>
-          </div>
-
-          <div class="prompt-card">
-            <div class="prompt-card-head">
-              <div><h4>スライド構成</h4><p class="prompt-scene">Gemini Notebookで生成するスライドの構成案を作る。</p></div>
-              <button type="button" class="copy-btn" data-copy-target="#pl4"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
-            </div>
-            <div class="prompt-body" id="pl4">読み込んだ資料をもとに、【単元名】の
-授業スライドの構成案を作成してください。
-
-・導入（1枚）
-・展開（3〜4枚）
-・まとめ（1枚）
-
-各スライドに入れる要点を、箇条書きで示してください。
-資料に無い内容は加えないでください。</div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- 校務 -->
-      <div class="accordion" id="prompts-work">
-        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="cat-work">
-          <span class="trigger-label"><span class="material-symbols-outlined" aria-hidden="true">work</span>校務</span>
-          <span class="material-symbols-outlined expand-icon" aria-hidden="true">expand_more</span>
-        </button>
-        <div class="accordion-panel" id="cat-work">
-
-          <div class="prompt-card">
-            <div class="prompt-card-head">
-              <div><h4>保護者文書</h4><p class="prompt-scene">行事・連絡の案内文を作る。</p></div>
-              <button type="button" class="copy-btn" data-copy-target="#pw1"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
-            </div>
-            <div class="prompt-body" id="pw1">【行事名／連絡内容】について、
-保護者向けの案内文を作成してください。
-
-・件名をつける
-・日時、持ち物、注意事項を分けて書く
-・丁寧語を使い、簡潔にまとめる</div>
-          </div>
-
-          <div class="prompt-card">
-            <div class="prompt-card-head">
-              <div><h4>学級通信</h4><p class="prompt-scene">学級通信のたたき台を作る。</p></div>
-              <button type="button" class="copy-btn" data-copy-target="#pw2"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
-            </div>
-            <div class="prompt-body" id="pw2">【学年・組】の学級通信を作成してください。
-
-・今週の出来事を3つ
-・来週の予定
-・担任からひとこと
-
-文体は温かく、保護者が読みやすい長さにしてください。</div>
-          </div>
-
-          <div class="prompt-card">
-            <div class="prompt-card-head">
-              <div><h4>行事案内</h4><p class="prompt-scene">職員向けの行事実施案内を作る。</p></div>
-              <button type="button" class="copy-btn" data-copy-target="#pw3"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
-            </div>
-            <div class="prompt-body" id="pw3">【行事名】の実施案内を、職員向けに作成してください。
-
-・目的
-・日時・場所
-・役割分担（【　】のまま項目だけ示す）
-・準備物と締切</div>
-          </div>
-
-          <div class="prompt-card">
-            <div class="prompt-card-head">
-              <div><h4>校内文書</h4><p class="prompt-scene">校内向けの通知文書を作る。</p></div>
-              <button type="button" class="copy-btn" data-copy-target="#pw4"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
-            </div>
-            <div class="prompt-body" id="pw4">【議題／内容】について、
-校内向けの通知文書を作成してください。
-
-・要点を先頭にまとめる
-・箇条書きを使う
-・確認・提出が必要な場合は期限を明記する</div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Canva -->
-      <div class="accordion" id="prompts-canva">
-        <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="cat-canva">
-          <span class="trigger-label"><span class="material-symbols-outlined" aria-hidden="true">palette</span>Canva</span>
-          <span class="material-symbols-outlined expand-icon" aria-hidden="true">expand_more</span>
-        </button>
-        <div class="accordion-panel" id="cat-canva">
-
-          <div class="prompt-card">
-            <div class="prompt-card-head">
-              <div><h4>画像生成用プロンプト</h4><p class="prompt-scene">授業で使うシンプルなイラストを生成する。</p></div>
-              <button type="button" class="copy-btn" data-copy-target="#pc1"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
-            </div>
-            <div class="prompt-body" id="pc1">【授業で使う場面・テーマ】を表す、
-シンプルで分かりやすいイラストを生成してください。
-
-条件:
-・生徒にとって理解しやすい構図にする
-・文字は入れない
-・色数を抑え、落ち着いた配色にする</div>
-          </div>
-
-          <div class="prompt-card">
-            <div class="prompt-card-head">
-              <div><h4>デザイン改善用プロンプト</h4><p class="prompt-scene">作った教材の見やすさを改善する案をもらう。</p></div>
-              <button type="button" class="copy-btn" data-copy-target="#pc2"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span><span class="copy-label">コピー</span></button>
-            </div>
-            <div class="prompt-body" id="pc2">この教材のデザインを、中学生にとって見やすく
-改善する案を3つ提案してください。
-
-・文字サイズや余白の観点
-・色のコントラストの観点
-・情報量を減らす観点
-
-それぞれ具体的な変更点を挙げてください。</div>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </section>
 
   <!-- ===== START TOMORROW：AI活用ロードマップ ===== -->
   <section id="roadmap" class="block">
@@ -1847,52 +1782,6 @@
     </div>
   </section>
 
-  <!-- ===== AIツールの使い分け ===== -->
-  <section id="tools" class="block">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="badge badge-solid">How to Choose</p>
-        <h2 class="section-title">AIツールの使い分け</h2>
-        <p class="section-lead">どれが優れているかを比べるものではありません。目的によって使い分けます。</p>
-      </div>
-      <div class="grid grid-3">
-        <div class="card tool-card">
-          <span class="badge badge-solid" style="margin-bottom:0.7rem;">県域教育アカウントで利用可</span>
-          <div class="tool-icon"><span class="material-symbols-outlined" aria-hidden="true">auto_awesome</span></div>
-          <h4>Gemini</h4>
-          <p>Google環境と組み合わせて生成AIを活用する。普段の校務の流れの中で使います。</p>
-        </div>
-        <div class="card tool-card">
-          <span class="badge badge-solid" style="margin-bottom:0.7rem;">県域教育アカウントで利用可</span>
-          <div class="tool-icon"><span class="material-symbols-outlined" aria-hidden="true">menu_book</span></div>
-          <h4>Gemini Notebook</h4>
-          <p>手元の資料を起点に理解・整理・教材化する。資料の範囲内で要約・スライド化します。</p>
-        </div>
-        <div class="card tool-card">
-          <span class="badge badge-solid" style="margin-bottom:0.7rem;">県域教育アカウントで利用可</span>
-          <div class="tool-icon"><span class="material-symbols-outlined" aria-hidden="true">palette</span></div>
-          <h4>Canva</h4>
-          <p>人に伝わる形に仕上げる。AIが作った土台を、生徒や保護者に伝わるデザインへ整えます。</p>
-        </div>
-        <div class="card tool-card">
-          <div class="tool-icon"><span class="material-symbols-outlined" aria-hidden="true">chat</span></div>
-          <h4>ChatGPT</h4>
-          <p>考える・相談する・文章化する。アイデア出しや文章の下書き、壁打ち相手として使います。</p>
-        </div>
-        <div class="card tool-card">
-          <div class="tool-icon"><span class="material-symbols-outlined" aria-hidden="true">draft</span></div>
-          <h4>Claude</h4>
-          <p>長文を丁寧に読み書きする。長い資料の要約や、保護者向け文書など細やかな配慮が必要な文章の下書きに向きます。</p>
-        </div>
-        <div class="card tool-card">
-          <span class="badge badge-solid" style="margin-bottom:0.7rem;">県域教育アカウントで利用可</span>
-          <div class="tool-icon"><span class="material-symbols-outlined" aria-hidden="true">grid_view</span></div>
-          <h4>Copilot</h4>
-          <p>Microsoft 365と組み合わせて使う。Word・Excel・PowerPointなど、普段の校務文書の作成をその場で支援します。</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ===== 個人情報の取扱い（最終確認） ===== -->
   <section class="block">
@@ -1908,6 +1797,10 @@
     </div>
   </section>
 
+  <div class="wrap" style="padding:0 1.5rem 3rem;text-align:center;">
+    <a href="#session1" class="btn btn-primary">Session 1へ進む<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+  </div>
+
   <!-- ===== フッター ===== -->
   <footer class="site-footer">
     <div class="wrap">
@@ -1918,8 +1811,8 @@
         <a href="#book">著作紹介</a>
         <a href="#today">今日の研修</a>
         <a href="#canva-basics">Canva Basics</a>
-        <a href="#prompts">プロンプトライブラリ</a>
-        <a href="#subjects">教科別活用例</a>
+        <a href="#today">プロンプトライブラリ</a>
+        <a href="#session2">教科別活用例</a>
       </div>
       <p style="margin-bottom:0.9rem;">
         <a href="mailto:michihirowadarin@gmail.com" class="contact-pill">
