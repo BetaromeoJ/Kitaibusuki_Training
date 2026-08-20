@@ -12,7 +12,7 @@
 ├── assets/
 │   ├── css/style.css       共通スタイル（配色・演出はすべてここで管理）
 │   ├── js/main.js          共通スクリプト（コピー・アコーディオン・Session全画面ビュー・スプラッシュ等）
-│   └── images/             講師写真・書影・バッジ画像（instructor-illustration.gif ほか、設定済み）
+│   └── images/             講師写真・書影・バッジ画像（instructor-illustration.png ほか、設定済み）
 └── README.md
 ```
 
@@ -29,10 +29,10 @@
 | 講師紹介 | `#instructor` | プロフィール・資格バッジ（Google認定トレーナー／Canva Canvassador）・資格取得推進リンク |
 | 著作紹介 | `#book` | 書影・実績バッジ（Amazon1位／増刷決定） |
 | 4つの使い方 | `#usage` | A当日に使う／B自分で学ぶ／C復習する／D今後使う |
-| 今日の研修 | `#today` | 研修テーマ＋Session 1〜3のカード（数字順に表示、開くボタンで全画面表示。すべて本日 STEP1〜3） |
-| Session 1 全画面ビュー | `#session1-view` | 音声×生成AI。本日 STEP 1。iPadでの録音とGeminiへの渡し方（方法A：文字起こしをコピー貼り付け／方法B：音声データをそのまま共有）を案内したうえで、Part A（単発の音声を要約・議事録・ToDoへ）とPart B（ロールプレイ音声をGemini Notebookで面談記録・学級通信・管理職への報告へ変換）の2部構成。メニュー等のリンクから開き、幕の演出で入場 |
-| Session 2 全画面ビュー | `#session2-view` | Gemini Notebookで資料（学習指導要領・授業資料等）を活用し、要点整理・授業案・確認問題を作成する。本日 STEP 2。末尾に応用編として、自分の授業音声をGemini Notebookにソースとして追加し、セルフで振り返る内容を追加。同上 |
-| Session 3 全画面ビュー | `#session3-view` | Gemini NotebookのStudio機能とCanvaのマジックレイヤーで、資料をインフォグラフィック・スライド教材へ仕上げる。本日 STEP 3。Canvaに未ログインの先生向けに「Canvaを開く」ボタンと県域教育アカウント（@kago.ed.jp）でのログイン案内を設置。I Love PDFへのリンクあり。同上 |
+| 今日の研修 | `#today` | 研修テーマ＋Session 1〜3のカード（数字順に表示、開くボタンで全画面表示。すべて本日実施） |
+| Session 1 全画面ビュー | `#session1-view` | 音声×生成AI。iPadでの録音とGeminiへの渡し方（方法A：文字起こしをコピー貼り付け／方法B：音声データをそのまま共有）を案内したうえで、Part A（単発の音声を要約・議事録・ToDoへ）とPart B（ロールプレイ音声をGemini Notebookで面談記録・学級通信・管理職への報告へ変換）の2部構成。メニュー等のリンクから開き、幕の演出で入場 |
+| Session 2 全画面ビュー | `#session2-view` | Gemini Notebookで資料（学習指導要領・授業資料等）を活用し、要点整理・授業案・確認問題を作成する。末尾に応用編として、自分の授業音声をGemini Notebookにソースとして追加し、セルフで振り返る内容を追加。同上 |
+| Session 3 全画面ビュー | `#session3-view` | Gemini NotebookのStudio機能とCanvaのマジックレイヤーで、資料をインフォグラフィック・スライド教材へ仕上げる。Canvaに未ログインの先生向けに「Canvaを開く」ボタンと県域教育アカウント（@kago.ed.jp）でのログイン案内を設置。I Love PDFへのリンクあり。同上 |
 | Canva Basics | `#canva-basics` | Canva公式の学習コンテンツ（無料）3件へのリンクカード |
 | 研修後に復習する | `#after` | クイックリンク・FAQ・参考リンク |
 | 教科別活用例 | `#subjects` | 13教科・立場のカード |
@@ -56,16 +56,17 @@
 実施順を一致させるため、次のように再構成しました。
 
 - 旧SESSION 2（ロールプレイ音声の文書変換）の内容を、旧SESSION 1（音声×生成AI）に統合し、
-  新しい **Session 1**（本日 STEP 1）としました。Part A（単発の音声を要約・議事録・ToDoへ）と
+  新しい **Session 1** としました。Part A（単発の音声を要約・議事録・ToDoへ）と
   Part B（ロールプレイ音声を面談記録・学級通信・管理職への報告へ）の2部構成です。
 - 旧SESSION 4（授業音声を振り返りに生かす）の内容を、Gemini Notebookにソースとして追加する方式に
-  書き換えたうえで、旧SESSION 3（資料の活用）の応用編として統合し、新しい **Session 2**（本日 STEP 2）
-  としました。
-- 旧SESSION 5（StudioとCanvaで教材を作る）は **Session 3**（本日 STEP 3）としてそのまま繰り上がりました。
+  書き換えたうえで、旧SESSION 3（資料の活用）の応用編として統合し、新しい **Session 2** としました。
+- 旧SESSION 5（StudioとCanvaで教材を作る）は **Session 3** としてそのまま繰り上がりました。
 
 これにより、旧SESSION 1・4のような「自分のペースで（研修前後に）」の自己学習用セッションはなくなり、
-Session 1〜3のすべてが本日のSTEP 1〜3と一致します。表記も、それまで混在していた大文字表記
-「SESSION」を、サイト全体で「Session」に統一しています。
+Session 1〜3のすべてを本日実施します。表記も、それまで混在していた大文字表記「SESSION」を、
+サイト全体で「Session」に統一しています。なお、当初は各SessionカードやSessionビューに「本日 STEP 1
+／2／3」のバッジも付けていましたが、2026年8月20日の追加修正でこのバッジ表記は廃止し、「Session 1」
+「Session 2」「Session 3」の表示のみに統一しています。
 
 ## iPadでの録音とGeminiへの渡し方
 
@@ -83,14 +84,13 @@ Gemini Notebookに追加する方法Bが向いています。
 ## 研修当日の進め方
 
 `#today`のSessionカードは1〜3の数字順に並び、すべて研修時間内（13:00〜15:00）に実際に扱います。
-カードには「本日 STEP 1／2／3」のバッジを付けて実施順を示しています。
 
 | 時間 | 内容 |
 |---|---|
 | 10分 | 開会・講師紹介・研修の趣旨説明 |
-| 30分 | Session 1（本日 STEP 1） |
-| 30分 | Session 2（本日 STEP 2） |
-| 20分 | Session 3（本日 STEP 3） |
+| 30分 | Session 1 |
+| 30分 | Session 2 |
+| 20分 | Session 3 |
 | 30分 | クロージング・おかわりタイム |
 
 合計120分で、研修時間「13:00〜15:00」と一致します。ヘッダーメニュー・「研修後に復習する」の
@@ -127,14 +127,14 @@ Gemini Notebookに追加する方法Bが向いています。
 <!-- 著作情報：ここから編集 -->　…　<!-- 著作情報：ここまで -->
 ```
 
-写真・書影は `assets/images/instructor-illustration.gif`・`google-trainer-badge.png`・
+写真・書影は `assets/images/instructor-illustration.png`・`google-trainer-badge.png`・
 `canvassador-badge.png`・`book-cover.png` に設定済みです（差し替える場合は同名で上書き）。
 画像が読み込めない場合もアイコン表示でレイアウトは崩れません。
 
-資格バッジ（Google for Education 認定トレーナー／Canva Canvassador）は `.cert-badge-row` /
-`.cert-badge-item` / `.cert-badge-img` で、縦横76px・`object-fit: contain`の統一サイズに揃えて
-並べています（`assets/css/style.css`）。サイズを変える場合は `.cert-badge-img` の `height`/`width` を
-書き換えてください。
+資格バッジ（Google for Education 認定トレーナー／Canva Canvassador）は、各`.badge-row`内でラベルの
+pillとバッジ画像を横並びにし、`.badge-img`（トレーナー）／`.badge-img-round`（Canvassador）とも
+高さ88pxに揃え、`object-fit: contain`でバッジ全体が切れずに表示されるようにしています
+（`assets/css/style.css`）。サイズを変える場合はこの2つのクラスの`height`/`width`を書き換えてください。
 
 講師紹介の紹介文の下には、Google認定教育者・Gemini認定教育者の資格取得を案内するボタン
 （`https://edu.google.com/intl/ALL_jp/learning-center/certifications/` へのリンク）を設置しています。

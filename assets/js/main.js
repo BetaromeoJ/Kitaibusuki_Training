@@ -160,8 +160,59 @@ function initAccordions() {
   });
 }
 
-// SESSION 1〜5は「全画面ビュー」として扱うため、通常のスムーススクロール対象から除外する
+// Session 1〜3は「全画面ビュー」として扱うため、通常のスムーススクロール対象から除外する
 const SESSION_VIEW_IDS = ['session1', 'session2', 'session3'];
+
+// 全画面ビューを1つ閉じる（closeSessionView）／開いているものをすべて閉じる（closeAllSessionViews）は
+// initSessionViews()・initSmoothAnchors() の両方から使うため、モジュールの外側で定義しておく。
+// こうすることで、全画面ビューの中にある「#today」等（Session自体へのリンクではない）通常のリンクを
+// クリックしたときも、スクロールする前にビューを閉じられる（閉じないと、裏側のページだけがスクロール
+// され、手前に固定表示されたビューに隠れて「リンクが反応しない」ように見えてしまう）。
+function closeSessionView(view) {
+  view.classList.remove('open');
+  document.body.classList.remove('session-view-open');
+  const curtain = view.querySelector('.session-curtain');
+  if (curtain) {
+    clearTimeout(curtain._hideTimer);
+    curtain.classList.remove('show', 'hide');
+  }
+}
+
+function closeAllSessionViews() {
+  document.querySelectorAll('.session-view.open').forEach(closeSessionView);
+}
+
+function openSessionView(id) {
+  const view = document.getElementById(id + '-view');
+  if (!view) return;
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // 別のSessionが開いている場合は先に閉じる（「次のSessionへ」リンクで一度に1つだけ表示するため）
+  document.querySelectorAll('.session-view.open').forEach((openViewEl) => {
+    if (openViewEl !== view) closeSessionView(openViewEl);
+  });
+
+  document.body.classList.add('session-view-open');
+  view.classList.add('open');
+  view.scrollTop = 0;
+
+  const curtain = view.querySelector('.session-curtain');
+  if (curtain) {
+    if (prefersReducedMotion) {
+      curtain.classList.add('hide');
+    } else {
+      curtain.classList.remove('hide', 'show');
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => curtain.classList.add('show'));
+      });
+      clearTimeout(curtain._hideTimer);
+      curtain._hideTimer = setTimeout(() => curtain.classList.add('hide'), 850);
+    }
+  }
+
+  view.setAttribute('tabindex', '-1');
+  view.focus({ preventScroll: true });
+}
 
 function initSmoothAnchors() {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -173,6 +224,8 @@ function initSmoothAnchors() {
       const target = document.getElementById(targetId);
       if (!target) return;
       e.preventDefault();
+      // 全画面ビューが開いたままだと、裏側のページがスクロールしても手前のビューに隠れて見えない
+      closeAllSessionViews();
       target.scrollIntoView({
         behavior: prefersReducedMotion ? 'auto' : 'smooth',
         block: 'start'
@@ -183,56 +236,13 @@ function initSmoothAnchors() {
   });
 }
 
-// SESSIONの全画面ビュー：メニューやボタンのリンク（href="#session01"等）をクリックすると、
+// Sessionの全画面ビュー：メニューやボタンのリンク（href="#session1"等）をクリックすると、
 // そのセッションだけを全画面表示する。入場時は幕（カーテン）が下から上へ流れて消える演出を行う。
 function initSessionViews() {
   const views = document.querySelectorAll('.session-view');
   if (!views.length) return;
 
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  const openView = (id) => {
-    const view = document.getElementById(id + '-view');
-    if (!view) return;
-
-    // 別のSESSIONが開いている場合は先に閉じる（「次のSESSIONへ」リンクで一度に1つだけ表示するため）
-    document.querySelectorAll('.session-view.open').forEach((openViewEl) => {
-      if (openViewEl !== view) closeView(openViewEl);
-    });
-
-    document.body.classList.add('session-view-open');
-    view.classList.add('open');
-    view.scrollTop = 0;
-
-    const curtain = view.querySelector('.session-curtain');
-    if (curtain) {
-      if (prefersReducedMotion) {
-        curtain.classList.add('hide');
-      } else {
-        curtain.classList.remove('hide', 'show');
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => curtain.classList.add('show'));
-        });
-        clearTimeout(curtain._hideTimer);
-        curtain._hideTimer = setTimeout(() => curtain.classList.add('hide'), 850);
-      }
-    }
-
-    view.setAttribute('tabindex', '-1');
-    view.focus({ preventScroll: true });
-  };
-
-  const closeView = (view) => {
-    view.classList.remove('open');
-    document.body.classList.remove('session-view-open');
-    const curtain = view.querySelector('.session-curtain');
-    if (curtain) {
-      clearTimeout(curtain._hideTimer);
-      curtain.classList.remove('show', 'hide');
-    }
-  };
-
-  // href="#session1"〜"#session5" を持つリンクはすべて全画面ビューを開くトリガーにする
+  // href="#session1"〜"#session3" を持つリンクはすべて全画面ビューを開くトリガーにする
   const sessionLinkSelector = SESSION_VIEW_IDS.map((id) => `a[href="#${id}"]`).join(', ');
   document.querySelectorAll(sessionLinkSelector).forEach((link) => {
     link.addEventListener('click', (e) => {
@@ -240,19 +250,19 @@ function initSessionViews() {
       const view = document.getElementById(id + '-view');
       if (!view) return;
       e.preventDefault();
-      openView(id);
+      openSessionView(id);
     });
   });
 
   views.forEach((view) => {
     view.querySelectorAll('.session-close-btn').forEach((btn) => {
-      btn.addEventListener('click', () => closeView(view));
+      btn.addEventListener('click', () => closeSessionView(view));
     });
   });
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-      document.querySelectorAll('.session-view.open').forEach(closeView);
+      closeAllSessionViews();
     }
   });
 }
