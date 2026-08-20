@@ -53,11 +53,9 @@
     <a href="#book"><span class="material-symbols-outlined" aria-hidden="true">menu_book</span>著作紹介</a>
     <a href="#usage"><span class="material-symbols-outlined" aria-hidden="true">explore</span>このサイトの使い方</a>
     <a href="#today"><span class="material-symbols-outlined" aria-hidden="true">today</span>今日の研修</a>
-    <a href="#session1"><span class="material-symbols-outlined" aria-hidden="true">mic</span>SESSION 1 音声をGeminiで仕事に</a>
-    <a href="#session2"><span class="material-symbols-outlined" aria-hidden="true">sync_alt</span>SESSION 2 別の文書に変換する（本日）</a>
-    <a href="#session3"><span class="material-symbols-outlined" aria-hidden="true">menu_book</span>SESSION 3 資料を活用する（本日）</a>
-    <a href="#session4"><span class="material-symbols-outlined" aria-hidden="true">hearing</span>SESSION 4 授業を振り返る</a>
-    <a href="#session5"><span class="material-symbols-outlined" aria-hidden="true">palette</span>SESSION 5 Canvaで教材化（本日）</a>
+    <a href="#session1"><span class="material-symbols-outlined" aria-hidden="true">mic</span>Session 1 音声×生成AI（本日 STEP1）</a>
+    <a href="#session2"><span class="material-symbols-outlined" aria-hidden="true">menu_book</span>Session 2 資料を活用する（本日 STEP2）</a>
+    <a href="#session3"><span class="material-symbols-outlined" aria-hidden="true">palette</span>Session 3 Canvaで教材化（本日 STEP3）</a>
     <a href="#canva-basics"><span class="material-symbols-outlined" aria-hidden="true">school</span>Canva Basics</a>
     <a href="#after"><span class="material-symbols-outlined" aria-hidden="true">history</span>研修後に復習する</a>
     <a href="#subjects"><span class="material-symbols-outlined" aria-hidden="true">apps</span>教科別活用例</a>
@@ -114,13 +112,15 @@
             </div>
 
             <!-- 資格バッジ：画像は assets/images/google-trainer-badge.png・canvassador-badge.png を差し替えてください（画像が無くても崩れません） -->
-            <div class="badge-row">
-              <span class="grad-pill">Google for Education 認定トレーナー</span>
-              <img src="assets/images/google-trainer-badge.png" alt="Google for Education Certified Trainer" class="badge-img" loading="lazy" onerror="this.style.display='none';">
-            </div>
-            <div class="badge-row">
-              <span class="grad-pill">Canva 認定教育アンバサダー</span>
-              <img src="assets/images/canvassador-badge.png" alt="Canva Canvassador 2026" class="badge-img-round" loading="lazy" onerror="this.style.display='none';">
+            <div class="cert-badge-row">
+              <div class="cert-badge-item">
+                <img src="assets/images/google-trainer-badge.png" alt="Google for Education Certified Trainer" class="cert-badge-img" loading="lazy" onerror="this.style.display='none';">
+                <span class="grad-pill">Google for Education 認定トレーナー</span>
+              </div>
+              <div class="cert-badge-item">
+                <img src="assets/images/canvassador-badge.png" alt="Canva Canvassador 2026" class="cert-badge-img cert-badge-img-round" loading="lazy" onerror="this.style.display='none';">
+                <span class="grad-pill">Canva 認定教育アンバサダー</span>
+              </div>
             </div>
             <div class="pill-row">
               <span class="grad-pill">GEG Mentors 2025-2026</span>
@@ -203,7 +203,7 @@
             <div class="role-letter">A</div>
             <h3>研修当日に使う</h3>
           </div>
-          <p class="desc">講師と一緒に操作・体験するための入口です。本日はSESSION 2・3・5をこの場で進めます。</p>
+          <p class="desc">講師と一緒に操作・体験するための入口です。本日はSession 1・2・3をこの場で進めます。</p>
           <span class="role-link">今日の研修へ<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span>
         </a>
         <a href="#canva-basics" class="card card-hover role-card">
@@ -247,90 +247,101 @@
 
       <div class="tip-card" style="margin-bottom:2rem;">
         <span class="material-symbols-outlined" aria-hidden="true">lightbulb</span>
-        <p>本日はこのあと<strong>SESSION 2 → SESSION 3 → SESSION 5</strong>の順に進めます。<strong>SESSION 1・4</strong>は、研修前後に自分のペースで確認できる内容です。Canvaの基礎基本も<a href="#canva-basics" style="color:var(--color-blue-deep);font-weight:700;">Canva Basics</a>から、必要な先生が自分のペースで学べるようにしています。</p>
+        <p>本日はこのあと<strong>Session 1 → Session 2 → Session 3</strong>の順に進めます。Canvaの基礎基本は<a href="#canva-basics" style="color:var(--color-blue-deep);font-weight:700;">Canva Basics</a>から、必要な先生が自分のペースで学べるようにしています。</p>
       </div>
 
-      <!-- ===== SESSION 1（クリックで全画面表示）自分のペースで ===== -->
+      <!-- ===== Session 1（クリックで全画面表示）本日 STEP 1 ===== -->
       <div class="card session-card" id="session1" style="margin-bottom:1.25rem;">
-        <p style="color:var(--color-text-sub);font-size:0.78rem;font-weight:700;letter-spacing:0.04em;margin-bottom:0.9rem;display:flex;align-items:center;gap:0.35rem;"><span class="material-symbols-outlined" aria-hidden="true" style="font-size:16px;">schedule</span>自分のペースで（研修前後に）</p>
-        <span class="session-badge"><span class="material-symbols-outlined" aria-hidden="true">mic</span>SESSION 1</span>
-        <h3 class="session-title">音声 × 生成AI</h3>
-        <p class="session-copy">「話した内容」を、使える文章へ。</p>
-        <a href="#session1" class="btn btn-outline">SESSION 1を開く<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
-      </div>
-
-      <!-- ===== SESSION 2（クリックで全画面表示）本日 STEP 1 ===== -->
-      <div class="card session-card" id="session2" style="margin-bottom:1.25rem;">
         <span class="badge badge-solid" style="margin-bottom:0.9rem;">本日 STEP 1</span>
-        <span class="session-badge"><span class="material-symbols-outlined" aria-hidden="true">sync_alt</span>SESSION 2</span>
-        <h3 class="session-title">Gemini Notebookで、別の文書に変換する</h3>
-        <p class="session-copy">ロールプレイの音声から、面談記録・学級通信・報告文へ。</p>
-        <a href="#session2" class="btn btn-primary">SESSION 2を開く<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+        <span class="session-badge"><span class="material-symbols-outlined" aria-hidden="true">mic</span>Session 1</span>
+        <h3 class="session-title">音声 × 生成AI</h3>
+        <p class="session-copy">「話した内容」を、記録・報告・通信など目的に応じた文書へ。</p>
+        <a href="#session1" class="btn btn-primary">Session 1を開く<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
       </div>
 
-      <!-- ===== SESSION 3（クリックで全画面表示）本日 STEP 2 ===== -->
-      <div class="card session-card" id="session3" style="margin-bottom:1.25rem;">
+      <!-- ===== Session 2（クリックで全画面表示）本日 STEP 2 ===== -->
+      <div class="card session-card" id="session2" style="margin-bottom:1.25rem;">
         <span class="badge badge-solid" style="margin-bottom:0.9rem;">本日 STEP 2</span>
-        <span class="session-badge"><span class="material-symbols-outlined" aria-hidden="true">menu_book</span>SESSION 3</span>
+        <span class="session-badge"><span class="material-symbols-outlined" aria-hidden="true">menu_book</span>Session 2</span>
         <h3 class="session-title">Gemini Notebookで資料を活用する</h3>
-        <p class="session-copy">手元の資料を、授業案・確認問題へ。</p>
-        <a href="#session3" class="btn btn-primary">SESSION 3を開く<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+        <p class="session-copy">手元の資料を、授業案・確認問題へ。自分の授業の振り返りにも。</p>
+        <a href="#session2" class="btn btn-primary">Session 2を開く<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
       </div>
 
-      <!-- ===== SESSION 4（クリックで全画面表示）自分のペースで ===== -->
-      <div class="card session-card" id="session4" style="margin-bottom:1.25rem;">
-        <p style="color:var(--color-text-sub);font-size:0.78rem;font-weight:700;letter-spacing:0.04em;margin-bottom:0.9rem;display:flex;align-items:center;gap:0.35rem;"><span class="material-symbols-outlined" aria-hidden="true" style="font-size:16px;">schedule</span>自分のペースで（研修前後に）</p>
-        <span class="session-badge"><span class="material-symbols-outlined" aria-hidden="true">hearing</span>SESSION 4</span>
-        <h3 class="session-title">授業音声を振り返りに生かす</h3>
-        <p class="session-copy">自分の授業を、客観的に振り返る。</p>
-        <a href="#session4" class="btn btn-outline">SESSION 4を開く<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
-      </div>
-
-      <!-- ===== SESSION 5（クリックで全画面表示）本日 STEP 3 ===== -->
-      <div class="card session-card" id="session5">
+      <!-- ===== Session 3（クリックで全画面表示）本日 STEP 3 ===== -->
+      <div class="card session-card" id="session3">
         <span class="badge badge-solid" style="margin-bottom:0.9rem;">本日 STEP 3</span>
-        <span class="session-badge"><span class="material-symbols-outlined" aria-hidden="true">palette</span>SESSION 5</span>
+        <span class="session-badge"><span class="material-symbols-outlined" aria-hidden="true">palette</span>Session 3</span>
         <h3 class="session-title">StudioとCanvaで教材を作る</h3>
         <p class="session-copy">資料から、配布できる教材へ。</p>
-        <a href="#session5" class="btn btn-primary">SESSION 5を開く<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+        <a href="#session3" class="btn btn-primary">Session 3を開く<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
       </div>
     </div>
   </section>
 
-  <!-- ===== SESSION 1 全画面ビュー（メニュー・ボタンのリンクから開く／幕の演出付き）自分のペースで ===== -->
-  <div class="session-view" id="session1-view" role="dialog" aria-modal="true" aria-label="SESSION 1 音声×生成AI">
+  <!-- ===== Session 1 全画面ビュー（メニュー・ボタンのリンクから開く／幕の演出付き）本日 STEP 1 ===== -->
+  <div class="session-view" id="session1-view" role="dialog" aria-modal="true" aria-label="Session 1 音声×生成AI">
     <div class="session-curtain">
-      <p class="session-curtain-text">SESSION 1<span class="session-curtain-sub">音声 × 生成AI</span></p>
+      <p class="session-curtain-text">Session 1<span class="session-curtain-sub">音声 × 生成AI</span></p>
     </div>
     <div class="session-view-header">
       <div class="wrap">
-        <span class="session-badge" style="margin:0;"><span class="material-symbols-outlined" aria-hidden="true">mic</span>SESSION 1</span>
+        <span class="session-badge" style="margin:0;"><span class="material-symbols-outlined" aria-hidden="true">mic</span>Session 1</span>
         <button type="button" class="session-close-btn"><span class="material-symbols-outlined" aria-hidden="true">close</span>閉じる</button>
       </div>
     </div>
     <div class="session-view-body">
       <div class="wrap">
         <h2 class="session-title">音声 × 生成AI</h2>
-        <p class="session-copy">「話した内容」を、使える文章へ。</p>
-        <p class="session-lead">会議、打合せ、面談などを録音し、その音声データを生成AIに読み込ませることで、要約・議事録・ToDoなどへ変換できることを体験します。重要なのは、文字起こしをすることではなく、音声を「次の仕事に使える情報」へ変えることです。</p>
+        <p class="session-copy">「話した内容」を、記録・報告・通信など、目的に応じた文書へ。</p>
+        <p class="session-lead">会議・打合せの音声や、ロールプレイで録音した面談・会議の音声を生成AIに読み込ませることで、要約・議事録・ToDoから、面談記録・学級通信・管理職への報告まで、目的に応じた文書に変換できることを体験します。重要なのは、文字起こしをすることではなく、音声を「次の仕事に使える情報」へ変えることです。</p>
 
         <h4 class="session-sub-title" style="margin-top:1.75rem;">この講座でできるようになること</h4>
         <div class="card" style="margin-bottom:2rem;">
           <ul class="goal-list">
             <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>iPadのボイスメモで録音する</li>
-            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>音声ファイルをGeminiへ共有する</li>
-            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>音声の内容を要約する</li>
-            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>議事録やToDoを作成する</li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>録音した音声をGeminiやGemini Notebookに渡す</li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>単発の音声を要約し、議事録やToDoを作成する</li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>ロールプレイの音声をGemini Notebookに追加し、面談記録・保護者への報告メッセージを作成する</li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>同じ音声から、学級通信・管理職への報告など目的に応じた文書に変換する</li>
           </ul>
+        </div>
+
+        <h4 class="session-sub-title">iPadでの録音とGeminiへの渡し方</h4>
+        <p style="color:var(--color-text-sub);margin-bottom:1rem;">北指宿中学校のタブレットはiPadです。録音には標準の「ボイスメモ」アプリを使います。録音した音声をGeminiに渡す方法は、次の2通りです。状況に応じて使い分けてください。</p>
+        <div class="compare-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-bottom:1.25rem;">
+          <div class="card">
+            <h4 style="margin-bottom:0.5rem;"><span class="material-symbols-outlined" aria-hidden="true" style="vertical-align:middle;color:var(--color-blue-deep);">text_fields</span> 方法A：文字起こしをコピーして貼り付ける</h4>
+            <ol class="step-list" style="margin-top:0.5rem;">
+              <li class="step-item" style="padding:0.55rem 0;gap:0.75rem;"><div class="step-num" style="width:26px;height:26px;font-size:0.8rem;">1</div><div class="step-body"><p>ボイスメモで録音する</p></div></li>
+              <li class="step-item" style="padding:0.55rem 0;gap:0.75rem;"><div class="step-num" style="width:26px;height:26px;font-size:0.8rem;">2</div><div class="step-body"><p>録音を開き、文字起こしを表示する</p></div></li>
+              <li class="step-item" style="padding:0.55rem 0;gap:0.75rem;"><div class="step-num" style="width:26px;height:26px;font-size:0.8rem;">3</div><div class="step-body"><p>文字起こしを全選択してコピーする</p></div></li>
+              <li class="step-item" style="padding:0.55rem 0;gap:0.75rem;"><div class="step-num" style="width:26px;height:26px;font-size:0.8rem;">4</div><div class="step-body"><p>Geminiに貼り付けて送信する</p></div></li>
+            </ol>
+          </div>
+          <div class="card">
+            <h4 style="margin-bottom:0.5rem;"><span class="material-symbols-outlined" aria-hidden="true" style="vertical-align:middle;color:var(--color-blue-deep);">ios_share</span> 方法B：音声データをそのまま共有する</h4>
+            <ol class="step-list" style="margin-top:0.5rem;">
+              <li class="step-item" style="padding:0.55rem 0;gap:0.75rem;"><div class="step-num" style="width:26px;height:26px;font-size:0.8rem;">1</div><div class="step-body"><p>ボイスメモで録音する</p></div></li>
+              <li class="step-item" style="padding:0.55rem 0;gap:0.75rem;"><div class="step-num" style="width:26px;height:26px;font-size:0.8rem;">2</div><div class="step-body"><p>共有ボタンからGemini（またはGemini Notebook）を選ぶ</p></div></li>
+              <li class="step-item" style="padding:0.55rem 0;gap:0.75rem;"><div class="step-num" style="width:26px;height:26px;font-size:0.8rem;">3</div><div class="step-body"><p>音声データをそのまま添付・追加して送信する</p></div></li>
+            </ol>
+          </div>
+        </div>
+        <div class="tip-card" style="margin-bottom:2rem;">
+          <span class="material-symbols-outlined" aria-hidden="true">lightbulb</span>
+          <p>単発の内容をすぐ整理したいときは、<strong>方法A・方法B</strong>のどちらでもかまいません。同じ音声から複数の文書を何度も作り直したいとき（下のPart Bで扱います）は、音声データをGemini Notebookに追加する<strong>方法B</strong>が向いています。</p>
+        </div>
+
+        <div style="margin:2rem 0 1.5rem;padding-top:2rem;border-top:2px solid var(--color-border);">
+          <span class="badge badge-solid" style="margin-bottom:0.6rem;">Part A</span>
+          <h3 class="session-title" style="font-size:1.35rem;">単発の音声を、要約・議事録・ToDoへ</h3>
+          <p class="session-copy" style="margin-bottom:0;">会議・打合せなどの音声を、その場で使える文章に変えます。</p>
         </div>
 
         <h4 class="session-sub-title">基本の流れ</h4>
         <div class="flow-diagram" style="margin-bottom:2rem;">
-          <div class="flow-step">iPadのボイスメモで録音</div>
-          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
-          <div class="flow-step">音声ファイルを共有</div>
-          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
-          <div class="flow-step">Geminiへ添付</div>
+          <div class="flow-step">音声をGeminiへ渡す（方法A・B）</div>
           <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
           <div class="flow-step">要約</div>
           <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
@@ -341,21 +352,14 @@
         <ol class="step-list" style="margin-bottom:1.5rem;">
           <li class="step-item">
             <div class="step-num">1</div>
-            <div class="step-body"><h4>iPadのボイスメモで録音する</h4><p>「ボイスメモ」アプリを開き、録音を開始します。会議や打合せの内容を録音します。</p></div>
-          </li>
-          <li class="step-item">
-            <div class="step-num">2</div>
-            <div class="step-body"><h4>音声ファイルを共有メニューからそのままGeminiに添付する</h4><p>ボイスメモの共有ボタンから直接Gemini（またはGemini Notebook）を選び、そのまま添付します。「ファイル」アプリなどに保存しておく必要はありません。</p></div>
-          </li>
-          <li class="step-item">
-            <div class="step-num">3</div>
             <div class="step-body"><h4>コピー用プロンプトを貼り付けて送信する</h4><p>下のプロンプトをコピーし、Geminiに貼り付けて送信します。</p></div>
           </li>
           <li class="step-item">
-            <div class="step-num">4</div>
-            <div class="step-body"><h4>結果を確認する</h4><p>出力された内容が音声と一致しているか、必ず人が確認します。</p></div>
+            <div class="step-num">2</div>
+            <div class="step-body"><h4>結果を確認する</h4><p>出力された内容が音声（または文字起こし）と一致しているか、必ず人が確認します。</p></div>
           </li>
         </ol>
+        <p style="color:var(--color-text-sub);font-size:0.85rem;margin-bottom:1.5rem;">方法Aで文字起こしを貼り付けた場合も、方法Bで音声データを添付した場合も、同じプロンプトがそのまま使えます。</p>
 
         <h4 class="session-sub-title">コピー用プロンプト</h4>
         <!-- コピー用プロンプト：ここから -->
@@ -436,11 +440,14 @@
         <p style="font-size:0.85rem;color:var(--color-text-sub);margin-top:1rem;">保護者への報告文・職員への共有文のプロンプトは<a href="#prompts-voice" style="color:var(--color-blue-deep);font-weight:700;">プロンプトライブラリ「音声」</a>にもまとめてあります。</p>
         <!-- コピー用プロンプト：ここまで -->
 
+
+
         <h4 class="session-sub-title">実践例</h4>
         <div class="example-card" style="margin-bottom:2rem;">
           <h4>職員朝会の録音から連絡文を作る</h4>
           <p>職員朝会をボイスメモで録音し、そのままGeminiに共有。プロンプト1で要約と整理を行い、プロンプト2で管理職への報告に使える議事録を作成。プロンプト3で自分が担当する作業だけをToDoとして抽出し、期限を確認しました。</p>
         </div>
+
 
         <h4 class="session-sub-title">音声データを扱うときの注意事項</h4>
         <div class="security-card" style="margin-bottom:2rem;">
@@ -457,6 +464,7 @@
           </ul>
         </div>
 
+
         <h4 class="session-sub-title">よくあるトラブル</h4>
         <div class="accordion" style="margin-bottom:1rem;">
           <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="accS1-1">
@@ -468,51 +476,14 @@
           </div>
         </div>
 
-        <div class="page-nav">
-          <a href="#session4" class="btn btn-outline">続けて自分のペースで学ぶ：授業音声を振り返りに生かす<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
-          <a href="#today" class="btn btn-outline">SESSION一覧に戻る</a>
+
+        <div style="margin:2.75rem 0 1.5rem;padding-top:2rem;border-top:2px solid var(--color-border);">
+          <span class="badge badge-solid" style="margin-bottom:0.6rem;">Part B</span>
+          <h3 class="session-title" style="font-size:1.35rem;">ロールプレイ音声を、Gemini Notebookで複数の文書へ</h3>
+          <p class="session-copy" style="margin-bottom:0;">同じ音声から、面談記録・学級通信・管理職への報告まで。</p>
         </div>
 
-        <footer class="site-footer">
-          <p class="foot-title">北指宿中学校 ICT研修ポータル</p>
-          <p class="foot-sub">AI × Canvaで、授業づくりと校務をもっと軽く。研修当日も、研修後も、日々の授業・校務でも使えるポータルです。</p>
-          <div class="footer-links">
-            <a href="#instructor">講師紹介</a>
-            <a href="#book">著作紹介</a>
-            <a href="#today">今日の研修</a>
-            <a href="#canva-basics">Canva Basics</a>
-            <a href="#prompts">プロンプトライブラリ</a>
-            <a href="#subjects">教科別活用例</a>
-          </div>
-          <p style="margin-bottom:0.9rem;">
-            <a href="mailto:michihirowadarin@gmail.com" class="contact-pill">
-              <span class="material-symbols-outlined" aria-hidden="true">mail</span>お問い合わせ：michihirowadarin@gmail.com
-            </a>
-          </p>
-          <p class="footer-copy">&copy; 北指宿中学校 ICT研修ポータル</p>
-        </footer>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===== SESSION 2 全画面ビュー（メニュー・ボタンのリンクから開く／幕の演出付き） ===== -->
-  <div class="session-view" id="session2-view" role="dialog" aria-modal="true" aria-label="SESSION 2 Gemini Notebookで、別の文書に変換する">
-    <div class="session-curtain">
-      <p class="session-curtain-text">SESSION 2<span class="session-curtain-sub">Gemini Notebookで、別の文書に変換する</span></p>
-    </div>
-    <div class="session-view-header">
-      <div class="wrap">
-        <span class="session-badge" style="margin:0;"><span class="material-symbols-outlined" aria-hidden="true">sync_alt</span>SESSION 2</span>
-        <button type="button" class="session-close-btn"><span class="material-symbols-outlined" aria-hidden="true">close</span>閉じる</button>
-      </div>
-    </div>
-    <div class="session-view-body">
-      <div class="wrap">
-        <h2 class="session-title">Gemini Notebookで、別の文書に変換する</h2>
-        <p class="session-copy">ロールプレイの音声から、面談記録・学級通信・管理職への報告まで。</p>
-        <p class="session-lead">近くの先生とグループになり、面談・会議のロールプレイを行って録音します。その音声をGemini Notebookに「資料（ソース）」として追加しておくと、ひとつの音声から目的の異なる複数の文書を、何度でも作り直すことができます。同じ情報を、読み手に合わせて形を変える使い方です。</p>
-
-        <h4 class="session-sub-title" style="margin-top:1.75rem;">この講座でできるようになること</h4>
+        <h4 class="session-sub-title" >この講座でできるようになること</h4>
         <div class="card" style="margin-bottom:2rem;">
           <ul class="goal-list">
             <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>面談・会議のロールプレイ音声を録音する</li>
@@ -521,6 +492,7 @@
             <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>学級通信・管理職への報告など、目的に応じた文書に変換する</li>
           </ul>
         </div>
+
 
         <h4 class="session-sub-title">ロールプレイ演習</h4>
         <p style="color:var(--color-text-sub);margin-bottom:1rem;">近くの2〜3人の先生でグループを作り、次の2つのロールプレイを行い、iPadのボイスメモで録音してください。</p>
@@ -539,7 +511,7 @@
         <div class="compare-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-bottom:2rem;">
           <div class="card">
             <h4 style="margin-bottom:0.5rem;"><span class="material-symbols-outlined" aria-hidden="true" style="vertical-align:middle;color:var(--color-blue-deep);">chat</span> Geminiに直接、音声を読み込ませる</h4>
-            <p style="color:var(--color-text-sub);font-size:0.9rem;">単発の会議・打合せ・面談など、その場限りの内容を素早く整理したいときに向いています（SESSION 1で紹介している使い方）。</p>
+            <p style="color:var(--color-text-sub);font-size:0.9rem;">単発の会議・打合せ・面談など、その場限りの内容を素早く整理したいときに向いています（上のPart Aで紹介している使い方）。</p>
           </div>
           <div class="card">
             <h4 style="margin-bottom:0.5rem;"><span class="material-symbols-outlined" aria-hidden="true" style="vertical-align:middle;color:var(--color-blue-deep);">folder_open</span> Gemini Notebookに、音声を資料として追加する</h4>
@@ -666,11 +638,14 @@
         </div>
         <p style="font-size:0.85rem;color:var(--color-text-sub);margin-top:1rem;">ほかのプロンプトは<a href="#prompts-voice" style="color:var(--color-blue-deep);font-weight:700;">プロンプトライブラリ「音声」</a>にまとめてあります。</p>
 
+
+
         <h4 class="session-sub-title">実践例</h4>
         <div class="example-card" style="margin-bottom:2rem;">
           <h4>研修中のロールプレイから、記録と報告メッセージを同時に作る</h4>
           <p>グループで三者面談のロールプレイを行い、iPadのボイスメモで録音。Gemini Notebookにソースとして追加し、プロンプト1で面談記録と保護者への報告メッセージを同時に生成しました。イニシャルトークを意識して話したことで、出力にも生徒個人が特定される情報が含まれず、そのまま研修内で確認・共有できました。</p>
         </div>
+
 
         <h4 class="session-sub-title">注意点</h4>
         <div class="caution-card" style="margin-bottom:2rem;">
@@ -683,6 +658,7 @@
             <li>AIが生成した文章は、事実と異なる部分がないか必ず確認する。</li>
           </ul>
         </div>
+
 
         <h4 class="session-sub-title">よくあるトラブル</h4>
         <div class="accordion" style="margin-bottom:1rem;">
@@ -709,8 +685,9 @@
           </div>
         </div>
 
+
         <div class="page-nav">
-          <a href="#session3" class="btn btn-primary">次のSESSIONへ：Gemini Notebookで資料を活用する<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+          <a href="#session2" class="btn btn-primary">次のSessionへ：Gemini Notebookで資料を活用する<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
         </div>
 
         <footer class="site-footer">
@@ -735,14 +712,15 @@
     </div>
   </div>
 
-  <!-- ===== SESSION 3 全画面ビュー（メニュー・ボタンのリンクから開く／幕の演出付き） ===== -->
-  <div class="session-view" id="session3-view" role="dialog" aria-modal="true" aria-label="SESSION 3 Gemini Notebookで資料を活用する">
+  
+  <!-- ===== Session 2 全画面ビュー（メニュー・ボタンのリンクから開く／幕の演出付き）本日 STEP 2 ===== -->
+  <div class="session-view" id="session2-view" role="dialog" aria-modal="true" aria-label="Session 2 Gemini Notebookで資料を活用する">
     <div class="session-curtain">
-      <p class="session-curtain-text">SESSION 3<span class="session-curtain-sub">Gemini Notebookで資料を活用する</span></p>
+      <p class="session-curtain-text">Session 2<span class="session-curtain-sub">Gemini Notebookで資料を活用する</span></p>
     </div>
     <div class="session-view-header">
       <div class="wrap">
-        <span class="session-badge" style="margin:0;"><span class="material-symbols-outlined" aria-hidden="true">menu_book</span>SESSION 3</span>
+        <span class="session-badge" style="margin:0;"><span class="material-symbols-outlined" aria-hidden="true">menu_book</span>Session 2</span>
         <button type="button" class="session-close-btn"><span class="material-symbols-outlined" aria-hidden="true">close</span>閉じる</button>
       </div>
     </div>
@@ -875,11 +853,14 @@
 ・解答例と解説を付ける</div>
         </div>
 
+
+
         <h4 class="session-sub-title">実践例</h4>
         <div class="example-card" style="margin-bottom:2rem;">
           <h4>校内研修資料を職員向けに要点整理する</h4>
           <p>校内研修で配布されたPDF資料をGemini Notebookに追加し、プロンプト1で重要事項を5項目に整理。根拠箇所が示されるため、資料のどこを見れば良いかがすぐに分かり、職員会議での説明資料としてそのまま活用できました。</p>
         </div>
+
 
         <h4 class="session-sub-title">注意点</h4>
         <div class="caution-card" style="margin-bottom:2rem;">
@@ -890,6 +871,7 @@
             <li>授業案・確認問題は、そのまま使わず、学年・学級の実態に合わせて調整する。</li>
           </ul>
         </div>
+
 
         <h4 class="session-sub-title">よくあるトラブル</h4>
         <div class="accordion" style="margin-bottom:1rem;">
@@ -902,53 +884,17 @@
           </div>
         </div>
 
-        <div class="page-nav">
-          <a href="#session5" class="btn btn-primary">次のSESSIONへ：StudioとCanvaで教材を作る<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+
+        <div style="margin:2.75rem 0 1.5rem;padding-top:2rem;border-top:2px solid var(--color-border);">
+          <span class="badge badge-solid" style="margin-bottom:0.6rem;">応用編</span>
+          <h3 class="session-title" style="font-size:1.35rem;">自分の授業音声を、Gemini Notebookで振り返る</h3>
+          <p class="session-copy" style="margin-bottom:0.75rem;">自分の授業を、客観的に振り返る。</p>
+          <p class="session-lead">ここまでと同じ考え方で、自分の授業音声もGemini Notebookにソースとして追加してみましょう。客観的な振り返り材料として活用し、授業のよさや改善の可能性を確認します。AIの分析は授業評価ではなく、教師自身が次の授業に生かすための材料として使います。</p>
         </div>
 
-        <footer class="site-footer">
-          <p class="foot-title">北指宿中学校 ICT研修ポータル</p>
-          <p class="foot-sub">AI × Canvaで、授業づくりと校務をもっと軽く。研修当日も、研修後も、日々の授業・校務でも使えるポータルです。</p>
-          <div class="footer-links">
-            <a href="#instructor">講師紹介</a>
-            <a href="#book">著作紹介</a>
-            <a href="#today">今日の研修</a>
-            <a href="#canva-basics">Canva Basics</a>
-            <a href="#prompts">プロンプトライブラリ</a>
-            <a href="#subjects">教科別活用例</a>
-          </div>
-          <p style="margin-bottom:0.9rem;">
-            <a href="mailto:michihirowadarin@gmail.com" class="contact-pill">
-              <span class="material-symbols-outlined" aria-hidden="true">mail</span>お問い合わせ：michihirowadarin@gmail.com
-            </a>
-          </p>
-          <p class="footer-copy">&copy; 北指宿中学校 ICT研修ポータル</p>
-        </footer>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===== SESSION 4 全画面ビュー（メニュー・ボタンのリンクから開く／幕の演出付き）自分のペースで ===== -->
-  <div class="session-view" id="session4-view" role="dialog" aria-modal="true" aria-label="SESSION 4 授業音声を振り返りに生かす">
-    <div class="session-curtain">
-      <p class="session-curtain-text">SESSION 4<span class="session-curtain-sub">授業音声を振り返りに生かす</span></p>
-    </div>
-    <div class="session-view-header">
-      <div class="wrap">
-        <span class="session-badge" style="margin:0;"><span class="material-symbols-outlined" aria-hidden="true">hearing</span>SESSION 4</span>
-        <button type="button" class="session-close-btn"><span class="material-symbols-outlined" aria-hidden="true">close</span>閉じる</button>
-      </div>
-    </div>
-    <div class="session-view-body">
-      <div class="wrap">
-        <h2 class="session-title">授業音声を振り返りに生かす</h2>
-        <p class="session-copy">自分の授業を、客観的に振り返る。</p>
-        <p class="session-lead">自分の授業音声を客観的な振り返り材料として活用し、授業のよさや改善の可能性を確認します。AIの分析は授業評価ではなく、教師自身が次の授業に生かすための材料として使います。</p>
-
-        <h4 class="session-sub-title" style="margin-top:1.75rem;">この講座でできるようになること</h4>
         <div class="card" style="margin-bottom:2rem;">
           <ul class="goal-list">
-            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>自分の授業音声を録音し、Geminiに共有する</li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>自分の授業音声を録音し、Gemini Notebookにソースとして追加する</li>
             <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>授業の流れや発問、生徒の発言場面を客観的に整理する</li>
             <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>授業のよさや改善の可能性を確認する</li>
             <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>次の授業で試せる具体的な工夫を考える</li>
@@ -959,7 +905,7 @@
         <div class="flow-diagram" style="margin-bottom:2rem;">
           <div class="flow-step">授業をiPadで録音</div>
           <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
-          <div class="flow-step">音声をGeminiへ共有</div>
+          <div class="flow-step">音声をGemini Notebookにソースとして追加</div>
           <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
           <div class="flow-step">振り返り用プロンプトで分析</div>
           <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
@@ -976,7 +922,7 @@
           </li>
           <li class="step-item">
             <div class="step-num">2</div>
-            <div class="step-body"><h4>音声ファイルをGeminiへ共有する</h4><p>SESSION 1と同じ手順で、音声ファイルをGeminiに添付します。</p></div>
+            <div class="step-body"><h4>音声ファイルをGemini Notebookにソースとして追加する</h4><p>このSessionで使っているノートブックに追加してもよく、新しいノートブックを作成してもかまいません。</p></div>
           </li>
           <li class="step-item">
             <div class="step-num">3</div>
@@ -1004,7 +950,7 @@
               <span class="copy-label">コピー</span>
             </button>
           </div>
-          <div class="prompt-body" id="promptS4-1">添付した授業音声を、
+          <div class="prompt-body" id="promptS4-1">ソースとして追加した授業音声を、
 客観的な振り返り材料として分析してください。
 
 次の観点で整理してください。
@@ -1051,11 +997,14 @@
 を示してください。</div>
         </div>
 
+
+
         <h4 class="session-sub-title">実践例</h4>
         <div class="example-card" style="margin-bottom:2rem;">
           <h4>数学の発問場面を振り返る</h4>
           <p>数学の授業を録音し、振り返り用プロンプトで分析。「発問後に考える時間が短い場面がある」という指摘を受け、次時への改善プロンプトで「発問後に10秒待つ」という具体的な工夫を提案してもらいました。次の授業で実際に試し、生徒の発言が増えたことを確認しました。</p>
         </div>
+
 
         <h4 class="session-sub-title">注意点</h4>
         <div class="caution-card" style="margin-bottom:2rem;">
@@ -1066,10 +1015,11 @@
           </ul>
         </div>
 
+
         <h4 class="session-sub-title">よくあるトラブル</h4>
         <div class="accordion" style="margin-bottom:1rem;">
           <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="accS4-1">
-            <span>Geminiに授業音声を添付できない・分析が途中で止まる</span>
+            <span>Gemini Notebookに授業音声を追加できない・分析が途中で止まる</span>
             <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
           </button>
           <div class="accordion-panel" id="accS4-1">
@@ -1077,8 +1027,9 @@
           </div>
         </div>
 
+
         <div class="page-nav">
-          <a href="#today" class="btn btn-outline">SESSION一覧に戻る</a>
+          <a href="#session3" class="btn btn-primary">次のSessionへ：StudioとCanvaで教材を作る<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
         </div>
 
         <footer class="site-footer">
@@ -1103,14 +1054,15 @@
     </div>
   </div>
 
-  <!-- ===== SESSION 5 全画面ビュー（メニュー・ボタンのリンクから開く／幕の演出付き） ===== -->
-  <div class="session-view" id="session5-view" role="dialog" aria-modal="true" aria-label="SESSION 5 StudioとCanvaで教材を作る">
+  
+  <!-- ===== Session 3 全画面ビュー（メニュー・ボタンのリンクから開く／幕の演出付き）本日 STEP 3 ===== -->
+  <div class="session-view" id="session3-view" role="dialog" aria-modal="true" aria-label="Session 3 StudioとCanvaで教材を作る">
     <div class="session-curtain">
-      <p class="session-curtain-text">SESSION 5<span class="session-curtain-sub">StudioとCanvaで教材を作る</span></p>
+      <p class="session-curtain-text">Session 3<span class="session-curtain-sub">StudioとCanvaで教材を作る</span></p>
     </div>
     <div class="session-view-header">
       <div class="wrap">
-        <span class="session-badge" style="margin:0;"><span class="material-symbols-outlined" aria-hidden="true">palette</span>SESSION 5</span>
+        <span class="session-badge" style="margin:0;"><span class="material-symbols-outlined" aria-hidden="true">palette</span>Session 3</span>
         <button type="button" class="session-close-btn"><span class="material-symbols-outlined" aria-hidden="true">close</span>閉じる</button>
       </div>
     </div>
@@ -1118,7 +1070,7 @@
       <div class="wrap">
         <h2 class="session-title">StudioとCanvaで教材を作る</h2>
         <p class="session-copy">資料から、配布できる教材へ。</p>
-        <p class="session-lead">SESSION 3で使った資料をもとに、Gemini NotebookのStudio機能でインフォグラフィックやスライドを生成し、Canvaのマジックレイヤー機能で授業・配布用に仕上げます。</p>
+        <p class="session-lead">Session 2で使った資料をもとに、Gemini NotebookのStudio機能でインフォグラフィックやスライドを生成し、Canvaのマジックレイヤー機能で授業・配布用に仕上げます。</p>
 
         <div class="statement-card" style="margin-bottom:2rem;">
           <p class="eyebrow">Canva's Role</p>
@@ -1134,6 +1086,12 @@
             <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>生成した資料をCanvaのマジックレイヤー機能で編集する</li>
             <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>授業や配布に合った教材として仕上げる</li>
           </ul>
+        </div>
+
+        <div class="tip-card" style="margin-bottom:2rem;">
+          <span class="material-symbols-outlined" aria-hidden="true">login</span>
+          <p><strong>Canvaにまだログインしたことがない方へ：</strong>下のボタンからCanvaを開き、<strong>県域教育アカウント（@kago.ed.jp）でログインしてください</strong>。初回はログイン画面の表示に少し時間がかかることがあります。</p>
+          <a href="https://www.canva.com/login" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="margin-top:0.9rem;">Canvaを開く<span class="material-symbols-outlined" aria-hidden="true">open_in_new</span></a>
         </div>
 
         <h4 class="session-sub-title">インフォグラフィックとスライドの違い</h4>
@@ -1201,7 +1159,7 @@
         <ol class="step-list" style="margin-bottom:1.5rem;">
           <li class="step-item">
             <div class="step-num">1</div>
-            <div class="step-body"><h4>SESSION 3と同じ資料をGemini Notebookに追加する</h4><p>教材にしたい資料をソースとして用意します。</p></div>
+            <div class="step-body"><h4>Session 2と同じ資料をGemini Notebookに追加する</h4><p>教材にしたい資料をソースとして用意します。</p></div>
           </li>
           <li class="step-item">
             <div class="step-num">2</div>
@@ -1339,8 +1297,7 @@
         </div>
 
         <div class="page-nav">
-          <a href="#session1" class="btn btn-outline">続けて自分のペースで学ぶ：音声 × 生成AI<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
-          <a href="#today" class="btn btn-outline">SESSION一覧に戻る</a>
+          <a href="#today" class="btn btn-primary">Session一覧に戻る<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
         </div>
 
         <footer class="site-footer">
@@ -1365,6 +1322,7 @@
     </div>
   </div>
 
+  
   <!-- ===== LEARN BY YOURSELF：Canva Basics ===== -->
   <section id="canva-basics" class="block">
     <div class="wrap">
@@ -1417,23 +1375,15 @@
         </a>
         <a href="#session1" class="card card-hover">
           <h4 style="font-size:0.98rem;font-weight:800;margin-bottom:0.4rem;">音声AI演習</h4>
-          <p style="font-size:0.85rem;color:var(--color-text-sub);">SESSION 1を見直す</p>
+          <p style="font-size:0.85rem;color:var(--color-text-sub);">Session 1を見直す（本日）</p>
         </a>
         <a href="#session2" class="card card-hover">
-          <h4 style="font-size:0.98rem;font-weight:800;margin-bottom:0.4rem;">Gemini Notebookで文書に変換</h4>
-          <p style="font-size:0.85rem;color:var(--color-text-sub);">SESSION 2を見直す（本日）</p>
+          <h4 style="font-size:0.98rem;font-weight:800;margin-bottom:0.4rem;">資料の活用と授業の振り返り</h4>
+          <p style="font-size:0.85rem;color:var(--color-text-sub);">Session 2を見直す（本日）</p>
         </a>
         <a href="#session3" class="card card-hover">
-          <h4 style="font-size:0.98rem;font-weight:800;margin-bottom:0.4rem;">資料の活用</h4>
-          <p style="font-size:0.85rem;color:var(--color-text-sub);">SESSION 3を見直す（本日）</p>
-        </a>
-        <a href="#session4" class="card card-hover">
-          <h4 style="font-size:0.98rem;font-weight:800;margin-bottom:0.4rem;">授業の振り返り</h4>
-          <p style="font-size:0.85rem;color:var(--color-text-sub);">SESSION 4を見直す</p>
-        </a>
-        <a href="#session5" class="card card-hover">
           <h4 style="font-size:0.98rem;font-weight:800;margin-bottom:0.4rem;">StudioとCanvaで教材作成</h4>
-          <p style="font-size:0.85rem;color:var(--color-text-sub);">SESSION 5を見直す（本日）</p>
+          <p style="font-size:0.85rem;color:var(--color-text-sub);">Session 3を見直す（本日）</p>
         </a>
         <a href="#canva-basics" class="card card-hover">
           <h4 style="font-size:0.98rem;font-weight:800;margin-bottom:0.4rem;">Canva公式の学習コンテンツ</h4>
@@ -1469,7 +1419,7 @@
           <span class="material-symbols-outlined expand-icon" aria-hidden="true">expand_more</span>
         </button>
         <div class="accordion-panel" id="faq2">
-          <p>原則として、実際の生徒・保護者・教職員に関する個人情報や、許可を得ていない音声・資料をAIサービスへ入力しないでください。詳しくは<a href="#session1" style="color:var(--color-blue-deep);font-weight:700;">SESSION 1の注意事項</a>をご確認ください。</p>
+          <p>原則として、実際の生徒・保護者・教職員に関する個人情報や、許可を得ていない音声・資料をAIサービスへ入力しないでください。詳しくは<a href="#session1" style="color:var(--color-blue-deep);font-weight:700;">Session 1の注意事項</a>をご確認ください。</p>
         </div>
       </div>
       <div class="accordion">
@@ -1958,7 +1908,7 @@
       </div>
       <div class="caution-card">
         <span class="material-symbols-outlined" aria-hidden="true">warning</span>
-        <p>個人情報を含む資料や音声を生成AIへ入力しないでください。生徒・保護者の氏名、住所、電話番号、成績、健康情報などは、番号・記号・仮名に置き換えてください。AIが生成した内容は、そのまま使用せず、必ず教職員が内容を確認してください。詳しくは<a href="#session1" style="color:var(--color-blue-deep);font-weight:700;">SESSION 1の注意事項</a>をご確認ください。</p>
+        <p>個人情報を含む資料や音声を生成AIへ入力しないでください。生徒・保護者の氏名、住所、電話番号、成績、健康情報などは、番号・記号・仮名に置き換えてください。AIが生成した内容は、そのまま使用せず、必ず教職員が内容を確認してください。詳しくは<a href="#session1" style="color:var(--color-blue-deep);font-weight:700;">Session 1の注意事項</a>をご確認ください。</p>
       </div>
     </div>
   </section>

@@ -161,7 +161,7 @@ function initAccordions() {
 }
 
 // SESSION 1〜5は「全画面ビュー」として扱うため、通常のスムーススクロール対象から除外する
-const SESSION_VIEW_IDS = ['session1', 'session2', 'session3', 'session4', 'session5'];
+const SESSION_VIEW_IDS = ['session1', 'session2', 'session3'];
 
 function initSmoothAnchors() {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
