@@ -12,7 +12,8 @@
 ├── assets/
 │   ├── css/style.css       共通スタイル（配色・演出はすべてここで管理）
 │   ├── js/main.js          共通スクリプト（コピー・アコーディオン・Session全画面ビュー・スプラッシュ等）
-│   └── images/             講師写真・書影・バッジ画像（instructor-illustration.png ほか、設定済み）
+│   ├── images/             書影・バッジ画像（book-cover.png ほか、設定済み）
+│   └── video/              講師紹介動画（instructor-illustration.mp4、設定済み）
 └── README.md
 ```
 
@@ -127,9 +128,11 @@ Gemini Notebookに追加する方法Bが向いています。
 <!-- 著作情報：ここから編集 -->　…　<!-- 著作情報：ここまで -->
 ```
 
-写真・書影は `assets/images/instructor-illustration.png`・`google-trainer-badge.png`・
-`canvassador-badge.png`・`book-cover.png` に設定済みです（差し替える場合は同名で上書き）。
-画像が読み込めない場合もアイコン表示でレイアウトは崩れません。
+講師紹介の写真は動画に変更し、`assets/video/instructor-illustration.mp4` に設定済みです
+（自動再生・ミュート・ループ・インライン再生。差し替える場合は同名で上書き）。
+書影・バッジは `assets/images/google-trainer-badge.png`・`canvassador-badge.png`・`book-cover.png`
+に設定済みです（差し替える場合は同名で上書き）。動画・画像が読み込めない場合もアイコン表示で
+レイアウトは崩れません。
 
 資格バッジ（Google for Education 認定トレーナー／Canva Canvassador）は、各`.badge-row`内でラベルの
 pillとバッジ画像を横並びにし、`.badge-img`（トレーナー）／`.badge-img-round`（Canvassador）とも
@@ -152,7 +155,7 @@ pillとバッジ画像を横並びにし、`.badge-img`（トレーナー）／`
 - [ ] Session 1〜3の全画面ビューが、メニューやボタンから正しく開くか。幕の演出のあとに内容が表示されるか
 - [ ] 各Session末尾の「次のSessionへ」リンクで、正しく次のSessionへ切り替わるか（Session 3は「Session一覧に戻る」のみ）
 - [ ] Session全画面ビューの「閉じる」ボタン・Escキーで元の画面に戻れるか
-- [ ] 講師写真・書影・資格バッジの画像が正しいサイズ・位置で表示されるか（読み込めない場合もレイアウトが崩れないか）
+- [ ] 講師紹介の動画・書影・資格バッジが正しいサイズ・位置で表示されるか（読み込めない場合もレイアウトが崩れないか）
 - [ ] Canva Basicsの3つのリンク（ガイド・動画・ブログ）が正しく開くか
 - [ ] Session 3の「Canvaを開く」ボタン・I Love PDFリンクが正しく開くか
 - [ ] GitHub Pages等で公開後、実機（スマートフォン・iPad・PC）で表示確認したか
