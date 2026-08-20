@@ -761,27 +761,8 @@ body.session-view-open { overflow: hidden; }
   padding: 0.45rem 1rem;
   border-radius: var(--radius-full);
 }
-.badge-img { height: 96px; width: auto; }
-.badge-img-round { height: 64px; width: 64px; border-radius: var(--radius-full); object-fit: cover; }
-.cert-badge-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-bottom: 1.25rem;
-}
-.cert-badge-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.55rem;
-  text-align: center;
-}
-.cert-badge-img {
-  height: 76px;
-  width: 76px;
-  object-fit: contain;
-}
-.cert-badge-img-round { border-radius: var(--radius-full); }
+.badge-img { height: 88px; width: auto; max-width: 160px; object-fit: contain; }
+.badge-img-round { height: 88px; width: 88px; border-radius: var(--radius-full); object-fit: contain; }
 .achievement-pill {
   display: inline-flex;
   align-items: center;
