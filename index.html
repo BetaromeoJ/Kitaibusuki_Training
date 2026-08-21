@@ -704,13 +704,20 @@
         <p class="session-copy">手元の資料を、授業案・確認問題へ。</p>
         <p class="session-lead">学習指導要領や授業資料、校内研修資料などをGemini Notebookにソースとして追加し、その資料だけを根拠に要点整理・授業案・確認問題を作成します。根拠箇所が示されるため、出力内容を資料と照らし合わせて確認できます。</p>
 
-        <h4 class="session-sub-title" style="margin-top:1.75rem;">この講座でできるようになること</h4>
+        <div class="tip-card" style="margin-bottom:2rem;">
+          <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
+          <div style="flex:1;">
+            <p><strong>Session 2は、講師によるデモンストレーション形式で進めます。</strong>実際の操作はありません。下の「参考プロンプト」は、研修後にご自身のペースで試すためのものです。</p>
+          </div>
+        </div>
+
+        <h4 class="session-sub-title" style="margin-top:1.75rem;">この講座でわかること</h4>
         <div class="card" style="margin-bottom:2rem;">
           <ul class="goal-list">
-            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Gemini Notebookに資料を追加する</li>
-            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>資料の重要事項を要点整理する</li>
-            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>資料を根拠に授業案を作成する</li>
-            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>資料を根拠に確認問題を作成する</li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>GeminiとGemini Notebookの使い分けを理解する</li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Gemini Notebookに資料を追加すると何ができるかを理解する</li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>資料を根拠にした要点整理・授業案・確認問題づくりの流れをつかむ</li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Studio機能でできることを知る</li>
           </ul>
         </div>
 
@@ -729,7 +736,26 @@
           </ul>
         </div>
 
-        <h4 class="session-sub-title">基本の流れ</h4>
+        <h4 class="session-sub-title">GeminiとGemini Notebookの使い分け</h4>
+        <div class="compare-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-bottom:2rem;">
+          <div class="card">
+            <h4 style="margin-bottom:0.5rem;"><span class="material-symbols-outlined" aria-hidden="true" style="vertical-align:middle;color:var(--color-blue-deep);">chat</span> Geminiに直接、資料や音声を読み込ませる</h4>
+            <p style="color:var(--color-text-sub);font-size:0.9rem;">単発の会議・打合せ・面談など、その場限りの内容を素早く整理したいときに向いています（Session 1で紹介した使い方です）。</p>
+          </div>
+          <div class="card">
+            <h4 style="margin-bottom:0.5rem;"><span class="material-symbols-outlined" aria-hidden="true" style="vertical-align:middle;color:var(--color-blue-deep);">folder_open</span> Gemini Notebookに、資料や音声をソースとして追加する</h4>
+            <p style="color:var(--color-text-sub);font-size:0.9rem;">同じ資料・音声から、目的の異なる複数の文書を作りたいときに向いています。ひとつのソースを保持したまま、何度も違う切り口でプロンプトを送れます。資料・音声を保存しておき、後日あらためて活用する可能性がある場合も、Gemini Notebookを使うとよいでしょう。</p>
+          </div>
+        </div>
+
+        <div class="tip-card" style="margin-bottom:2rem;">
+          <span class="material-symbols-outlined" aria-hidden="true">forum</span>
+          <div style="flex:1;">
+            <p><strong>隣の人と話してみましょう：</strong>ご自身の校務・授業の中で、「その場で素早く整理したい場面」と「同じ資料を何度も使い回したい場面」、それぞれどんな場面が思い浮かびますか。1分ずつ、隣の方と話してみましょう。</p>
+          </div>
+        </div>
+
+        <h4 class="session-sub-title">資料整理・授業案・確認問題の流れ</h4>
         <div class="flow-diagram" style="margin-bottom:2rem;">
           <div class="flow-step">Gemini Notebookを開く</div>
           <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
@@ -742,27 +768,46 @@
           <div class="flow-step">授業・校務に活用</div>
         </div>
 
-        <h4 class="session-sub-title">演習手順</h4>
-        <ol class="step-list" style="margin-bottom:1.5rem;">
-          <li class="step-item">
-            <div class="step-num">1</div>
-            <div class="step-body"><h4>Gemini Notebookを開く</h4><p>新しいノートブックを作成します。</p></div>
-          </li>
-          <li class="step-item">
-            <div class="step-num">2</div>
-            <div class="step-body"><h4>資料をソースとして追加する</h4><p>学習指導要領や授業資料などのファイルを追加します。複数の資料をまとめて追加できます。</p></div>
-          </li>
-          <li class="step-item">
-            <div class="step-num">3</div>
-            <div class="step-body"><h4>コピー用プロンプトを貼り付けて送信する</h4><p>目的（資料整理・授業案・確認問題）に合わせてプロンプトを選び、送信します。</p></div>
-          </li>
-          <li class="step-item">
-            <div class="step-num">4</div>
-            <div class="step-body"><h4>根拠箇所を確認する</h4><p>出力に示された根拠箇所を資料と照らし合わせ、内容が正しいか確認します。</p></div>
-          </li>
-        </ol>
+        <h4 class="session-sub-title">Studio機能</h4>
+        <div class="card" style="margin-bottom:2rem;">
+          <p>Gemini Notebookには、追加した資料をもとに音声解説やスライド、要約など、さまざまな形式のアウトプットを自動生成できる「Studio」機能があります。ここでは講師が実際に操作し、資料からビジュアル資料を生成する様子をご覧いただきます。</p>
+          <p style="margin-top:0.75rem;">※ Session 3の演習で使用するインフォグラフィックは、この機能を使って講師があらかじめ用意したものです。</p>
+        </div>
 
-        <h4 class="session-sub-title">コピー用プロンプト</h4>
+        <div style="margin:2.75rem 0 1.5rem;padding-top:2rem;border-top:2px solid var(--color-border);">
+          <span class="badge badge-solid" style="margin-bottom:0.6rem;">応用編</span>
+          <h3 class="session-title" style="font-size:1.35rem;">自分の授業音声を、Gemini Notebookで振り返る</h3>
+          <p class="session-copy" style="margin-bottom:0.75rem;">自分の授業を、客観的に振り返る。</p>
+          <p class="session-lead">ここまでと同じ考え方で、自分の授業音声もGemini Notebookにソースとして追加できます。客観的な振り返り材料として活用でき、授業のよさや改善の可能性を確認できます。AIの分析は授業評価ではなく、教師自身が次の授業に生かすための材料として使います。ここでは講師が実際の流れをデモンストレーションします。</p>
+        </div>
+
+        <h4 class="session-sub-title">この使い方でわかること</h4>
+        <div class="card" style="margin-bottom:2rem;">
+          <ul class="goal-list">
+            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>授業音声をGemini Notebookにソースとして追加する流れを知る</li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>授業の流れや発問、生徒の発言場面を客観的に整理できることを理解する</li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>授業のよさや改善の可能性を確認する視点を持つ</li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>次の授業で試せる具体的な工夫のヒントを得る</li>
+          </ul>
+        </div>
+
+        <h4 class="session-sub-title">授業音声を振り返る流れ</h4>
+        <div class="flow-diagram" style="margin-bottom:2rem;">
+          <div class="flow-step">授業をiPadで録音</div>
+          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
+          <div class="flow-step">音声をGemini Notebookにソースとして追加</div>
+          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
+          <div class="flow-step">振り返り用プロンプトで分析</div>
+          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
+          <div class="flow-step">よさ・改善点を確認</div>
+          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
+          <div class="flow-step">次時への改善案を作成</div>
+        </div>
+
+        <h4 class="session-sub-title">参考プロンプト（研修後にお試しください）</h4>
+        <p style="color:var(--color-text-sub);margin-bottom:1rem;">今日のSessionでは実際の操作は行いませんが、下のプロンプトはそのままコピーしてGemini Notebookに貼り付けるだけで使えます。研修後、ご自身のペースでお試しください。</p>
+
+        <p style="font-weight:800;font-size:0.85rem;color:var(--color-text-faint);letter-spacing:0.04em;margin-bottom:0.75rem;">資料整理・授業案・確認問題</p>
         <div class="prompt-card">
           <div class="prompt-card-head">
             <div>
@@ -827,92 +872,7 @@
 ・解答例と解説を付ける</div>
         </div>
 
-
-
-        <h4 class="session-sub-title">実践例</h4>
-        <div class="example-card" style="margin-bottom:2rem;">
-          <h4>校内研修資料を職員向けに要点整理する</h4>
-          <p>校内研修で配布されたPDF資料をGemini Notebookに追加し、プロンプト1で重要事項を5項目に整理。根拠箇所が示されるため、資料のどこを見れば良いかがすぐに分かり、職員会議での説明資料としてそのまま活用できました。</p>
-        </div>
-
-
-        <h4 class="session-sub-title">注意点</h4>
-        <div class="caution-card" style="margin-bottom:2rem;">
-          <span class="material-symbols-outlined" aria-hidden="true">warning</span>
-          <ul>
-            <li>外部に公開できない校内資料は、共有範囲を確認してから追加する。</li>
-            <li>資料に書かれていない内容が出力されていないか、根拠箇所と照らし合わせて確認する。</li>
-            <li>授業案・確認問題は、そのまま使わず、学年・学級の実態に合わせて調整する。</li>
-          </ul>
-        </div>
-
-
-        <h4 class="session-sub-title">よくあるトラブル</h4>
-        <div class="accordion" style="margin-bottom:1rem;">
-          <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="accS3-1">
-            <span>Gemini Notebookに資料を追加できない</span>
-            <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
-          </button>
-          <div class="accordion-panel" id="accS3-1">
-            <p>ファイル形式・サイズの確認、通信環境の確認が必要です。うまく追加できない場合は、ファイルを分割するか、時間をおいて再度お試しください。</p>
-          </div>
-        </div>
-
-
-        <div style="margin:2.75rem 0 1.5rem;padding-top:2rem;border-top:2px solid var(--color-border);">
-          <span class="badge badge-solid" style="margin-bottom:0.6rem;">応用編</span>
-          <h3 class="session-title" style="font-size:1.35rem;">自分の授業音声を、Gemini Notebookで振り返る</h3>
-          <p class="session-copy" style="margin-bottom:0.75rem;">自分の授業を、客観的に振り返る。</p>
-          <p class="session-lead">ここまでと同じ考え方で、自分の授業音声もGemini Notebookにソースとして追加してみましょう。客観的な振り返り材料として活用し、授業のよさや改善の可能性を確認します。AIの分析は授業評価ではなく、教師自身が次の授業に生かすための材料として使います。</p>
-        </div>
-
-        <div class="card" style="margin-bottom:2rem;">
-          <ul class="goal-list">
-            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>自分の授業音声を録音し、Gemini Notebookにソースとして追加する</li>
-            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>授業の流れや発問、生徒の発言場面を客観的に整理する</li>
-            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>授業のよさや改善の可能性を確認する</li>
-            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>次の授業で試せる具体的な工夫を考える</li>
-          </ul>
-        </div>
-
-        <h4 class="session-sub-title">基本の流れ</h4>
-        <div class="flow-diagram" style="margin-bottom:2rem;">
-          <div class="flow-step">授業をiPadで録音</div>
-          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
-          <div class="flow-step">音声をGemini Notebookにソースとして追加</div>
-          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
-          <div class="flow-step">振り返り用プロンプトで分析</div>
-          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
-          <div class="flow-step">よさ・改善点を確認</div>
-          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
-          <div class="flow-step">次時への改善案を作成</div>
-        </div>
-
-        <h4 class="session-sub-title">演習手順</h4>
-        <ol class="step-list" style="margin-bottom:1.5rem;">
-          <li class="step-item">
-            <div class="step-num">1</div>
-            <div class="step-body"><h4>授業をiPadのボイスメモで録音する</h4><p>校内・自治体のルールを確認し、録音の目的を明確にしてから録音します。</p></div>
-          </li>
-          <li class="step-item">
-            <div class="step-num">2</div>
-            <div class="step-body"><h4>音声ファイルをGemini Notebookにソースとして追加する</h4><p>このSessionで使っているノートブックに追加してもよく、新しいノートブックを作成してもかまいません。</p></div>
-          </li>
-          <li class="step-item">
-            <div class="step-num">3</div>
-            <div class="step-body"><h4>振り返り用プロンプトを送信する</h4><p>下のプロンプトをコピーして送信し、10の観点で分析してもらいます。</p></div>
-          </li>
-          <li class="step-item">
-            <div class="step-num">4</div>
-            <div class="step-body"><h4>分析結果を自分の授業の記憶と照らし合わせる</h4><p>音声だけでは分からない教室の様子（表情・板書など）を思い出しながら確認します。</p></div>
-          </li>
-          <li class="step-item">
-            <div class="step-num">5</div>
-            <div class="step-body"><h4>次時への改善プロンプトで改善案を作成する</h4><p>分析結果を基に、次の授業で試す具体的な工夫を3つ提案してもらいます。</p></div>
-          </li>
-        </ol>
-
-        <h4 class="session-sub-title">コピー用プロンプト</h4>
+        <p style="font-weight:800;font-size:0.85rem;color:var(--color-text-faint);letter-spacing:0.04em;margin:1.5rem 0 0.75rem;">授業音声の振り返り</p>
         <div class="prompt-card">
           <div class="prompt-card-head">
             <div>
@@ -971,24 +931,27 @@
 を示してください。</div>
         </div>
 
-
-
         <h4 class="session-sub-title">実践例</h4>
+        <div class="example-card" style="margin-bottom:1rem;">
+          <h4>校内研修資料を職員向けに要点整理する</h4>
+          <p>校内研修で配布されたPDF資料をGemini Notebookに追加し、プロンプト1で重要事項を5項目に整理。根拠箇所が示されるため、資料のどこを見れば良いかがすぐに分かり、職員会議での説明資料としてそのまま活用できました。</p>
+        </div>
         <div class="example-card" style="margin-bottom:2rem;">
           <h4>数学の発問場面を振り返る</h4>
           <p>数学の授業を録音し、振り返り用プロンプトで分析。「発問後に考える時間が短い場面がある」という指摘を受け、次時への改善プロンプトで「発問後に10秒待つ」という具体的な工夫を提案してもらいました。次の授業で実際に試し、生徒の発言が増えたことを確認しました。</p>
         </div>
 
-
         <h4 class="session-sub-title">注意点</h4>
         <div class="caution-card" style="margin-bottom:2rem;">
           <span class="material-symbols-outlined" aria-hidden="true">warning</span>
           <ul>
+            <li>外部に公開できない校内資料は、共有範囲を確認してから追加する。</li>
+            <li>資料に書かれていない内容が出力されていないか、根拠箇所と照らし合わせて確認する。</li>
+            <li>授業案・確認問題は、そのまま使わず、学年・学級の実態に合わせて調整する。</li>
             <li>音声だけでは、生徒の表情、ノート、板書、教室全体の様子などは確認できません。</li>
             <li>AIの分析を授業評価とせず、教師自身が振り返るための材料として使用してください。</li>
           </ul>
         </div>
-
 
         <h4 class="session-sub-title">Gemini Notebook 教科別活用例</h4>
         <p style="color:var(--color-text-sub);margin-bottom:1rem;">Gemini Notebookの教科別活用例です。教科別に数例だけ紹介します。ご自分の教科・立場ならどんな活用ができるかをGeminiに相談してみましょう。</p>
@@ -1073,6 +1036,7 @@
         </div>
 
       </div>
+
 
         <h4 class="session-sub-title">明日から使えるプロンプト集：授業・校務</h4>
         <p style="color:var(--color-text-sub);margin-bottom:1rem;">「そのままコピー」→「【　】部分だけ自分の内容に変更」で使えます。カテゴリーをタップすると開きます。</p>
@@ -1204,7 +1168,18 @@
         </div>
       </div>
 
+
         <h4 class="session-sub-title">よくあるトラブル</h4>
+        <div class="accordion" style="margin-bottom:1rem;">
+          <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="accS3-1">
+            <span>Gemini Notebookに資料を追加できない</span>
+            <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
+          </button>
+          <div class="accordion-panel" id="accS3-1">
+            <p>ファイル形式・サイズの確認、通信環境の確認が必要です。うまく追加できない場合は、ファイルを分割するか、時間をおいて再度お試しください。</p>
+          </div>
+        </div>
+
         <div class="accordion" style="margin-bottom:1rem;">
           <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="accS4-1">
             <span>Gemini Notebookに授業音声を追加できない・分析が途中で止まる</span>
